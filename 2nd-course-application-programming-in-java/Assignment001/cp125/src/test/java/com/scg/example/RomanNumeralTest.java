@@ -1,15 +1,13 @@
 package com.scg.example;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
-import junit.framework.JUnit4TestAdapter;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /**
  * JUnit test for the RomanNumeral class.  Illustrates the use of JUnit 4.x.
@@ -35,7 +33,7 @@ public class RomanNumeralTest {
      * Initialize the test fixture.  Initializes variables used by the various
      * tests.
      */
-    @Before
+    @BeforeEach
     public void init() {
         romanStr1975 = new RomanNumeral("MCMLXXV");
         romanInt1975 = new RomanNumeral(1975);
@@ -49,16 +47,18 @@ public class RomanNumeralTest {
     /**
      * Test the constructor's handling of a null argument.
      */
-    @Test(expected = NullPointerException.class)
+    @Test
     public void verifyConstructor() {
-        new RomanNumeral(null);
+    	Assertions.assertThrows(NullPointerException.class, () -> {
+            new RomanNumeral(null);
+    	  });
     }
 
     /**
      * Teardown the test fixture.  Sets variables used by the various
      * tests to null.
      */
-    @After
+    @AfterEach
     public void clean() {
         romanStr1975 = null;
         romanInt1975 = null;
@@ -70,22 +70,13 @@ public class RomanNumeralTest {
     }
 
     /**
-     * Constructs a suite of tests.
-     *
-     * @return the test suite
-     */
-    /* Require for use with tools that don't support JUnit 4.
-    public static junit.framework.Test suite() {
-        return new JUnit4TestAdapter(RomanNumeralTest.class);
-    }
-    */
-
-    /**
      * Tests the <code>equals</code> method.
      */
     @Test
     public void equals() {
         assertFalse(romanInt1975.equals(null));
+        assertFalse(romanInt1975.equals("Foo"));
+        assertFalse(romanInt1975.equals(romanInt1989));
         assertEquals(romanStr1975, romanInt1975);
         assertEquals(romanStr1989, romanInt1989);
         assertEquals(romanStr1998, romanInt1998);
@@ -251,18 +242,4 @@ public class RomanNumeralTest {
         //assertEquals( "MMM", RomanNumeral.toRoman(2001) );
     }
 
-    @Ignore("Not yet implemented.")
-    @Test
-    public void verifyUniverse() {
-        fail("Not yet implemented.");
-    }
-
-    /**
-     * Runs the test suite.
-     *
-     * @param args (unused)
-     */
-    public static void main(final String[] args) {
-        junit.textui.TestRunner.run(new JUnit4TestAdapter(RomanNumeralTest.class));
-    }
 }
