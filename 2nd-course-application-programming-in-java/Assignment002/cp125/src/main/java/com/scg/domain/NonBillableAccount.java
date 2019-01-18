@@ -5,7 +5,24 @@ package com.scg.domain;
  * @author Charlie Misner
  */
 public enum NonBillableAccount implements Account {
-    BUSINESS_DEVELOPMENT, SICK_LEAVE, VACATION;
+    BUSINESS_DEVELOPMENT(){
+        @Override
+        public String toString(){
+            return "Business Development";
+        }
+    },
+    SICK_LEAVE(){
+        @Override
+        public String toString(){
+            return "Sick Leave";
+        }
+    },
+    VACATION(){
+        @Override
+        public String toString(){
+            return "Vacation";
+        }
+    };
 
     /**
      * Getter for name.
@@ -21,20 +38,6 @@ public enum NonBillableAccount implements Account {
      */
     public boolean isBillable() {
         return false;
-    }
-
-    /**
-     * Returns the friendly name of this enum
-     * @return String name
-     */
-    @Override
-    public String toString() {
-        switch(this) {
-            case BUSINESS_DEVELOPMENT: return "Business Development";
-            case SICK_LEAVE: return "Sick Leave";
-            case VACATION: return "Vacation";
-            default: throw new IllegalArgumentException();
-        }
     }
 
 }
