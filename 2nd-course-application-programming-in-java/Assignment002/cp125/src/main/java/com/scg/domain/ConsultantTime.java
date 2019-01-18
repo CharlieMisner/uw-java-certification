@@ -24,7 +24,11 @@ public class ConsultantTime {
         this.date = date;
         this.account = account;
         this.skillType = skillType;
-        this.hours = hours;
+        if(hours <=0){
+            throw new IllegalArgumentException("Hours must not be zero.");
+        } else {
+            this.hours = hours;
+        }
     }
 
     /**
@@ -82,6 +86,10 @@ public class ConsultantTime {
     }
 
     public void setHours(int hours) {
-        this.hours = hours;
+        if(hours <=0){
+            throw new IllegalArgumentException("Hours must not be zero.");
+        } else {
+            this.hours = hours;
+        }
     }
 }

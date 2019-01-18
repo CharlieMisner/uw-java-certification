@@ -36,7 +36,7 @@ public class PersonalName {
      * @param middleName
      * @param lastName
      */
-    public PersonalName(String firstName, String middleName, String lastName) {
+    public PersonalName(String lastName, String firstName, String middleName) {
         this.firstName = firstName;
         this.middleName = middleName;
         this.lastName = lastName;
@@ -48,7 +48,7 @@ public class PersonalName {
      */
     @Override
     public String toString(){
-        return this.lastName + ", " + this.firstName + ", " + this.lastName;
+        return this.lastName + ", " + this.firstName + " " + this.middleName;
     }
 
     @Override
