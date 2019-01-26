@@ -38,7 +38,7 @@ public class ConsultantTime {
     @Override
     public String toString() {
         return  date.toString() + ", " +
-                account.toString() + ", " +
+                account.getName() + ", " +
                 skillType.toString() + ", " +
                 hours;
     }
