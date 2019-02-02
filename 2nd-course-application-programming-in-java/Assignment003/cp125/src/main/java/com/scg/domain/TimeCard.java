@@ -172,6 +172,8 @@ public class TimeCard {
         return billableHoursForClient;
     }
 
+    public List<ConsultantTime> getConsultingHours(){return this.billableConsultantTimes;}
+
     public Consultant getConsultant() {
         return consultant;
     }

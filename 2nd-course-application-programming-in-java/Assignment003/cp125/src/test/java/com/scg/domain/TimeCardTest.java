@@ -1,6 +1,8 @@
 package com.scg.domain;
 
+import com.scg.util.Address;
 import com.scg.util.PersonalName;
+import com.scg.util.StateCode;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -14,8 +16,9 @@ class TimeCardTest {
     Consultant consultant;
     TimeCard timeCard;
     LocalDate startDate = LocalDate.of(2019, 1, 1);
+    Address address = new Address("15", "Seattle", StateCode.WA, "98102");
 
-    final ClientAccount clientAccount = new ClientAccount("Test", new PersonalName());
+    final ClientAccount clientAccount = new ClientAccount("Test", new PersonalName(), address);
     final Consultant programmer = new Consultant(new PersonalName("Charlie", "Misner"));
     final Consultant systemAnalyst = new Consultant(new PersonalName("Foo", "Bar", "Baz"));
 
