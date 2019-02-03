@@ -149,7 +149,7 @@ public class Invoice {
             this.businessAddress = new Address(
                 properties.getProperty("business.street"),
                 properties.getProperty("business.city"),
-                StateCode.WA, //TODO set enum properly
+                StateCode.valueOf(properties.getProperty("business.state")), //TODO set enum properly
                 properties.getProperty("business.zip")
             );
         } catch(IOException exception) {

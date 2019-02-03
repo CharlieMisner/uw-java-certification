@@ -46,7 +46,6 @@ class TimeCardTest {
     public void init(){
         this.timeCard = new TimeCard(programmer, startDate);
         this.timeCard.addConsultantTime(new ConsultantTime(startDate, clientAccount, Skill.SOFTWARE_ENGINEER, 8));
-        // this.timeCard.addConsultantTime(new ConsultantTime(startDate, clientAccount, Skill.SOFTWARE_TESTER, 10));
     }
 
     @Test
