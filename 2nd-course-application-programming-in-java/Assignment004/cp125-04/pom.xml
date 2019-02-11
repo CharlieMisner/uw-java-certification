@@ -2,9 +2,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.scg</groupId>
-  <artifactId>cp125-03</artifactId>
+  <artifactId>cp125-04</artifactId>
   <packaging>jar</packaging>
-  <version>03</version>
+  <version>04</version>
   <name>cp125</name>
   <url>http://maven.apache.org</url>
   <properties>
