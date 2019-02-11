@@ -14,7 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/cp125$com_scg_in_cp125.ic" NAME="com.scg in cp125 Coverage Results" MODIFIED="1548461247194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/cp125$com_scg_in_cp125.ic" NAME="com.scg in cp125 Coverage Results" MODIFIED="1548462523032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.scg.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/cp125$ConsultantTimeTest.ic" NAME="ConsultantTimeTest Coverage Results" MODIFIED="1548460650916" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -26,18 +26,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Assignment02.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/app/Assignment02.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1983">
-              <caret line="64" column="57" lean-forward="true" selection-start-line="63" selection-start-column="12" selection-end-line="64" selection-end-column="57" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ConsultantTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/scg/domain/ConsultantTest.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -53,12 +41,10 @@
       <file leaf-file-name="ConsultantTimeTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/scg/domain/ConsultantTimeTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="16" column="4" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="24" />
+            <state relative-caret-position="170">
+              <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1178#1179#0" expanded="true" />
-                <element signature="e#1208#1209#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -67,8 +53,8 @@
       <file leaf-file-name="PersonalName.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/scg/util/PersonalName.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1122">
-              <caret line="85" column="5" lean-forward="true" selection-start-line="85" selection-start-column="5" selection-end-line="85" selection-end-column="5" />
+            <state relative-caret-position="1173">
+              <caret line="85" column="5" selection-start-line="85" selection-start-column="5" selection-end-line="85" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -76,14 +62,10 @@
       <file leaf-file-name="PersonalNameTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/scg/util/PersonalNameTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+            <state relative-caret-position="340">
+              <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#385#386#0" expanded="true" />
-                <element signature="e#415#416#0" expanded="true" />
-                <element signature="e#598#599#0" expanded="true" />
-                <element signature="e#628#629#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -92,14 +74,12 @@
       <file leaf-file-name="TimeCardTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/scg/domain/TimeCardTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="37" column="83" selection-start-line="37" selection-start-column="83" selection-end-line="37" selection-end-column="83" />
+            <state relative-caret-position="521">
+              <caret line="62" column="48" selection-start-line="62" selection-start-column="48" selection-end-line="62" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#878#879#0" expanded="true" />
-                <element signature="e#908#909#0" expanded="true" />
-                <element signature="e#2332#2333#0" expanded="true" />
-                <element signature="e#2394#2395#0" expanded="true" />
+                <element signature="e#2262#2263#0" expanded="true" />
+                <element signature="e#2336#2337#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -108,10 +88,23 @@
       <file leaf-file-name="TimeCard.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/scg/domain/TimeCard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1224">
-              <caret line="80" column="62" lean-forward="true" selection-start-line="80" selection-start-column="62" selection-end-line="80" selection-end-column="62" />
+            <state relative-caret-position="180">
+              <caret line="160" column="62" selection-start-line="160" selection-start-column="62" selection-end-line="160" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#354#370#0" expanded="true" />
+                <element signature="e#449#465#0" expanded="true" />
+                <element signature="e#6203#6219#0" expanded="true" />
+                <element signature="e#6504#6505#0" expanded="true" />
+                <element signature="e#6537#6538#0" expanded="true" />
+                <element signature="e#6582#6583#0" expanded="true" />
+                <element signature="e#6620#6621#0" expanded="true" />
+                <element signature="e#6654#6655#0" expanded="true" />
+                <element signature="e#6687#6688#0" expanded="true" />
+                <element signature="e#6729#6730#0" expanded="true" />
+                <element signature="e#6770#6771#0" expanded="true" />
+                <element signature="e#6815#6816#0" expanded="true" />
+                <element signature="e#6859#6860#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -147,7 +140,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/scg/domain/Consultant.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/scg/domain/ClientAccount.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/scg/util/PersonalName.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/scg/domain/TimeCard.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/scg/domain/ClientAccountTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/scg/domain/ConsultantTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/scg/domain/ConsultantTime.java" />
@@ -155,6 +147,7 @@
         <option value="$PROJECT_DIR$/src/test/java/com/scg/domain/NonBillableAccountTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/scg/domain/SkillTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/scg/util/PersonalNameTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/scg/domain/TimeCard.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/scg/domain/TimeCardTest.java" />
       </list>
     </option>
@@ -179,8 +172,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -316,10 +309,10 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.com.scg in cp125">
+  <component name="RunManager" selected="JUnit.TimeCardTest.testGetBillableHoursForClient">
     <configuration name="Assignment02" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="app.Assignment02" />
-      <module name="cp125" />
+      <module name="cp125-02" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -331,18 +324,18 @@
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="PersonalNameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cp125" />
+    <configuration name="TimeCardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cp125-02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.scg.util.*" />
+          <option name="PATTERN" value="com.scg.domain.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.scg.util" />
-      <option name="MAIN_CLASS_NAME" value="com.scg.util.PersonalNameTest" />
+      <option name="PACKAGE_NAME" value="com.scg.domain" />
+      <option name="MAIN_CLASS_NAME" value="com.scg.domain.TimeCardTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -354,8 +347,31 @@
       </option>
       <patterns />
     </configuration>
+    <configuration name="TimeCardTest.testGetBillableHoursForClient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cp125-02" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.scg.domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.scg.domain" />
+      <option name="MAIN_CLASS_NAME" value="com.scg.domain.TimeCardTest" />
+      <option name="METHOD_NAME" value="testGetBillableHoursForClient" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
     <configuration name="TimeCardTest.testToReportString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cp125" />
+      <module name="cp125-02" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.scg.domain.*" />
@@ -378,7 +394,7 @@
       <patterns />
     </configuration>
     <configuration name="TimeCardTest.testToString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cp125" />
+      <module name="cp125-02" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.scg.domain.*" />
@@ -417,7 +433,7 @@
       <patterns />
     </configuration>
     <configuration name="com.scg in cp125" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cp125" />
+      <module name="cp125-02" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.scg.*" />
@@ -427,29 +443,6 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.scg" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="com.scg.domain in cp125" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cp125" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.scg.domain.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.scg.domain" />
       <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="package" />
@@ -486,19 +479,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.Assignment02" />
-      <item itemvalue="JUnit.com.scg.domain in cp125" />
-      <item itemvalue="JUnit.PersonalNameTest" />
       <item itemvalue="JUnit.com.scg in cp125" />
       <item itemvalue="JUnit.TimeCardTest.testToString" />
       <item itemvalue="JUnit.TimeCardTest.testToReportString" />
+      <item itemvalue="JUnit.TimeCardTest" />
+      <item itemvalue="JUnit.TimeCardTest.testGetBillableHoursForClient" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.com.scg in cp125" />
+        <item itemvalue="JUnit.TimeCardTest.testGetBillableHoursForClient" />
         <item itemvalue="JUnit.TimeCardTest.testToReportString" />
+        <item itemvalue="JUnit.TimeCardTest" />
+        <item itemvalue="JUnit.com.scg in cp125" />
         <item itemvalue="JUnit.TimeCardTest.testToString" />
-        <item itemvalue="JUnit.com.scg.domain in cp125" />
-        <item itemvalue="JUnit.PersonalNameTest" />
       </list>
     </recent_temporary>
   </component>
@@ -506,35 +499,35 @@
     <configuration />
   </component>
   <component name="TestHistory">
-    <history-entry file="com_scg_domain_in_cp125 - 2019.01.25 at 16h 06m 57s.xml">
-      <configuration name="com.scg.domain in cp125" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="com_scg_in_cp125 - 2019.01.25 at 16h 07m 28s.xml">
-      <configuration name="com.scg in cp125" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TimeCardTest_testToString - 2019.01.25 at 16h 23m 37s.xml">
-      <configuration name="TimeCardTest.testToString" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TimeCardTest_testToString - 2019.01.25 at 16h 23m 49s.xml">
-      <configuration name="TimeCardTest.testToString" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TimeCardTest_testToString - 2019.01.25 at 16h 24m 24s.xml">
-      <configuration name="TimeCardTest.testToString" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TimeCardTest_testToReportString - 2019.01.25 at 16h 24m 29s.xml">
-      <configuration name="TimeCardTest.testToReportString" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TimeCardTest_testToReportString - 2019.01.25 at 16h 24m 33s.xml">
-      <configuration name="TimeCardTest.testToReportString" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TimeCardTest_testToReportString - 2019.01.25 at 16h 24m 44s.xml">
-      <configuration name="TimeCardTest.testToReportString" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TimeCardTest_testToReportString - 2019.01.25 at 16h 26m 24s.xml">
       <configuration name="TimeCardTest.testToReportString" configurationId="JUnit" />
     </history-entry>
     <history-entry file="TimeCardTest_testToReportString - 2019.01.25 at 16h 26m 43s.xml">
       <configuration name="TimeCardTest.testToReportString" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TimeCardTest_testToReportString - 2019.01.25 at 16h 27m 05s.xml">
+      <configuration name="TimeCardTest.testToReportString" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TimeCardTest_testToReportString - 2019.01.25 at 16h 27m 09s.xml">
+      <configuration name="TimeCardTest.testToReportString" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TimeCardTest_testToReportString - 2019.01.25 at 16h 28m 27s.xml">
+      <configuration name="TimeCardTest.testToReportString" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TimeCardTest_testToReportString - 2019.01.25 at 16h 28m 35s.xml">
+      <configuration name="TimeCardTest.testToReportString" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="com_scg_in_cp125 - 2019.01.25 at 16h 28m 44s.xml">
+      <configuration name="com.scg in cp125" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TimeCardTest - 2019.01.28 at 18h 07m 20s.xml">
+      <configuration name="TimeCardTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TimeCardTest_testToReportString - 2019.01.28 at 18h 07m 49s.xml">
+      <configuration name="TimeCardTest.testToReportString" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TimeCardTest_testGetBillableHoursForClient - 2019.01.28 at 18h 11m 56s.xml">
+      <configuration name="TimeCardTest.testGetBillableHoursForClient" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -549,17 +542,17 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.29385474" />
-      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.32995737" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.17430167" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32960895" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22068231" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2228145" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Coverage" order="4" side_tool="true" weight="0.32995737" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -707,6 +700,19 @@
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#354#370#0" expanded="true" />
+            <element signature="e#449#465#0" expanded="true" />
+            <element signature="e#6203#6219#0" expanded="true" />
+            <element signature="e#6504#6505#0" expanded="true" />
+            <element signature="e#6537#6538#0" expanded="true" />
+            <element signature="e#6582#6583#0" expanded="true" />
+            <element signature="e#6620#6621#0" expanded="true" />
+            <element signature="e#6654#6655#0" expanded="true" />
+            <element signature="e#6687#6688#0" expanded="true" />
+            <element signature="e#6729#6730#0" expanded="true" />
+            <element signature="e#6770#6771#0" expanded="true" />
+            <element signature="e#6815#6816#0" expanded="true" />
+            <element signature="e#6859#6860#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -860,13 +866,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/scg/domain/ClientAccount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-181">
-          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/scg/domain/Consultant.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -931,6 +930,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/scg/domain/ConsultantTimeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/scg/util/PersonalName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="85" column="5" selection-start-line="85" selection-start-column="5" selection-end-line="85" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/scg/util/PersonalNameTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/Assignment02.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1646">
+          <caret line="223" column="37" lean-forward="true" selection-start-line="223" selection-start-column="37" selection-end-line="223" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/scg/domain/ConsultantTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -941,69 +977,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/scg/domain/ConsultantTimeTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/scg/domain/ClientAccount.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="16" column="4" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1178#1179#0" expanded="true" />
-            <element signature="e#1208#1209#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/scg/util/PersonalName.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="85" column="5" lean-forward="true" selection-start-line="85" selection-start-column="5" selection-end-line="85" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/scg/util/PersonalNameTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#385#386#0" expanded="true" />
-            <element signature="e#415#416#0" expanded="true" />
-            <element signature="e#598#599#0" expanded="true" />
-            <element signature="e#628#629#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="82">
+          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/scg/domain/TimeCard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1224">
-          <caret line="80" column="62" lean-forward="true" selection-start-line="80" selection-start-column="62" selection-end-line="80" selection-end-column="62" />
+        <state relative-caret-position="180">
+          <caret line="160" column="62" selection-start-line="160" selection-start-column="62" selection-end-line="160" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/Assignment02.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1983">
-          <caret line="64" column="57" lean-forward="true" selection-start-line="63" selection-start-column="12" selection-end-line="64" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#354#370#0" expanded="true" />
+            <element signature="e#449#465#0" expanded="true" />
+            <element signature="e#6203#6219#0" expanded="true" />
+            <element signature="e#6504#6505#0" expanded="true" />
+            <element signature="e#6537#6538#0" expanded="true" />
+            <element signature="e#6582#6583#0" expanded="true" />
+            <element signature="e#6620#6621#0" expanded="true" />
+            <element signature="e#6654#6655#0" expanded="true" />
+            <element signature="e#6687#6688#0" expanded="true" />
+            <element signature="e#6729#6730#0" expanded="true" />
+            <element signature="e#6770#6771#0" expanded="true" />
+            <element signature="e#6815#6816#0" expanded="true" />
+            <element signature="e#6859#6860#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/scg/domain/TimeCardTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="37" column="83" selection-start-line="37" selection-start-column="83" selection-end-line="37" selection-end-column="83" />
+        <state relative-caret-position="521">
+          <caret line="62" column="48" selection-start-line="62" selection-start-column="48" selection-end-line="62" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#878#879#0" expanded="true" />
-            <element signature="e#908#909#0" expanded="true" />
-            <element signature="e#2332#2333#0" expanded="true" />
-            <element signature="e#2394#2395#0" expanded="true" />
+            <element signature="e#2262#2263#0" expanded="true" />
+            <element signature="e#2336#2337#0" expanded="true" />
           </folding>
         </state>
       </provider>

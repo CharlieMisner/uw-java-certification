@@ -5,6 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -42,6 +43,7 @@ class TimeCardTest {
     public void init(){
         this.timeCard = new TimeCard(programmer, startDate);
         this.timeCard.addConsultantTime(new ConsultantTime(startDate, clientAccount, Skill.SOFTWARE_ENGINEER, 8));
+        // this.timeCard.addConsultantTime(new ConsultantTime(startDate, clientAccount, Skill.SOFTWARE_TESTER, 10));
     }
 
     @Test
@@ -52,5 +54,14 @@ class TimeCardTest {
     @Test
     public void testToReportString(){
         assertEquals(991, this.timeCard.toReportString().length());
+    }
+
+    @Test
+    public void testGetBillableHoursForClient(){
+        this.timeCard.addConsultantTime(new ConsultantTime(startDate, clientAccount, Skill.SOFTWARE_TESTER, 10));
+        List<ConsultantTime> billableHours = this.timeCard.getBillableHoursForClient("Test");
+        for(ConsultantTime time: billableHours){
+            assertEquals("Test", time.getAccount().getName());
+        }
     }
 }

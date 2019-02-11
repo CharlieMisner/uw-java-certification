@@ -13,8 +13,8 @@ public class TimeCard {
 
     private Consultant consultant;
     private LocalDate weekStartingDay;
-    private List<ConsultantTime> billableConsultantTimes = new ArrayList();
-    private List<ConsultantTime> nonBillableConsultantTimes = new ArrayList();
+    private List<ConsultantTime> billableConsultantTimes = new ArrayList<ConsultantTime>();
+    private List<ConsultantTime> nonBillableConsultantTimes = new ArrayList<ConsultantTime>();
     private int totalHours;
     private int totalBillableHours;
     private int totalNonBillableHours;
@@ -155,6 +155,21 @@ public class TimeCard {
         String hours = String.valueOf(consultantTime.getHours());
         String skill = consultantTime.getSkillType().toString();
         return this.createTableString(account, date, hours, skill);
+    }
+
+    /**
+     * Gets an array of consultant times based on client name.
+     * @param clientName
+     * @return
+     */
+    public List<ConsultantTime> getBillableHoursForClient(String clientName){
+        List<ConsultantTime> billableHoursForClient =new ArrayList<ConsultantTime>();
+        for(ConsultantTime time: this.billableConsultantTimes){
+            if(clientName == time.getAccount().getName()){
+                billableHoursForClient.add(time);
+            }
+        }
+        return billableHoursForClient;
     }
 
     public Consultant getConsultant() {
