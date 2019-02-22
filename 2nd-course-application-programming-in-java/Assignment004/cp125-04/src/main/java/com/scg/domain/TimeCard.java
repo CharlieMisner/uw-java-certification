@@ -1,6 +1,8 @@
 package com.scg.domain;
 
+import java.sql.Time;
 import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -9,7 +11,7 @@ import java.util.List;
  * Time card class
  * @author Charlie Misner
  */
-public class TimeCard {
+public class TimeCard implements Comparable<TimeCard> {
 
     private Consultant consultant;
     private LocalDate weekStartingDay;
@@ -22,6 +24,61 @@ public class TimeCard {
     public TimeCard(Consultant consultant, LocalDate weekStartingDay) {
         this.consultant = consultant;
         this.weekStartingDay = weekStartingDay;
+    }
+
+    /**
+     * Enables comparison of two timecards.
+     * @param timeCard
+     * @return
+     */
+    public int compareTo(TimeCard timeCard){
+        int diff;
+
+        String firstConsultantName = this.getConsultant().toString();
+        String secondConsultantName = timeCard.getConsultant().toString();
+        long firstBeginningDateMillis = this.getWeekStartingDay().atStartOfDay()
+                .atZone(ZoneId.of("America/Los_Angeles")).toInstant().toEpochMilli();
+        long secondBeginningDateMillis = timeCard.getWeekStartingDay().atStartOfDay()
+                .atZone(ZoneId.of("America/Los_Angeles")).toInstant().toEpochMilli();
+        int firstTotalBillableHours = this.getTotalBillableHours();
+        int secondTotalBillableHours = timeCard.getTotalBillableHours();
+        int firstNonBillableHours = this.getTotalNonBillableHours();
+        int secondNonBillableHours = timeCard.getTotalNonBillableHours();
+
+        //Sort by start data
+        if(firstBeginningDateMillis > secondBeginningDateMillis) {
+            diff = 1;
+        } else if (firstBeginningDateMillis < secondBeginningDateMillis) {
+            diff = -1;
+        } else {
+
+            // Sort by consultant.
+            if(firstConsultantName.compareTo(secondConsultantName) > 0){
+                diff = 1;
+            } else if (firstConsultantName.compareTo(secondConsultantName) < 0){
+                diff = -1;
+            } else {
+
+                //Sort by total billable hours
+                if(firstTotalBillableHours > secondTotalBillableHours) {
+                    diff = 1;
+                } else if(firstTotalBillableHours < secondTotalBillableHours) {
+                    diff = -1;
+                } else {
+
+                    //Sort by total non-billable hours
+                    if(firstNonBillableHours > secondNonBillableHours) {
+                        diff = 1;
+                    } else if(firstNonBillableHours < secondNonBillableHours) {
+                        diff = -1;
+                    } else {
+                        diff = 0;
+                    }
+                }
+            }
+        }
+
+        return diff;
     }
 
     /**
@@ -164,11 +221,12 @@ public class TimeCard {
      */
     public List<ConsultantTime> getBillableHoursForClient(String clientName){
         List<ConsultantTime> billableHoursForClient =new ArrayList<ConsultantTime>();
-        for(ConsultantTime time: this.billableConsultantTimes){
-            if(clientName == time.getAccount().getName()){
-                billableHoursForClient.add(time);
-            }
-        }
+
+        this.billableConsultantTimes
+            .stream()
+            .filter(time -> clientName.equals(time.getAccount().getName()))
+            .forEach(time -> billableHoursForClient.add(time));
+
         return billableHoursForClient;
     }
 

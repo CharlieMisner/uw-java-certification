@@ -7,7 +7,7 @@ import com.scg.util.PersonalName;
  * Client account class
  * @author Charlie Misner
  */
-public class ClientAccount implements Account {
+public class ClientAccount implements Account, Comparable<ClientAccount> {
 
     private String name;
     private PersonalName contact;
@@ -22,6 +22,14 @@ public class ClientAccount implements Account {
         this.name = name;
         this.contact = contact;
         this.address = address;
+    }
+
+    public int compareTo(ClientAccount clientAccount){
+        int diff = this.getName().compareTo(clientAccount.getName());
+        diff = (diff == 0) ? this.getContact().toString().compareTo(clientAccount.getContact().toString()): diff;
+        diff = (diff == 0) ? this.getAddress().toString().compareTo(clientAccount.getAddress().toString()): diff;
+
+        return diff;
     }
 
     /**

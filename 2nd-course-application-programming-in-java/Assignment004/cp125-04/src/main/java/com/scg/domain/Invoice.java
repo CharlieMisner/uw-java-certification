@@ -104,12 +104,12 @@ public class Invoice {
      * @param timeCard
      */
     public void extractLineItems(TimeCard timeCard){
-        List<ConsultantTime> times = timeCard.getConsultingHours();
-        for (ConsultantTime time : times){
-            if(this.account.equals(time.getAccount()) && this.month.equals(time.getDate().getMonth())){
+        timeCard.getConsultingHours()
+            .stream()
+            .filter(time -> this.account.equals(time.getAccount()) && this.month.equals(time.getDate().getMonth()))
+            .forEach(time -> {
                 lineItems.add(new InvoiceLineItem(time.getDate(), timeCard.getConsultant(), time.getSkillType(), time.getHours()));
-            }
-        }
+            });
     }
 
     public ClientAccount getClientAccount() {

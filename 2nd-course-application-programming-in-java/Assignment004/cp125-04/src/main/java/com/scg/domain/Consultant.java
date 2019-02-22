@@ -2,12 +2,21 @@ package com.scg.domain;
 
 import com.scg.util.PersonalName;
 
-public class Consultant {
+public class Consultant implements Comparable<Consultant>{
 
     private PersonalName name;
 
     public Consultant(PersonalName name) {
         this.name = name;
+    }
+
+    /**
+     * Enables comparison of two consultants.
+     * @param consultant
+     * @return
+     */
+    public int compareTo(Consultant consultant) {
+        return this.name.toString().compareTo(consultant.getName().toString());
     }
 
     /**
