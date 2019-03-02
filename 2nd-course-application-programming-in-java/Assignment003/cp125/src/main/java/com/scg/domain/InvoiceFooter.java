@@ -1,5 +1,8 @@
 package com.scg.domain;
 
+/**
+ * @author CharlieM
+ */
 public class InvoiceFooter {
 
     private String businessName;
@@ -9,6 +12,10 @@ public class InvoiceFooter {
         this.businessName = businessName;
     }
 
+    /**
+     * Override of toString for invoice footer.
+     * @return
+     */
     @Override
     public String toString() {
         StringBuilder footerString = new StringBuilder();
@@ -25,6 +32,9 @@ public class InvoiceFooter {
         return footerString.toString();
     }
 
+    /**
+     * Increases the page number
+     */
     public void incrementPageNumber(){
         this.pageNumber++;
     }

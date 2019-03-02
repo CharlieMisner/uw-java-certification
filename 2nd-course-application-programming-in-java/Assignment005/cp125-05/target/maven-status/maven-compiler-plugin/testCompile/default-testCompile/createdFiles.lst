@@ -1,0 +1,14 @@
+com\scg\util\DateRangeTest.class
+com\scg\domain\InvoiceTest.class
+com\scg\domain\InvoiceLineItemTest.class
+com\scg\util\AddressTest.class
+com\scg\util\StateCodeTest.class
+com\scg\domain\NonBillableAccountTest.class
+com\scg\domain\TimeCardTest.class
+com\scg\domain\ConsultantTest.class
+com\scg\domain\ConsultantTimeTest.class
+com\scg\domain\SkillTest.class
+com\scg\util\PersonalNameTest.class
+com\scg\util\TimeCardConsultantComparatorTest.class
+com\scg\util\TimeCardListUtilTest.class
+com\scg\domain\ClientAccountTest.class

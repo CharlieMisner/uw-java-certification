@@ -4,6 +4,9 @@ import com.scg.util.Address;
 
 import java.time.LocalDate;
 
+/**
+ * @author CharlieM
+ */
 public class InvoiceHeader {
 
     private String businessName;
@@ -20,6 +23,10 @@ public class InvoiceHeader {
         this.invoiceForMonth = invoiceForMonth;
     }
 
+    /**
+     * Returns formatted invoice header
+     * @return
+     */
     @Override
     public String toString() {
         StringBuilder headerString = new StringBuilder();

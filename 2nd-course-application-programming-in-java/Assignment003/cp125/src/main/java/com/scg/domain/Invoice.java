@@ -116,10 +116,10 @@ public class Invoice {
         return account;
     }
 
-    private void calculateTotals(){
-
-    }
-
+    /**
+     * Returns the total hours on an invoice.
+     * @return
+     */
     public int getTotalHours(){
         this.totalHours = 0;
         for (InvoiceLineItem lineItem : this.lineItems){
@@ -128,6 +128,10 @@ public class Invoice {
         return totalHours;
     }
 
+    /**
+     * Returns the total charges for an invoice.
+     * @return
+     */
     public int getTotalCharges() {
         this.totalCharges = 0;
         for (InvoiceLineItem lineItem : this.lineItems){

@@ -118,6 +118,9 @@ public final class Assignment04 {
             timeCards.clear();
 
             ListFactory.populateLists(accounts, consultants, timeCards);
+            //End Init here*********************************
+            //Make everything serializable.
+            //Add serialization proxy to consultant class
 
             // Create the Invoices
             final List<Invoice> invoices = createInvoices(accounts, timeCards);

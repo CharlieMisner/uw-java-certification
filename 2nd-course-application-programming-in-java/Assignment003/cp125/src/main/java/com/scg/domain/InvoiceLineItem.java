@@ -5,6 +5,9 @@ import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.util.Locale;
 
+/**
+ * @author CharlieM
+ */
 public class InvoiceLineItem {
 
     private LocalDate date;

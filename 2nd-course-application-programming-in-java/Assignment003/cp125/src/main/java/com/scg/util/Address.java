@@ -1,5 +1,8 @@
 package com.scg.util;
 
+/**
+ * @author CharlieM
+ */
 public class Address {
 
     private String streetNumber;
@@ -14,11 +17,19 @@ public class Address {
         this.postalCode = postalCode;
     }
 
+    /**
+     * Return formatted address string.
+     * @return
+     */
     @Override
     public String toString() {
         return String.format("%s %n %s, %s %s", this.streetNumber, this.city, this.state, this.postalCode);
     }
 
+    /**
+     * Returns unique hashcode.
+     * @return
+     */
     @Override
     public int hashCode() {
         return 31 + this.toString().hashCode();

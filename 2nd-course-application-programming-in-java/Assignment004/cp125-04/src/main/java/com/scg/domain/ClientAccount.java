@@ -24,6 +24,11 @@ public class ClientAccount implements Account, Comparable<ClientAccount> {
         this.address = address;
     }
 
+    /**
+     * Enables comparison of two client accounts.
+     * @param clientAccount
+     * @return
+     */
     public int compareTo(ClientAccount clientAccount){
         int diff = this.getName().compareTo(clientAccount.getName());
         diff = (diff == 0) ? this.getContact().toString().compareTo(clientAccount.getContact().toString()): diff;
