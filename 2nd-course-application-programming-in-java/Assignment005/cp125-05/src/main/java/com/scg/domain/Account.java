@@ -6,7 +6,7 @@ import java.io.Serializable;
  * Interface for account.
  * @author Charlie Misner
  */
-public interface Account {
+public interface Account extends Serializable {
 
     /**
      * Gets account name.

@@ -9,6 +9,7 @@ com\scg\domain\Skill$5.class
 com\scg\domain\InvoiceLineItem.class
 com\scg\domain\TimeCard.class
 com\scg\domain\NonBillableAccount$1.class
+com\scg\domain\Consultant$SerializationProxy.class
 com\scg\domain\Invoice.class
 com\scg\util\TimeCardConsultantComparator.class
 com\scg\domain\Consultant.class

@@ -76,6 +76,7 @@ public final class Assignment05 {
      *
      * @param args Command line arguments.
      */
+    @SuppressWarnings("unchecked")
     public static void main(final String[] args) throws Exception {
         // Create lists to be populated by factory
         List<ClientAccount> accounts = new ArrayList<>();
