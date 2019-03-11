@@ -2,12 +2,23 @@ package com.scg.beans;
 
 import com.scg.domain.Consultant;
 
-public class TerminationEvent {
+import java.util.EventObject;
+/**
+ * @author Charlie Misner
+ */
+public class TerminationEvent extends EventObject {
 
     private Consultant consultant;
     private boolean isVoluntary;
 
+    /**
+     * Constructor
+     * @param source
+     * @param consultant
+     * @param voluntary
+     */
     public TerminationEvent(Object source, Consultant consultant, boolean voluntary){
+        super(source);
         this.consultant = consultant;
         this.isVoluntary = voluntary;
     }

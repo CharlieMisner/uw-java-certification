@@ -1,8 +1,9 @@
 package com.scg.beans;
 
 import java.io.Serializable;
+import java.util.EventListener;
 
-public interface BenefitListener extends Serializable {
+public interface BenefitListener extends EventListener, Serializable {
 
     /**
      * Cancels dental.

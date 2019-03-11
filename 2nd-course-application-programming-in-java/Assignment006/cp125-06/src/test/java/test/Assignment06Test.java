@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
+import java.beans.PropertyVetoException;
 import java.beans.VetoableChangeListener;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -124,7 +125,7 @@ public final class Assignment06Test {
          * @param event the change event
          */
         @Override
-        public void vetoableChange(final PropertyChangeEvent event) {
+        public void vetoableChange(final PropertyChangeEvent event) throws PropertyVetoException {
             this.lastEvent = event;
         }
     }
@@ -201,9 +202,10 @@ public final class Assignment06Test {
     /** Test the vetoable property (payRate) */
     @Test
     public void testVeto() {
+        PropertyChangeEvent event;
         hrServer.adjustPayRate(staffConsultant, VALID_RAISE);
         assertEquals(VALID_RAISE, staffConsultant.getPayRate());
-        PropertyChangeEvent event = testPropertyListener.lastEvent();
+        event = testPropertyListener.lastEvent();
         assertEquals(PAY_RATE_PROP, event.getPropertyName());
         assertEquals(VALID_RAISE, event.getNewValue());
         assertEquals(staffConsultant, event.getSource());
