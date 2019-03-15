@@ -69,6 +69,7 @@ public class DbServer {
             statement = this.connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
             statement.executeUpdate(generateTimeCardInsertString(timeCard));
             for (ConsultantTime consultantTime : timeCard.getConsultingHours()){
+                System.out.println(consultantTime.toString());
                 addHours(consultantTime, getTimeCardId(timeCard));
             }
         } catch (SQLException exception) {
@@ -83,10 +84,9 @@ public class DbServer {
      */
     public void addHours(ConsultantTime time, int timeCardId) {
         Statement statement;
-        int clientId = getClientId(time.getAccount().getName());
         try {
             statement = this.connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
-            statement.executeUpdate(generateHoursInsertString(time, timeCardId, clientId));
+            statement.executeUpdate(generateHoursInsertString(time, timeCardId));
         } catch (SQLException exception) {
             logger.error(exception.getMessage());
         }
@@ -132,7 +132,18 @@ public class DbServer {
      * @return
      */
     public List<ClientAccount> getClients(){
-
+        Statement statement;
+        ResultSet result;
+        List<ClientAccount> clients;
+        int id = 0;
+        try {
+            statement = this.connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            result = statement.executeQuery("SELECT * FROM clients");
+            result.next();
+            //clients = result.getArray();
+        } catch (SQLException exception) {
+            logger.error(exception.getMessage());
+        }
         return new ArrayList<>();
     }
 
@@ -219,9 +230,11 @@ public class DbServer {
         return string.toString();
     }
 
-    private String generateHoursInsertString(ConsultantTime time, int timeCardId, int clientId){
+    private String generateHoursInsertString(ConsultantTime time, int timeCardId){
         StringBuilder string = new StringBuilder();
+
         if(time.getAccount().isBillable()){
+            int clientId = getClientId(time.getAccount().getName());
             String propertiesList = String.format("(%d, %d, '%s', '%s', %d)",
                     clientId,
                     timeCardId,
@@ -235,7 +248,7 @@ public class DbServer {
             string.append(propertiesList);
         } else {
             String propertiesList = String.format("('%s', %d, '%s', %d)",
-                    time.getAccount().getName(),
+                    ((NonBillableAccount)time.getAccount()).name(),
                     timeCardId,
                     time.getDate(),
                     time.getHours()
@@ -297,4 +310,5 @@ public class DbServer {
 
         return string.toString();
     }
+
 }

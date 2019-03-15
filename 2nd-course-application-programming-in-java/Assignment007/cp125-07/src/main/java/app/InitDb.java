@@ -29,7 +29,7 @@ public class InitDb {
         final List<TimeCard> timeCards = new ArrayList<>();
         ListFactory.populateLists(accounts, consultants, timeCards);
         // Print them
-        //ListFactory.printTimeCards(timeCards);
+        ListFactory.printTimeCards(timeCards);
 
         // Use the list util methods
         Console console = System.console();
@@ -39,21 +39,21 @@ public class InitDb {
             Consultant carl = consultants.get(0);
             final List<TimeCard> selected = TimeCardListUtil.getTimeCardsForConsultant(timeCards, carl);
             final int count = selected.size();
-            //consoleWrtr.printf("Counted %d time cards for %s%n",count, carl);
+            consoleWrtr.printf("Counted %d time cards for %s%n",count, carl);
             if (count != 2) {
-                //logger.error(String.format("Bad time card count for %s", carl));
+                logger.error(String.format("Bad time card count for %s", carl));
             }
 
             TimeCardListUtil.sortByStartDate(timeCards);
-            //consoleWrtr.println("Time cards by date:");
+            consoleWrtr.println("Time cards by date:");
             for (TimeCard tc : timeCards) {
-                //consoleWrtr.printf("  %s, %s%n", tc.getWeekStartingDay(), tc.getConsultant());
+                consoleWrtr.printf("  %s, %s%n", tc.getWeekStartingDay(), tc.getConsultant());
             }
 
             TimeCardListUtil.sortByConsultantName(timeCards);
-            //consoleWrtr.println("Time cards by consultant:");
+            consoleWrtr.println("Time cards by consultant:");
             for (TimeCard tc : timeCards) {
-                //consoleWrtr.printf("  %s, %s%n", tc.getWeekStartingDay(), tc.getConsultant());
+                consoleWrtr.printf("  %s, %s%n", tc.getWeekStartingDay(), tc.getConsultant());
             }
 
             accounts.clear();

@@ -19,6 +19,7 @@ public class TimeCard implements Comparable<TimeCard>, Serializable {
     private LocalDate weekStartingDay;
     private List<ConsultantTime> billableConsultantTimes = new ArrayList<>();
     private List<ConsultantTime> nonBillableConsultantTimes = new ArrayList<>();
+    private List<ConsultantTime> consultantTimes = new ArrayList<>();
     private int totalHours;
     private int totalBillableHours;
     private int totalNonBillableHours;
@@ -93,6 +94,7 @@ public class TimeCard implements Comparable<TimeCard>, Serializable {
         } else {
             this.nonBillableConsultantTimes.add(consultantTime);
         }
+        this.consultantTimes.add(consultantTime);
         this.updateHours(consultantTime.getAccount().isBillable(), consultantTime.getHours());
     }
 
@@ -232,7 +234,7 @@ public class TimeCard implements Comparable<TimeCard>, Serializable {
         return billableHoursForClient;
     }
 
-    public List<ConsultantTime> getConsultingHours(){return this.billableConsultantTimes;}
+    public List<ConsultantTime> getConsultingHours(){return this.consultantTimes;}
 
     public Consultant getConsultant() {
         return consultant;
