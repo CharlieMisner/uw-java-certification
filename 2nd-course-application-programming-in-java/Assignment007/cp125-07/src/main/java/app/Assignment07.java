@@ -3,6 +3,7 @@ package app;
 import com.scg.domain.ClientAccount;
 import com.scg.domain.Invoice;
 import com.scg.domain.TimeCard;
+import com.scg.persistent.DbServer;
 import com.scg.util.DateRange;
 import com.scg.util.TimeCardListUtil;
 import org.slf4j.Logger;
@@ -22,6 +23,10 @@ public class Assignment07 {
 
     /** This class' logger. */
     private static final Logger log = LoggerFactory.getLogger(Assignment05.class);
+
+    private static final String DB_URL = "jdbc:derby://localhost:1527/memory:scgDb";
+    private static final String DB_USERNAME = "student";
+    private static final String DB_PASSWORD = "student";
 
     /**
      * Create invoices for the clients from the timecards.
@@ -71,25 +76,27 @@ public class Assignment07 {
         try (PrintWriter consoleWrtr = (console != null) ? console.writer()
                 : new PrintWriter(new OutputStreamWriter(System.out))) {
 
+            DbServer dataBase = new DbServer(DB_URL, DB_USERNAME, DB_PASSWORD);
 
+            accounts = dataBase.getClients();
 
             // Create the Invoices
-            List<Invoice> invoices = createInvoices(accounts, timeCards);
-
-            // Print them
-            consoleWrtr.println();
-            consoleWrtr.println("==================================================================================");
-            consoleWrtr.println("=============================== I N V O I C E S ==================================");
-            consoleWrtr.println("==================================================================================");
-            consoleWrtr.println();
-            printInvoices(invoices, consoleWrtr);
-
-            // Now print it to a file
-            try (PrintWriter fileWriter = new PrintWriter("invoices.txt", ENCODING)) {
-                printInvoices(invoices, fileWriter);
-            } catch (final IOException ex) {
-                log.error("Unable to print invoice.", ex);
-            }
+//            List<Invoice> invoices = createInvoices(accounts, timeCards);
+//
+//            // Print them
+//            consoleWrtr.println();
+//            consoleWrtr.println("==================================================================================");
+//            consoleWrtr.println("=============================== I N V O I C E S ==================================");
+//            consoleWrtr.println("==================================================================================");
+//            consoleWrtr.println();
+//            printInvoices(invoices, consoleWrtr);
+//
+//            // Now print it to a file
+//            try (PrintWriter fileWriter = new PrintWriter("invoices.txt", ENCODING)) {
+//                printInvoices(invoices, fileWriter);
+//            } catch (final IOException ex) {
+//                log.error("Unable to print invoice.", ex);
+//            }
         }
     }
 

@@ -1,6 +1,9 @@
 package com.scg.persistent;
 
 import com.scg.domain.*;
+import com.scg.util.Address;
+import com.scg.util.PersonalName;
+import com.scg.util.StateCode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -134,17 +137,36 @@ public class DbServer {
     public List<ClientAccount> getClients(){
         Statement statement;
         ResultSet result;
-        List<ClientAccount> clients;
-        int id = 0;
+        List<ClientAccount> clients = new ArrayList<>();;
         try {
             statement = this.connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
             result = statement.executeQuery("SELECT * FROM clients");
-            result.next();
-            //clients = result.getArray();
+            result.last();
+            int numberOfRows = result.getRow();
+            result.first();
+            for (int i=0; i < numberOfRows; i++){
+                String name = result.getString("name");
+                Address address = new Address(
+                        result.getString("street"),
+                        result.getString("city"),
+                        StateCode.valueOf(result.getString("state")),
+                        result.getString("postal_code")
+                );
+                PersonalName contact = new PersonalName(
+                        result.getString("contact_last_name"),
+                        result.getString("contact_first_name"),
+                        result.getString("contact_middle_name")
+                );
+                ClientAccount clientAccount = new ClientAccount( name, contact, address);
+                clients.add(clientAccount);
+                System.out.println(clientAccount.getName());
+                result.next();
+            }
+
         } catch (SQLException exception) {
             logger.error(exception.getMessage());
         }
-        return new ArrayList<>();
+        return clients;
     }
 
     /**
