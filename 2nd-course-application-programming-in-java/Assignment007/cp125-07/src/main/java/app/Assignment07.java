@@ -1,6 +1,7 @@
 package app;
 
 import com.scg.domain.ClientAccount;
+import com.scg.domain.Consultant;
 import com.scg.domain.Invoice;
 import com.scg.domain.TimeCard;
 import com.scg.persistent.DbServer;
@@ -28,26 +29,21 @@ public class Assignment07 {
     private static final String DB_USERNAME = "student";
     private static final String DB_PASSWORD = "student";
 
+    private static final DbServer DATABASE = new DbServer(DB_URL, DB_USERNAME, DB_PASSWORD);;
+
     /**
      * Create invoices for the clients from the timecards.
      *
-     * @param accounts the accounts to create the invoices for
-     * @param timeCards the time cards to create the invoices from
-     *
      * @return the created invoices
      */
-    private static List<Invoice> createInvoices(final List<ClientAccount> accounts,
-                                                final List<TimeCard> timeCards) {
+    private static List<Invoice> createInvoices() {
+        List<ClientAccount> accounts = DATABASE.getClients();
+        List<TimeCard> timeCards = DATABASE.getTimeCards();
         final List<Invoice> invoices = new ArrayList<>();
 
-        final List<TimeCard> timeCardList = TimeCardListUtil
-                .getTimeCardsForDateRange(timeCards, new DateRange(TEST_INVOICE_MONTH, TEST_INVOICE_YEAR));
         for (final ClientAccount account : accounts) {
-            final Invoice invoice = new Invoice(account, TEST_INVOICE_MONTH, TEST_INVOICE_YEAR);
+            final Invoice invoice = DATABASE.getInvoice(account, TEST_INVOICE_MONTH, TEST_INVOICE_YEAR);
             invoices.add(invoice);
-            for (final TimeCard currentTimeCard : timeCardList) {
-                invoice.extractLineItems(currentTimeCard);
-            }
         }
 
         return invoices;
@@ -68,35 +64,28 @@ public class Assignment07 {
 
     public static void main(String[] args){
         // Create lists to be populated by factory
-        List<ClientAccount> accounts = new ArrayList<>();
-        List<TimeCard> timeCards = new ArrayList<>();
 
         // Use the list util methods
         Console console = System.console();
         try (PrintWriter consoleWrtr = (console != null) ? console.writer()
                 : new PrintWriter(new OutputStreamWriter(System.out))) {
 
-            DbServer dataBase = new DbServer(DB_URL, DB_USERNAME, DB_PASSWORD);
+            List<Invoice> invoices = createInvoices();
 
-            accounts = dataBase.getClients();
+            // Print them
+            consoleWrtr.println();
+            consoleWrtr.println("==================================================================================");
+            consoleWrtr.println("=============================== I N V O I C E S ==================================");
+            consoleWrtr.println("==================================================================================");
+            consoleWrtr.println();
+            printInvoices(invoices, consoleWrtr);
 
-            // Create the Invoices
-//            List<Invoice> invoices = createInvoices(accounts, timeCards);
-//
-//            // Print them
-//            consoleWrtr.println();
-//            consoleWrtr.println("==================================================================================");
-//            consoleWrtr.println("=============================== I N V O I C E S ==================================");
-//            consoleWrtr.println("==================================================================================");
-//            consoleWrtr.println();
-//            printInvoices(invoices, consoleWrtr);
-//
-//            // Now print it to a file
-//            try (PrintWriter fileWriter = new PrintWriter("invoices.txt", ENCODING)) {
-//                printInvoices(invoices, fileWriter);
-//            } catch (final IOException ex) {
-//                log.error("Unable to print invoice.", ex);
-//            }
+            // Now print it to a file
+            try (PrintWriter fileWriter = new PrintWriter("invoices.txt", ENCODING)) {
+                printInvoices(invoices, fileWriter);
+            } catch (final IOException ex) {
+                log.error("Unable to print invoice.", ex);
+            }
         }
     }
 

@@ -1,16 +1,18 @@
 package com.scg.persistent;
 
 import com.scg.domain.*;
-import com.scg.util.Address;
-import com.scg.util.PersonalName;
-import com.scg.util.StateCode;
+import com.scg.util.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.sql.*;
+import java.time.LocalDate;
 import java.time.Month;
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.scg.util.ListFactory.TEST_INVOICE_MONTH;
+import static com.scg.util.ListFactory.TEST_INVOICE_YEAR;
 
 /**
  * @author Charlie Misner
@@ -22,6 +24,8 @@ public class DbServer {
     private String username;
     private String password;
     private Connection connection;
+    private List<ClientAccount> clients;
+    private List<TimeCard> timeCards;
 
     public DbServer(String dbUrl, String username, String password) {
         this.dbUrl = dbUrl;
@@ -72,7 +76,6 @@ public class DbServer {
             statement = this.connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
             statement.executeUpdate(generateTimeCardInsertString(timeCard));
             for (ConsultantTime consultantTime : timeCard.getConsultingHours()){
-                System.out.println(consultantTime.toString());
                 addHours(consultantTime, getTimeCardId(timeCard));
             }
         } catch (SQLException exception) {
@@ -137,12 +140,13 @@ public class DbServer {
     public List<ClientAccount> getClients(){
         Statement statement;
         ResultSet result;
-        List<ClientAccount> clients = new ArrayList<>();;
+        List<ClientAccount> clients = new ArrayList<>();
         try {
             statement = this.connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
             result = statement.executeQuery("SELECT * FROM clients");
             result.last();
             int numberOfRows = result.getRow();
+            clients = new ArrayList<>(numberOfRows);
             result.first();
             for (int i=0; i < numberOfRows; i++){
                 String name = result.getString("name");
@@ -158,24 +162,130 @@ public class DbServer {
                         result.getString("contact_middle_name")
                 );
                 ClientAccount clientAccount = new ClientAccount( name, contact, address);
-                clients.add(clientAccount);
-                System.out.println(clientAccount.getName());
+                clients.add(result.getInt("id") - 1,clientAccount);
                 result.next();
             }
 
         } catch (SQLException exception) {
             logger.error(exception.getMessage());
         }
+        this.clients = clients;
         return clients;
     }
 
+    public List<TimeCard> getTimeCards(){
+        Statement statement;
+        ResultSet result;
+        List<TimeCard> timeCards = new ArrayList<>();
+        try {
+            statement = this.connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            result = statement.executeQuery("SELECT * FROM timecards");
+            result.last();
+            int numberOfRows = result.getRow();
+            timeCards = new ArrayList<>(numberOfRows);
+            result.first();
+            for (int i=0; i < numberOfRows; i++){
+                TimeCard timecard = new TimeCard(
+                        this.getConsultants().get(result.getInt("consultant_id")-1),
+                        LocalDate.parse(result.getString("start_date"))
+                );
+                timeCards.add(result.getInt("id") - 1, timecard);
+                result.next();
+            }
+
+        } catch (SQLException exception) {
+            logger.error(exception.getMessage());
+        }
+        this.timeCards = timeCards;
+        this.getBillableHours();
+        this.getNonBillableHours();
+        return timeCards;
+    }
+
     /**
-     * Returns Invoices from db.
+     * Returns Consultants from db.
      * @return
      */
-    public List<ClientAccount> getConsultants(){
+    public List<Consultant> getConsultants(){
+        Statement statement;
+        ResultSet result;
+        List<Consultant> consultants = new ArrayList<>();
+        try {
+            statement = this.connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            result = statement.executeQuery("SELECT * FROM consultants");
+            result.last();
+            int numberOfRows = result.getRow();
+            result.first();
+            for (int i=0; i < numberOfRows; i++){
+                PersonalName contact = new PersonalName(
+                        result.getString("last_name"),
+                        result.getString("first_name"),
+                        result.getString("middle_name")
+                );
+                Consultant consultant = new Consultant(contact);
+                consultants.add(consultant);
+                result.next();
+            }
 
-        return new ArrayList<>();
+        } catch (SQLException exception) {
+            logger.error(exception.getMessage());
+        }
+        return consultants;
+    }
+
+    private List<ConsultantTime> getBillableHours(){
+        Statement statement;
+        ResultSet result;
+        List<ConsultantTime> times = new ArrayList<>();
+        try {
+            statement = this.connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            result = statement.executeQuery("SELECT * FROM billable_hours");
+            result.last();
+            int numberOfRows = result.getRow();
+            result.first();
+            for (int i=0; i < numberOfRows; i++){
+                ConsultantTime time = new ConsultantTime(
+                        LocalDate.parse(result.getString("date")),
+                        this.clients.get(result.getInt("client_id") - 1),
+                        Skill.valueOf(result.getString("skill")),
+                        result.getInt("hours"));
+                times.add(time);
+                this.timeCards.get(result.getInt("timecard_id")-1).addConsultantTime(time);
+
+                result.next();
+            }
+
+        } catch (SQLException exception) {
+            logger.error(exception.getMessage());
+        }
+        return times;
+    }
+
+    private List<ConsultantTime> getNonBillableHours(){
+        Statement statement;
+        ResultSet result;
+        List<ConsultantTime> times = new ArrayList<>();;
+        try {
+            statement = this.connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            result = statement.executeQuery("SELECT * FROM non_billable_hours");
+            result.last();
+            int numberOfRows = result.getRow();
+            result.first();
+            for (int i=0; i < numberOfRows; i++){
+                ConsultantTime time = new ConsultantTime(
+                        LocalDate.parse(result.getString("date")),
+                        NonBillableAccount.valueOf(result.getString("ACCOUNT_NAME")),
+                        Skill.valueOf("UNKNOWN_SKILL"),
+                        result.getInt("hours"));
+                times.add(time);
+                this.timeCards.get(result.getInt("timecard_id")-1).addConsultantTime(time);
+                result.next();
+            }
+
+        } catch (SQLException exception) {
+            logger.error(exception.getMessage());
+        }
+        return times;
     }
 
     /**
@@ -185,9 +295,16 @@ public class DbServer {
      * @param year
      * @return
      */
-    public List<ClientAccount> getInvoice(ClientAccount client, Month month, int year){
+    public Invoice getInvoice(ClientAccount client, Month month, int year){
+        List<TimeCard> timeCards = this.getTimeCards();
+        final List<TimeCard> timeCardList = TimeCardListUtil
+                .getTimeCardsForDateRange(timeCards, new DateRange(TEST_INVOICE_MONTH, TEST_INVOICE_YEAR));
+        Invoice invoice = new Invoice(client, month, year);
+        for (final TimeCard currentTimeCard : timeCardList) {
+            invoice.extractLineItems(currentTimeCard);
+        }
 
-        return new ArrayList<>();
+        return invoice;
     }
 
     /**
