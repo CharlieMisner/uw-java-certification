@@ -16,6 +16,8 @@ public class CommandProcessor {
         this.clientList = clientList;
     }
     public void execute(AddClientCommand command){
+        System.out.println(command.getTarget());
         clientList.add(command.getTarget());
+
     }
 }

@@ -31,4 +31,7 @@ public abstract class AbstractCommand<T> implements Command<T> {
         return this.getClass().getName();
     }
 
+    public void setTarget(T target) {
+        this.target = target;
+    }
 }
