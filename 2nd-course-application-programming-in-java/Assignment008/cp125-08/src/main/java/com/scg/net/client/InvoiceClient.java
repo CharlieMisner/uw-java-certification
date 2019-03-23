@@ -2,6 +2,7 @@ package com.scg.net.client;
 
 import com.scg.domain.ClientAccount;
 import com.scg.domain.TimeCard;
+import com.scg.net.cmd.AbstractCommand;
 import com.scg.net.cmd.AddClientCommand;
 import com.scg.util.Address;
 import com.scg.util.PersonalName;
@@ -49,7 +50,8 @@ public class InvoiceClient {
                 new PersonalName("Joe", "Shmoe"),
                 new Address("A", "NY", StateCode.WA, "98074"));
         try {
-            output.writeObject(new AddClientCommand(firstClient));
+            AbstractCommand<ClientAccount> firstClientCommand = new AddClientCommand(firstClient);
+            output.writeObject(firstClientCommand);
         } catch (IOException ioException){
             ioException.printStackTrace();
         }

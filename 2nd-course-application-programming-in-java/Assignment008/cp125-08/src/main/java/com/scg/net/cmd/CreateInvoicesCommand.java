@@ -1,4 +1,16 @@
 package com.scg.net.cmd;
 
-public class CreateInvoicesCommand {
+import java.io.Serializable;
+import java.time.LocalDate;
+
+public class CreateInvoicesCommand extends AbstractCommand<LocalDate> implements Serializable {
+
+    public CreateInvoicesCommand(LocalDate target){
+        this.target = target;
+    }
+
+    public void execute(){
+        receiver.execute(this);
+    }
+
 }

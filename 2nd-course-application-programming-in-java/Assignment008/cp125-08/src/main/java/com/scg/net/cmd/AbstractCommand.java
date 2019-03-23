@@ -2,14 +2,16 @@ package com.scg.net.cmd;
 
 import com.scg.net.server.CommandProcessor;
 
-public abstract class AbstractCommand<T> implements Command<T> {
+import java.io.Serializable;
+
+public abstract class AbstractCommand<T> implements Command<T>, Serializable {
 
     public CommandProcessor receiver;
     public T target;
 
     public AbstractCommand(T target){
-        this.target = target;
-    }
+
+    };
 
     public AbstractCommand(){
 
