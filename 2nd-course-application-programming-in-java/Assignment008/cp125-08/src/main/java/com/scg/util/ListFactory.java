@@ -36,7 +36,7 @@ public final class ListFactory implements Serializable {
     private static final int SECOND_CLIENT_NDX = 1;
 
     /** This class' logger. */
-    private static final Logger logger = LoggerFactory.getLogger("InitLists");
+    private static final Logger logger = LoggerFactory.getLogger("ListFactory");
 
     /** The start month for our test cases. */
     private static final Month TIMECARD_START_MONTH = Month.FEBRUARY;

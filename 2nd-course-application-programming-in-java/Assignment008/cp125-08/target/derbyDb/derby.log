@@ -1,14 +1,15 @@
-Fri Mar 15 23:28:44 PDT 2019 : Apache Derby Network Server - 10.14.2.0 - (1828579) started and ready to accept connections on port 1527
+Fri Mar 22 12:56:29 PDT 2019 : Apache Derby Network Server - 10.14.2.0 - (1828579) started and ready to accept connections on port 1527
 ----------------------------------------------------------------
-Fri Mar 15 23:28:44 PDT 2019:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0169-8530-394c-00004ee9df7b 
-on database directory memory:C:\dev\learning\uw-java-certification\2nd-course-application-programming-in-java\Assignment007\cp125-07\target\derbyDb\scgDb with class loader java.net.URLClassLoader@269c1aee 
-Loaded from file:/C:/Users/charl/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
+Fri Mar 22 12:56:29 PDT 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0169-a6f9-e8db-00004ee9df7b 
+on database directory memory:C:\training\uw-java-certification\2nd-course-application-programming-in-java\Assignment008\cp125-08\target\derbyDb\scgDb with class loader java.net.URLClassLoader@32a0b4bc 
+Loaded from file:/C:/Users/chq-charliem/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
 java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_181-b13
-user.dir=C:\dev\learning\uw-java-certification\2nd-course-application-programming-in-java\Assignment007\cp125-07
+java.runtime.version=1.8.0_191-b12
+user.dir=C:\training\uw-java-certification\2nd-course-application-programming-in-java\Assignment008\cp125-08
 os.name=Windows 10
 os.arch=amd64
 os.version=10.0
 derby.system.home=target/derbyDb
 Database Class Loader started - derby.database.classpath=''
+Fri Mar 22 13:35:16 PDT 2019 : Apache Derby Network Server - 10.14.2.0 - (1828579) shutdown
