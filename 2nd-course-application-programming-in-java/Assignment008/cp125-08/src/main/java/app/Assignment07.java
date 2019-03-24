@@ -81,11 +81,11 @@ public class Assignment07 {
             printInvoices(invoices, consoleWrtr);
 
             // Now print it to a file
-            try (PrintWriter fileWriter = new PrintWriter("invoices.txt", ENCODING)) {
-                printInvoices(invoices, fileWriter);
-            } catch (final IOException ex) {
-                log.error("Unable to print invoice.", ex);
-            }
+//            try (PrintWriter fileWriter = new PrintWriter("invoices.txt", ENCODING)) {
+//                printInvoices(invoices, fileWriter);
+//            } catch (final IOException ex) {
+//                log.error("Unable to print invoice.", ex);
+//            }
         }
     }
 

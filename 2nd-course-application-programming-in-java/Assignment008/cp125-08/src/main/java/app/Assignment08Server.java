@@ -16,7 +16,7 @@ public class Assignment08Server {
 
     public static void main(String args[]){
         ListFactory.populateLists(accounts, consultants, new ArrayList<>());
-        InvoiceServer invoiceServer = new InvoiceServer(DEFAULT_PORT, accounts, consultants, "test");
+        InvoiceServer invoiceServer = new InvoiceServer(DEFAULT_PORT, accounts, consultants, "invoices");
         invoiceServer.run();
     }
 }

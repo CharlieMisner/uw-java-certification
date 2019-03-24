@@ -26,6 +26,8 @@ public class InvoiceServer {
     private List<ClientAccount> clientList;
     private List<Consultant> consultantList;
     private String outputDirectoryName;
+    private String currentCommandType = "";
+    private boolean shutDown = false;
 
     public InvoiceServer(int port, List<ClientAccount> clientList, List<Consultant> consultantList, String outputDirectoryName){
         this.port = port;
@@ -34,6 +36,9 @@ public class InvoiceServer {
         this.outputDirectoryName = outputDirectoryName;
     }
 
+    /**
+     * Runs server.
+     */
     public void run(){
         try{
             // Runs server on port
@@ -46,6 +51,7 @@ public class InvoiceServer {
             this.inputStream = new ObjectInputStream(client.getInputStream());
             // Create receiver
             this.receiver = new CommandProcessor(client, clientList, consultantList, this);
+            this.receiver.setOutPutDirectoryName(this.outputDirectoryName);
             this.serviceConnection(client);
 
         } catch (IOException exception) {
@@ -54,27 +60,61 @@ public class InvoiceServer {
 
     }
 
+    /**
+     * Manages connection
+     * @param client
+     */
     public void serviceConnection(Socket client){
-        boolean isShutdown = false;
+        this.currentCommandType = "";
         System.out.println("Client Connected");
-        while(!isShutdown){
+        while(!currentCommandType.equals("DisconnectCommand")){
             try{
+                //System.out.println(this.currentCommandType);
                 Command currentCommand = (Command)this.inputStream.readObject();
+                this.currentCommandType = getCommandType(currentCommand);
                 currentCommand.setReceiver(this.receiver);
                 currentCommand.execute();
-
-                isShutdown = true;
             } catch (ClassNotFoundException exception) {
+                logger.error("Class not found");
+                this.disconnect();
+            } catch (IOException exception){
                 exception.printStackTrace();
-                isShutdown = true;
-            }catch (IOException exception) {
-                exception.printStackTrace();
-                isShutdown = true;
+                this.disconnect();
+                this.currentCommandType = "DisconnectCommand";
+                //
             }
+        }
+        this.disconnect();
+
+    }
+
+    /**
+     * Gets command type.
+     * @param command
+     * @return
+     */
+    private String getCommandType(Command command){
+        return command.getClass().getSimpleName();
+    }
+
+    /**
+     * Disconnect.
+     */
+    private void disconnect(){
+        try {
+            inputStream.close();
+            client.close();
+        }catch (IOException exception) {
+            exception.printStackTrace();
         }
     }
 
-    public void shutDown(){
-
+    private void shutdown(){
+        try {
+            client.close();
+            inputStream.close();
+        }catch (IOException exception) {
+            exception.printStackTrace();
+        }
     }
 }
