@@ -65,15 +65,29 @@ public class InitDb {
             DbServer dataBase = new DbServer(DB_URL, DB_USERNAME, DB_PASSWORD);
 
             for (ClientAccount client: accounts) {
-                dataBase.addClient(client);
+                try {
+                    dataBase.addClient(client);
+                } catch (SQLException exception) {
+                    logger.error(exception.getMessage());
+                }
+
             }
 
             for (Consultant consultant: consultants) {
-                dataBase.addConsultant(consultant);
+                try {
+                    dataBase.addConsultant(consultant);
+                } catch (SQLException exception) {
+                    logger.error(exception.getMessage());
+                }
+
             }
 
             for (TimeCard timeCard : timeCards) {
-                dataBase.addTimeCard(timeCard);
+                try {
+                    dataBase.addTimeCard(timeCard);
+                } catch (SQLException exception) {
+                    logger.error(exception.getMessage());
+                }
             }
         }
     }

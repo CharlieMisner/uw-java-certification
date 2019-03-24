@@ -23,7 +23,7 @@ public class Assignment07 {
     private static final String ENCODING = "ISO-8859-1";
 
     /** This class' logger. */
-    private static final Logger log = LoggerFactory.getLogger(Assignment05.class);
+    private static final Logger log = LoggerFactory.getLogger(Assignment07.class);
 
     private static final String DB_URL = "jdbc:derby://localhost:1527/memory:scgDb";
     private static final String DB_USERNAME = "student";

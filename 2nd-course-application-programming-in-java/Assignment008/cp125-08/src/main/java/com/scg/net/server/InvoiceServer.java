@@ -16,7 +16,6 @@ import java.util.List;
 public class InvoiceServer {
 
     private static final Logger logger = LoggerFactory.getLogger(InvoiceServer.class);
-    private final String SHUTDOWN_COMMAND = "ShutdownCommand";
 
     private Socket client = null;
     private ServerSocket server = null;
@@ -27,7 +26,6 @@ public class InvoiceServer {
     private List<Consultant> consultantList;
     private String outputDirectoryName;
     private String currentCommandType = "";
-    private boolean shutDown = false;
 
     public InvoiceServer(int port, List<ClientAccount> clientList, List<Consultant> consultantList, String outputDirectoryName){
         this.port = port;
@@ -46,14 +44,16 @@ public class InvoiceServer {
             System.out.println("Server started");
             System.out.println("Waiting for a client ...");
             // Connects client and Server
-            client = server.accept();
-            // Takes objects from clients
-            this.inputStream = new ObjectInputStream(client.getInputStream());
-            // Create receiver
-            this.receiver = new CommandProcessor(client, clientList, consultantList, this);
-            this.receiver.setOutPutDirectoryName(this.outputDirectoryName);
-            this.serviceConnection(client);
-
+            while(!this.currentCommandType.equals("ShutdownCommand")){
+                client = server.accept();
+                // Takes objects from clients
+                this.inputStream = new ObjectInputStream(client.getInputStream());
+                // Create receiver
+                this.receiver = new CommandProcessor(client, clientList, consultantList, this);
+                this.receiver.setOutPutDirectoryName(this.outputDirectoryName);
+                this.serviceConnection(client);
+            }
+            this.shutdown();
         } catch (IOException exception) {
             logger.error(exception.getMessage());
         }
@@ -67,25 +67,27 @@ public class InvoiceServer {
     public void serviceConnection(Socket client){
         this.currentCommandType = "";
         System.out.println("Client Connected");
-        while(!currentCommandType.equals("ShutdownCommand")){
+        while(!currentCommandType.equals("DisconnectCommand")){
             try{
                 //System.out.println(this.currentCommandType);
                 Command currentCommand = (Command)this.inputStream.readObject();
                 this.currentCommandType = getCommandType(currentCommand);
                 currentCommand.setReceiver(this.receiver);
                 currentCommand.execute();
+                if(this.currentCommandType.equals("ShutdownCommand")){
+                    break;
+                }
             } catch (ClassNotFoundException exception) {
                 logger.error("Class not found");
                 this.disconnect();
+                this.currentCommandType = "DisconnectCommand";
             } catch (IOException exception){
                 exception.printStackTrace();
                 this.disconnect();
                 this.currentCommandType = "DisconnectCommand";
-                //
             }
         }
         this.disconnect();
-
     }
 
     /**
@@ -98,23 +100,30 @@ public class InvoiceServer {
     }
 
     /**
-     * Disconnect.
+     * Disconnects the socket.
      */
     private void disconnect(){
         try {
             inputStream.close();
             client.close();
+            System.out.println("Client Disconnected");
         }catch (IOException exception) {
             exception.printStackTrace();
         }
     }
 
+    /**
+     * Shutsdown the server.
+     */
     private void shutdown(){
         try {
+            System.out.println("Shutting down the server");
             client.close();
             inputStream.close();
+            this.server.close();
         }catch (IOException exception) {
             exception.printStackTrace();
         }
+        System.out.println("Server Shutdown Complete.");
     }
 }

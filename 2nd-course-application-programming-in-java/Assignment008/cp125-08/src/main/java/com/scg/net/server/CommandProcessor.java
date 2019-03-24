@@ -10,9 +10,7 @@ import com.scg.util.TimeCardListUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.Console;
 import java.io.IOException;
-import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.time.LocalDate;
@@ -23,6 +21,9 @@ import java.util.Locale;
 
 import static com.scg.util.ListFactory.TEST_INVOICE_YEAR;
 
+/**
+ * @author Charlie Misner
+ */
 public class CommandProcessor {
 
     private static final Logger logger = LoggerFactory.getLogger(CommandProcessor.class);
@@ -113,7 +114,6 @@ public class CommandProcessor {
         }
 
         for (final Invoice invoice : invoices) {
-            // Now print it to a file
             String invoiceFileName = String.format(
                     "./target/%s/%s-%s-Invoice.txt",
                     this.outPutDirectoryName,

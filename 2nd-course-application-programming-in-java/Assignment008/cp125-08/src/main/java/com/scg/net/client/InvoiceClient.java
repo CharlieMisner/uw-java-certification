@@ -16,6 +16,9 @@ import java.net.UnknownHostException;
 import java.time.LocalDate;
 import java.util.List;
 
+/**
+ * @author Charlie Misner
+ */
 public class InvoiceClient {
 
     private static final Logger logger = LoggerFactory.getLogger(InvoiceClient.class);
@@ -50,14 +53,14 @@ public class InvoiceClient {
             this.createInvoices(this.output);
             //Send disconnect command.
             this.sendDisconnect(this.output);
-            this.sendShutdown(this.output);
+            //this.sendShutdown(this.output);
             System.out.println("Sending Disconnect");
-//            try {
-//                this.socket.close();
-//                this.output.close();
-//            }catch(IOException i) {
-//                logger.error(i.getMessage());
-//            }
+            try {
+                this.socket.close();
+                this.output.close();
+            }catch(IOException i) {
+                logger.error(i.getMessage());
+            }
         } catch (UnknownHostException exception){
             logger.error(exception.getMessage());
         } catch (IOException ioException){
@@ -65,11 +68,26 @@ public class InvoiceClient {
         }
 
         try {
-            socket.close();
-            output.close();
-        }catch(IOException i) {
-            logger.error(i.getMessage());
+            this.socket = new Socket(this.host, this.port);
+            System.out.println("Client started");
+            System.out.println("Connecting to Server for Shutdown ...");
+            //Create output stream.
+            this.output = new ObjectOutputStream(this.socket.getOutputStream());
+            //Send commands with data.
+            this.sendShutdown(this.output);
+            System.out.println("Sending Shutdown");
+            try {
+                this.socket.close();
+                this.output.close();
+            }catch(IOException i) {
+                logger.error(i.getMessage());
+            }
+        } catch (UnknownHostException exception){
+            logger.error(exception.getMessage());
+        } catch (IOException ioException){
+            logger.error(ioException.getMessage());
         }
+
     }
 
     /**

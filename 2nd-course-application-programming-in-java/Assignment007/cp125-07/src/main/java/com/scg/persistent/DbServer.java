@@ -2,6 +2,7 @@ package com.scg.persistent;
 
 import com.scg.domain.*;
 import com.scg.util.*;
+import org.apache.derby.client.am.SqlException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -42,12 +43,13 @@ public class DbServer {
      * Adds client to DB
      * @param client
      */
-    public void addClient(ClientAccount client){
+    public void addClient(ClientAccount client) throws SQLException{
         Statement statement;
         try {
             statement = this.connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
             statement.executeUpdate(generateClientInsertString(client));
         } catch (SQLException exception) {
+            connection.rollback();
             logger.error(exception.getMessage());
         }
     }
@@ -56,12 +58,13 @@ public class DbServer {
      * Adds consultant to DB
      * @param consultant
      */
-    public void addConsultant(Consultant consultant){
+    public void addConsultant(Consultant consultant) throws SQLException{
         Statement statement;
         try {
             statement = this.connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
             statement.executeUpdate(generateConsultantInsertString(consultant));
         } catch (SQLException exception) {
+            connection.rollback();
             logger.error(exception.getMessage());
         }
     }
@@ -70,7 +73,7 @@ public class DbServer {
      * Adds timecard to DB
      * @param timeCard
      */
-    public void addTimeCard(TimeCard timeCard){
+    public void addTimeCard(TimeCard timeCard) throws SQLException {
         Statement statement;
         try {
             statement = this.connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
@@ -79,6 +82,7 @@ public class DbServer {
                 addHours(consultantTime, getTimeCardId(timeCard));
             }
         } catch (SQLException exception) {
+            connection.rollback();
             logger.error(exception.getMessage());
         }
     }
@@ -88,12 +92,13 @@ public class DbServer {
      * @param time
      * @param timeCardId
      */
-    public void addHours(ConsultantTime time, int timeCardId) {
+    public void addHours(ConsultantTime time, int timeCardId) throws SQLException {
         Statement statement;
         try {
             statement = this.connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
             statement.executeUpdate(generateHoursInsertString(time, timeCardId));
         } catch (SQLException exception) {
+            connection.rollback();
             logger.error(exception.getMessage());
         }
     }
@@ -319,6 +324,11 @@ public class DbServer {
         }
     }
 
+    /**
+     * Creates sql command for client insert
+     * @param client
+     * @return
+     */
     private String generateClientInsertString(ClientAccount client){
         StringBuilder string = new StringBuilder();
         String propertiesList = String.format("('%s', '%s', '%s', '%s', '%s','%s', '%s', '%s')",
@@ -339,6 +349,11 @@ public class DbServer {
         return string.toString();
     }
 
+    /**
+     * Creates sql to insert consultant
+     * @param consultant
+     * @return
+     */
     private String generateConsultantInsertString(Consultant consultant){
         StringBuilder string = new StringBuilder();
         String propertiesList = String.format("('%s', '%s', '%s')",
@@ -354,6 +369,11 @@ public class DbServer {
         return string.toString();
     }
 
+    /**
+     * Creates sql to insert timecard
+     * @param timeCard
+     * @return
+     */
     private String generateTimeCardInsertString(TimeCard timeCard){
         int consultantId = this.getConsultantId(timeCard.getConsultant());
         StringBuilder string = new StringBuilder();
@@ -369,6 +389,12 @@ public class DbServer {
         return string.toString();
     }
 
+    /**
+     * Creates sql to create hours
+     * @param time
+     * @param timeCardId
+     * @return
+     */
     private String generateHoursInsertString(ConsultantTime time, int timeCardId){
         StringBuilder string = new StringBuilder();
 
