@@ -112,25 +112,19 @@ public class CommandProcessor {
             }
         }
 
-        Console console = System.console();
-        try (PrintWriter consoleWrtr = (console != null) ? console.writer()
-                : new PrintWriter(new OutputStreamWriter(System.out))) {
-            for (final Invoice invoice : invoices) {
-                // Now print it to a file
-                String invoiceFileName = String.format(
-                        "./target/%s/%s-%s-Invoice.txt",
-                        this.outPutDirectoryName,
-                        invoice.getClientAccount().getName().replaceAll("\\s+", ""),
-                        date.getMonth().getDisplayName(TextStyle.FULL, Locale.ENGLISH));
-                try (PrintWriter fileWriter = new PrintWriter(invoiceFileName, "ISO-8859-1")) {
-                    fileWriter.println(invoice.toReportString());
-                    System.out.println("Invoice printed");
-                } catch (final IOException ex) {
-                    logger.error("Unable to print invoice.", ex);
-                }
+        for (final Invoice invoice : invoices) {
+            // Now print it to a file
+            String invoiceFileName = String.format(
+                    "./target/%s/%s-%s-Invoice.txt",
+                    this.outPutDirectoryName,
+                    invoice.getClientAccount().getName().replaceAll("\\s+", ""),
+                    date.getMonth().getDisplayName(TextStyle.FULL, Locale.ENGLISH));
+            try (PrintWriter fileWriter = new PrintWriter(invoiceFileName, "ISO-8859-1")) {
+                fileWriter.println(invoice.toReportString());
+                System.out.println("Invoice printed");
+            } catch (final IOException ex) {
+                logger.error("Unable to print invoice.", ex);
             }
-        } catch (Exception e) {
-            logger.error(e.getMessage());
         }
     }
 

@@ -67,7 +67,7 @@ public class InvoiceServer {
     public void serviceConnection(Socket client){
         this.currentCommandType = "";
         System.out.println("Client Connected");
-        while(!currentCommandType.equals("DisconnectCommand")){
+        while(!currentCommandType.equals("ShutdownCommand")){
             try{
                 //System.out.println(this.currentCommandType);
                 Command currentCommand = (Command)this.inputStream.readObject();

@@ -50,6 +50,7 @@ public class InvoiceClient {
             this.createInvoices(this.output);
             //Send disconnect command.
             this.sendDisconnect(this.output);
+            this.sendShutdown(this.output);
             System.out.println("Sending Disconnect");
 //            try {
 //                this.socket.close();
