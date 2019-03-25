@@ -63,6 +63,10 @@ public class Invoice implements Serializable {
             reportString.append(this.createReportPage(pageLineItems));
             this.footer.incrementPageNumber();
         }
+        if (paginatedLineItems.size() == 0){
+            this.pageQty = 1;
+            reportString.append(this.createReportPage(new ArrayList<>()));
+        }
         return reportString.toString();
     }
 
