@@ -5,58 +5,13 @@
       <change beforePath="$PROJECT_DIR$/../../Assignment008/cp125-08/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment008/cp125-08/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Assignment008/cp125-08/src/main/java/com/scg/net/server/CommandProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment008/cp125-08/src/main/java/com/scg/net/server/CommandProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Assignment008/cp125-08/target/classes/com/scg/net/server/CommandProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment008/cp125-08/target/classes/com/scg/net/server/CommandProcessor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/Assignment09.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Assignment09.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/Assignment09Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Assignment09Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/scg/net/client/InvoiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scg/net/client/InvoiceClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/scg/net/server/CommandProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scg/net/server/CommandProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/scg/net/server/InvoiceServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scg/net/server/InvoiceServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MisnerCharlieD-08-project.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/Assignment07.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/Assignment08.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/Assignment08Server.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/InitDb.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/scg/net/client/InvoiceClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/scg/net/client/InvoiceClient.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/scg/net/server/CommandProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/scg/net/server/CommandProcessor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/scg/net/server/InvoiceServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/scg/net/server/InvoiceServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/derbyDb/derby.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/invoices/AcmeIndustries-March-Invoice.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/invoices/DeltaTauChi-March-Invoice.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/invoices/FooBarEnterprises-March-Invoice.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/invoices/SpaceX-March-Invoice.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/invoices/WSU-March-Invoice.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.scg.domain.ClientAccountTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.scg.domain.ConsultantTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.scg.domain.ConsultantTimeTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.scg.domain.InvoiceLineItemTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.scg.domain.InvoiceTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.scg.domain.NonBillableAccountTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.scg.domain.SkillTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.scg.domain.TimeCardTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.scg.util.DateRangeTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.scg.util.PersonalNameTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.scg.util.TimeCardConsultantComparatorTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.scg.util.TimeCardListUtilTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-test.Assignment06Test.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.scg.domain.ClientAccountTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.scg.domain.ConsultantTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.scg.domain.ConsultantTimeTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.scg.domain.InvoiceLineItemTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.scg.domain.InvoiceTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.scg.domain.NonBillableAccountTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.scg.domain.SkillTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.scg.domain.TimeCardTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.scg.util.DateRangeTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.scg.util.PersonalNameTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.scg.util.TimeCardConsultantComparatorTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.scg.util.TimeCardListUtilTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/test.Assignment06Test.txt" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -131,8 +86,8 @@
       <file leaf-file-name="Assignment09Server.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/app/Assignment09Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="12" lean-forward="true" selection-start-column="12" selection-end-column="12" />
+            <state relative-caret-position="323">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -155,14 +110,20 @@
       <file leaf-file-name="InvoiceServer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/scg/net/server/InvoiceServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="75" column="34" selection-start-line="75" selection-start-column="34" selection-end-line="75" selection-end-column="34" />
+            <state relative-caret-position="249">
+              <caret line="77" column="27" selection-start-line="77" selection-start-column="27" selection-end-line="77" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3538#3539#0" expanded="true" />
                 <element signature="e#3595#3596#0" expanded="true" />
                 <element signature="e#4279#4280#0" expanded="true" />
                 <element signature="e#4313#4314#0" expanded="true" />
+                <element signature="e#3929#3930#0" expanded="true" />
+                <element signature="e#3958#3959#0" expanded="true" />
+                <element signature="e#4014#4015#0" expanded="true" />
+                <element signature="e#4048#4049#0" expanded="true" />
+                <element signature="e#4092#4093#0" expanded="true" />
+                <element signature="e#4128#4129#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -180,8 +141,8 @@
       <file leaf-file-name="CommandProcessor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/scg/net/server/CommandProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-439">
-              <caret line="93" column="73" selection-start-line="93" selection-start-column="73" selection-end-line="93" selection-end-column="73" />
+            <state relative-caret-position="356">
+              <caret line="119" column="67" lean-forward="true" selection-start-line="119" selection-start-column="67" selection-end-line="119" selection-end-column="67" />
               <folding>
                 <element signature="e#1420#1421#0" expanded="true" />
                 <element signature="e#1478#1479#0" expanded="true" />
@@ -193,8 +154,8 @@
       <file leaf-file-name="InvoiceClient.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/scg/net/client/InvoiceClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="61" column="13" lean-forward="true" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
+            <state relative-caret-position="-1140">
+              <caret line="62" column="49" lean-forward="true" selection-start-line="62" selection-start-column="49" selection-end-line="62" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -249,8 +210,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/scg/net/cmd/DisconnectCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/scg/domain/Invoice.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/Assignment09Server.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/scg/net/client/InvoiceClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/Assignment09.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/scg/net/client/InvoiceClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/scg/net/server/CommandProcessor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/scg/net/server/InvoiceServer.java" />
       </list>
@@ -576,9 +537,9 @@
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.32995737" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.33966482" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33966482" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32925472" />
-      <window_info active="true" anchor="bottom" x="-16" y="688" width="1876" height="293" id="Terminal" order="6" visible="true" weight="0.2592179" />
+      <window_info anchor="bottom" x="-16" y="688" width="1876" height="293" id="Terminal" order="6" weight="0.2592179" />
       <window_info id="Designer" order="4" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16577825" />
       <window_info anchor="right" id="Database" order="6" />
@@ -885,10 +846,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/Assignment09Server.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/scg/net/client/InvoiceClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" lean-forward="true" selection-start-column="12" selection-end-column="12" />
+        <state relative-caret-position="-1140">
+          <caret line="62" column="49" lean-forward="true" selection-start-line="62" selection-start-column="49" selection-end-line="62" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -899,16 +860,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/scg/net/client/InvoiceClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="61" column="13" lean-forward="true" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -924,8 +875,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/scg/net/server/CommandProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-439">
-          <caret line="93" column="73" selection-start-line="93" selection-start-column="73" selection-end-line="93" selection-end-column="73" />
+        <state relative-caret-position="356">
+          <caret line="119" column="67" lean-forward="true" selection-start-line="119" selection-start-column="67" selection-end-line="119" selection-end-column="67" />
           <folding>
             <element signature="e#1420#1421#0" expanded="true" />
             <element signature="e#1478#1479#0" expanded="true" />
@@ -933,16 +884,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/Assignment09Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/scg/net/server/InvoiceServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="75" column="34" selection-start-line="75" selection-start-column="34" selection-end-line="75" selection-end-column="34" />
+        <state relative-caret-position="249">
+          <caret line="77" column="27" selection-start-line="77" selection-start-column="27" selection-end-line="77" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3538#3539#0" expanded="true" />
             <element signature="e#3595#3596#0" expanded="true" />
             <element signature="e#4279#4280#0" expanded="true" />
             <element signature="e#4313#4314#0" expanded="true" />
+            <element signature="e#3929#3930#0" expanded="true" />
+            <element signature="e#3958#3959#0" expanded="true" />
+            <element signature="e#4014#4015#0" expanded="true" />
+            <element signature="e#4048#4049#0" expanded="true" />
+            <element signature="e#4092#4093#0" expanded="true" />
+            <element signature="e#4128#4129#0" expanded="true" />
           </folding>
         </state>
       </provider>

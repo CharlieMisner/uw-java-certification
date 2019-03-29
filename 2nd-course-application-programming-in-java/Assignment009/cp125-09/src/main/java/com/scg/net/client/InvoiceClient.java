@@ -51,8 +51,7 @@ public class InvoiceClient implements Runnable {
             this.sendTimeCards(this.output);
             //Send command to create invoices.
             this.createInvoices(this.output);
-            //Send disconnect command.
-            this.sendDisconnect(this.output);
+            //Send shutdown command.
             this.sendShutdown(this.output);
             try {
                 this.socket.close();
@@ -162,7 +161,7 @@ public class InvoiceClient implements Runnable {
      * Send shutdown.
      * @param output
      */
-    private void sendShutdown(ObjectOutputStream output){
+    public void sendShutdown(ObjectOutputStream output){
         try {
             AbstractCommand<Void> shutdownCommand = new ShutdownCommand();
             System.out.println("Sending Shutdown");

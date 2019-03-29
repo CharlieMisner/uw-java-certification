@@ -91,7 +91,12 @@ public class CommandProcessor implements Runnable{
      * @param command
      */
     public void execute(DisconnectCommand command){
-        System.out.println(command.getClass().getSimpleName()+" received ");
+        System.out.println(command.getClass().getSimpleName()+" received on Thread " + this.threadNumber);
+        try {
+            this.client.close();
+        }catch (IOException exception) {
+            exception.printStackTrace();
+        }
     }
 
     /**
@@ -100,6 +105,16 @@ public class CommandProcessor implements Runnable{
      */
     public void execute(ShutdownCommand command){
         System.out.println(command.getClass().getSimpleName()+" received on Thread " + this.threadNumber);
+        this.server.incrementShutdownCount();
+        try {
+            this.client.close();
+        }catch (IOException exception) {
+            exception.printStackTrace();
+        }
+        if(server.getShutdownCount() == server.getThreadCount()){
+            System.out.println("Shutting down the server.");
+            this.server.shutdown();
+        }
     }
 
     public void setOutPutDirectoryName(String outPutDirectoryName){

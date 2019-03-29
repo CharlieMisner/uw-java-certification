@@ -2,8 +2,6 @@ package com.scg.net.server;
 
 import com.scg.domain.ClientAccount;
 import com.scg.domain.Consultant;
-import com.scg.net.cmd.AbstractCommand;
-import com.scg.net.cmd.AddClientCommand;
 import com.scg.net.cmd.Command;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,6 +19,7 @@ public class InvoiceServer {
     private ObjectInputStream inputStream = null;
     private int port = 0;
     private static int threadCount = 1;
+    private static int shutdownCount = 1;
     private List<ClientAccount> clientList;
     private List<Consultant> consultantList;
     private String outputDirectoryName;
@@ -43,7 +42,7 @@ public class InvoiceServer {
             System.out.println("Server started");
             System.out.println("Waiting for a client ...");
             // Connects client and Server
-            while(!this.currentCommandType.equals("ShutdownCommand")){
+            while(!server.isClosed()){
                 CommandProcessor receiver;
                 Socket client = server.accept();
                 // Create receiver
@@ -54,9 +53,8 @@ public class InvoiceServer {
                 Thread receiverThread = new Thread(receiver);
                 receiverThread.start();
             }
-            this.shutdown();
         } catch (IOException exception) {
-            logger.error(exception.getMessage());
+            exception.printStackTrace();
         }
 
     }
@@ -70,18 +68,14 @@ public class InvoiceServer {
         try{
             // Takes objects from clients
             ObjectInputStream inputStream = new ObjectInputStream(client.getInputStream());
-            String currentCommandType = "";
             System.out.println("Client Connected");
-            while(!currentCommandType.equals("DisconnectCommand")){
+            while(!client.isClosed()){
                     Command currentCommand = (Command)inputStream.readObject();
-                    currentCommandType = getCommandType(currentCommand);
                     currentCommand.setReceiver(receiver);
                     currentCommand.execute();
-                    if(currentCommandType.equals("ShutdownCommand")){
-                        break;
-                    }
             }
             inputStream.close();
+            client.close();
         } catch (ClassNotFoundException exception) {
             logger.error("Class not found");
             currentCommandType = "DisconnectCommand";
@@ -105,10 +99,8 @@ public class InvoiceServer {
     /**
      * Shutsdown the server.
      */
-    private void shutdown(){
+    public synchronized void shutdown(){
         try {
-            System.out.println("Shutting down the server");
-            inputStream.close();
             this.server.close();
         }catch (IOException exception) {
             exception.printStackTrace();
@@ -116,7 +108,19 @@ public class InvoiceServer {
         System.out.println("Server Shutdown Complete.");
     }
 
-    public void incrementThreadCount() {
+    public synchronized void incrementThreadCount() {
         threadCount++;
+    }
+
+    public synchronized void incrementShutdownCount() {
+        shutdownCount++;
+    }
+
+    public static int getThreadCount() {
+        return threadCount;
+    }
+
+    public static int getShutdownCount() {
+        return shutdownCount;
     }
 }
