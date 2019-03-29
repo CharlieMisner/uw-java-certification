@@ -7,7 +7,7 @@ import com.scg.util.ListFactory;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Assignment08 {
+public class Assignment09 {
 
     private static List<TimeCard> timeCards = new ArrayList<>();
     public static final int DEFAULT_PORT = 10888;
@@ -15,7 +15,14 @@ public class Assignment08 {
 
     public static void main(String args[]){
         ListFactory.populateLists(new ArrayList<>(), new ArrayList<>(), timeCards);
-        InvoiceClient client = new InvoiceClient(DEFAULT_HOST, DEFAULT_PORT, timeCards);
-        client.run();
+        InvoiceClient client1 = new InvoiceClient(DEFAULT_HOST, DEFAULT_PORT, timeCards);
+        Thread clientThread1 = new Thread(client1);
+        clientThread1.start();
+        InvoiceClient client2 = new InvoiceClient(DEFAULT_HOST, DEFAULT_PORT, timeCards);
+        Thread clientThread2 = new Thread(client2);
+        clientThread2.start();
+        InvoiceClient client3 = new InvoiceClient(DEFAULT_HOST, DEFAULT_PORT, timeCards);
+        Thread clientThread3 = new Thread(client3);
+        clientThread3.start();
     }
 }

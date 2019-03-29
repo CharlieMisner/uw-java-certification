@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * @author Charlie Misner
  */
-public class InvoiceClient {
+public class InvoiceClient implements Runnable {
 
     private static final Logger logger = LoggerFactory.getLogger(InvoiceClient.class);
 
@@ -53,29 +53,7 @@ public class InvoiceClient {
             this.createInvoices(this.output);
             //Send disconnect command.
             this.sendDisconnect(this.output);
-            //this.sendShutdown(this.output);
-            System.out.println("Sending Disconnect");
-            try {
-                this.socket.close();
-                this.output.close();
-            }catch(IOException i) {
-                logger.error(i.getMessage());
-            }
-        } catch (UnknownHostException exception){
-            logger.error(exception.getMessage());
-        } catch (IOException ioException){
-            logger.error(ioException.getMessage());
-        }
-
-        try {
-            this.socket = new Socket(this.host, this.port);
-            System.out.println("Client started");
-            System.out.println("Connecting to Server for Shutdown ...");
-            //Create output stream.
-            this.output = new ObjectOutputStream(this.socket.getOutputStream());
-            //Send commands with data.
             this.sendShutdown(this.output);
-            System.out.println("Sending Shutdown");
             try {
                 this.socket.close();
                 this.output.close();
@@ -173,6 +151,7 @@ public class InvoiceClient {
     private void sendDisconnect(ObjectOutputStream output){
         try {
             AbstractCommand<Void> disconnectCommand = new DisconnectCommand();
+            System.out.println("Sending Disconnect");
             output.writeObject(disconnectCommand);
         } catch (IOException ioException){
             ioException.printStackTrace();
@@ -186,6 +165,7 @@ public class InvoiceClient {
     private void sendShutdown(ObjectOutputStream output){
         try {
             AbstractCommand<Void> shutdownCommand = new ShutdownCommand();
+            System.out.println("Sending Shutdown");
             output.writeObject(shutdownCommand);
         } catch (IOException ioException){
             ioException.printStackTrace();

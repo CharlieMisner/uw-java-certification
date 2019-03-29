@@ -1,0 +1,48 @@
+The Small Consulting Group 
+ 1616 Index Ct. 
+ Renton, WA 98058 
+ 
+Invoice for: 
+ FooBar Enterprises 
+ 1024 Kilobyte Dr. 
+ Silicone Gulch, CA 94105 
+ Yosemite, Sam  
+
+Date        Consultant         Skill                 Hours     Charge 
+---------------------------------------------------------------------
+2017-03-08  Carl, Coder        Software Engineer     8      $1,200.00 
+2017-03-09  Carl, Coder        Software Engineer     12     $1,800.00 
+2017-03-06  Architect, Ann S.  System Architect      8      $1,600.00 
+2017-03-08  Architect, Ann S.  System Architect      8      $1,600.00 
+2017-03-09  Architect, Ann S.  System Architect      8      $1,600.00 
+
+The Small Consulting Group 
+Page:  1
+=====================================================================
+
+The Small Consulting Group 
+ 1616 Index Ct. 
+ Renton, WA 98058 
+ 
+Invoice for: 
+ FooBar Enterprises 
+ 1024 Kilobyte Dr. 
+ Silicone Gulch, CA 94105 
+ Yosemite, Sam  
+
+Date        Consultant         Skill                 Hours     Charge 
+---------------------------------------------------------------------
+2017-03-10  Architect, Ann S.  System Architect      8      $1,600.00 
+2017-03-11  Architect, Ann S.  System Architect      8      $1,600.00 
+2017-03-13  Architect, Ann S.  System Architect      8      $1,600.00 
+2017-03-14  Architect, Ann S.  System Architect      8      $1,600.00 
+2017-03-17  Architect, Ann S.  System Architect      8      $1,600.00 
+
+Total:
+$15,800.00
+
+The Small Consulting Group 
+Page:  2
+=====================================================================
+
+

@@ -25,17 +25,29 @@ import static com.scg.util.ListFactory.TEST_INVOICE_YEAR;
 /**
  * @author Charlie Misner
  */
-public class CommandProcessor {
+public class CommandProcessor implements Runnable{
 
     private static final Logger logger = LoggerFactory.getLogger(CommandProcessor.class);
     private List<ClientAccount> clientList;
     private List<Consultant> consultantList;
     private List<TimeCard> timeCardList = new ArrayList<>();
     private String outPutDirectoryName;
+    private Socket client;
+    private InvoiceServer server;
+    private int threadNumber;
 
     CommandProcessor(Socket connection, List<ClientAccount> clientList, List<Consultant> consultantList, InvoiceServer server){
         this.clientList = clientList;
         this.consultantList = consultantList;
+        this.server = server;
+        this.client = connection;
+    }
+
+    /**
+     * Executes commands.
+     */
+    public void run(){
+        this.server.serviceConnection(this.client, this);
     }
 
     /**
@@ -43,7 +55,7 @@ public class CommandProcessor {
      * @param command
      */
     public void execute(AddClientCommand command){
-        System.out.println(command.getTarget().getClass().getSimpleName()+" received");
+        System.out.println(command.getTarget().getClass().getSimpleName()+" received on Thread " + this.threadNumber);
         clientList.add(command.getTarget());
     }
 
@@ -52,7 +64,7 @@ public class CommandProcessor {
      * @param command
      */
     public void execute(AddConsultantCommand command){
-        System.out.println(command.getTarget().getClass().getSimpleName()+" received");
+        System.out.println(command.getTarget().getClass().getSimpleName()+" received on Thread " + this.threadNumber);
         consultantList.add(command.getTarget());
     }
 
@@ -61,7 +73,7 @@ public class CommandProcessor {
      * @param command
      */
     public void execute(AddTimeCardCommand command){
-        System.out.println(command.getTarget().getClass().getSimpleName()+" received");
+        System.out.println(command.getTarget().getClass().getSimpleName()+" received on Thread " + this.threadNumber);
         timeCardList.add(command.getTarget());
     }
 
@@ -70,7 +82,7 @@ public class CommandProcessor {
      * @param command
      */
     public void execute(CreateInvoicesCommand command){
-        System.out.println(command.getClass().getSimpleName()+" received");
+        System.out.println(command.getClass().getSimpleName()+" received on Thread " + this.threadNumber);
         this.createInvoices(clientList, timeCardList, command.getTarget());
     }
 
@@ -79,7 +91,7 @@ public class CommandProcessor {
      * @param command
      */
     public void execute(DisconnectCommand command){
-        System.out.println(command.getClass().getSimpleName()+" received");
+        System.out.println(command.getClass().getSimpleName()+" received ");
     }
 
     /**
@@ -87,11 +99,11 @@ public class CommandProcessor {
      * @param command
      */
     public void execute(ShutdownCommand command){
-        System.out.println(command.getClass().getSimpleName()+" received");
+        System.out.println(command.getClass().getSimpleName()+" received on Thread " + this.threadNumber);
     }
 
     public void setOutPutDirectoryName(String outPutDirectoryName){
-        this.outPutDirectoryName = outPutDirectoryName;
+        this.outPutDirectoryName = outPutDirectoryName + this.threadNumber;
     }
 
     /**
@@ -126,11 +138,15 @@ public class CommandProcessor {
                     date.getMonth().getDisplayName(TextStyle.FULL, Locale.ENGLISH));
             try (PrintWriter fileWriter = new PrintWriter(invoiceFileName, "ISO-8859-1")) {
                 fileWriter.println(invoice.toReportString());
-                System.out.println("Invoice printed");
+                System.out.println("Invoice printed on Thread " + this.threadNumber);
             } catch (final IOException ex) {
                 logger.error("Unable to print invoice.", ex);
             }
         }
     }
 
+    public void setThreadNumber(int threadNumber) {
+        this.threadNumber = threadNumber;
+        this.server.incrementThreadCount();
+    }
 }

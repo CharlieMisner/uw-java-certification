@@ -8,7 +8,7 @@ import com.scg.util.ListFactory;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Assignment08Server {
+public class Assignment09Server {
 
     public static final int DEFAULT_PORT = 10888;
     private static List<ClientAccount> accounts = new ArrayList<>();
