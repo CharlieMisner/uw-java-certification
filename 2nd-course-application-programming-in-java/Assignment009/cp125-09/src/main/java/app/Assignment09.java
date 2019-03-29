@@ -24,5 +24,11 @@ public class Assignment09 {
         InvoiceClient client3 = new InvoiceClient(DEFAULT_HOST, DEFAULT_PORT, timeCards);
         Thread clientThread3 = new Thread(client3);
         clientThread3.start();
+        try{
+            Thread.sleep(1000);
+        } catch (InterruptedException exception){
+
+        }
+        InvoiceClient.sendShutdown(DEFAULT_HOST, DEFAULT_PORT);
     }
 }

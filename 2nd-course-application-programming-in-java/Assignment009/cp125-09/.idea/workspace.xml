@@ -2,13 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b4b42d8-e994-4058-9fb5-84c6ab9c1b1c" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/scg/net/server/InvoiceServerShutdownHook.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/scg/net/server/InvoiceServerShutdownHook.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/client-consultant-data/clients.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/client-consultant-data/consultants.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/list-data/clients.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Assignment008/cp125-08/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment008/cp125-08/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Assignment008/cp125-08/src/main/java/com/scg/net/server/CommandProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment008/cp125-08/src/main/java/com/scg/net/server/CommandProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Assignment008/cp125-08/target/classes/com/scg/net/server/CommandProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment008/cp125-08/target/classes/com/scg/net/server/CommandProcessor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/Assignment09.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Assignment09.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scg/domain/ClientAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scg/domain/ClientAccount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/scg/net/client/InvoiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scg/net/client/InvoiceClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/scg/net/server/CommandProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scg/net/server/CommandProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/scg/net/server/InvoiceServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scg/net/server/InvoiceServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/Assignment09.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/Assignment09.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/scg/net/client/InvoiceClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/scg/net/client/InvoiceClient.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/scg/net/server/CommandProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/scg/net/server/CommandProcessor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/scg/net/server/InvoiceServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/scg/net/server/InvoiceServer.class" afterDir="false" />
@@ -95,45 +103,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Assignment09.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/app/Assignment09.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InvoiceServer.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="InvoiceServer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/scg/net/server/InvoiceServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="77" column="27" selection-start-line="77" selection-start-column="27" selection-end-line="77" selection-end-column="27" />
+            <state relative-caret-position="461">
+              <caret line="104" column="34" selection-start-line="104" selection-start-column="34" selection-end-line="104" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3538#3539#0" expanded="true" />
-                <element signature="e#3595#3596#0" expanded="true" />
                 <element signature="e#4279#4280#0" expanded="true" />
                 <element signature="e#4313#4314#0" expanded="true" />
-                <element signature="e#3929#3930#0" expanded="true" />
-                <element signature="e#3958#3959#0" expanded="true" />
-                <element signature="e#4014#4015#0" expanded="true" />
-                <element signature="e#4048#4049#0" expanded="true" />
-                <element signature="e#4092#4093#0" expanded="true" />
-                <element signature="e#4128#4129#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Command.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/scg/net/cmd/Command.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -141,8 +120,8 @@
       <file leaf-file-name="CommandProcessor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/scg/net/server/CommandProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="119" column="67" lean-forward="true" selection-start-line="119" selection-start-column="67" selection-end-line="119" selection-end-column="67" />
+            <state relative-caret-position="153">
+              <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="89" />
               <folding>
                 <element signature="e#1420#1421#0" expanded="true" />
                 <element signature="e#1478#1479#0" expanded="true" />
@@ -151,11 +130,44 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Assignment09.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/app/Assignment09.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="461">
+              <caret line="30" column="9" lean-forward="true" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InvoiceServerShutdownHook.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/scg/net/server/InvoiceServerShutdownHook.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="63" column="21" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClientAccount.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/scg/domain/ClientAccount.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="82" selection-start-line="82" selection-end-line="82" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="InvoiceClient.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/scg/net/client/InvoiceClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1140">
-              <caret line="62" column="49" lean-forward="true" selection-start-line="62" selection-start-column="49" selection-end-line="62" selection-end-column="49" />
+            <state relative-caret-position="1240">
+              <caret line="173" column="49" lean-forward="true" selection-start-line="173" selection-start-column="49" selection-end-line="173" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -183,6 +195,7 @@
       <find>IO exc</find>
       <find>null</find>
       <find>read</find>
+      <find>toStr</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -210,10 +223,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/scg/net/cmd/DisconnectCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/scg/domain/Invoice.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/Assignment09Server.java" />
-        <option value="$PROJECT_DIR$/src/main/java/app/Assignment09.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/scg/net/client/InvoiceClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/scg/net/server/CommandProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/app/Assignment09.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/scg/domain/ClientAccount.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/scg/net/server/InvoiceServer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/scg/net/server/InvoiceServerShutdownHook.java" />
       </list>
     </option>
   </component>
@@ -335,22 +350,18 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="scg" type="462c0819:PsiDirectoryNode" />
               <item name="net" type="462c0819:PsiDirectoryNode" />
-              <item name="cmd" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cp125-06" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cp125-09" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="scg" type="462c0819:PsiDirectoryNode" />
-              <item name="net" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cp125-06" type="b2602c69:ProjectViewProjectNode" />
               <item name="cp125-09" type="462c0819:PsiDirectoryNode" />
               <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cp125-06" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cp125-09" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="client-consultant-data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cp125-06" type="b2602c69:ProjectViewProjectNode" />
@@ -537,9 +548,9 @@
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.32995737" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33966482" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.24134079" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32925472" />
-      <window_info anchor="bottom" x="-16" y="688" width="1876" height="293" id="Terminal" order="6" weight="0.2592179" />
+      <window_info active="true" anchor="bottom" x="-16" y="688" width="1876" height="293" id="Terminal" order="6" visible="true" weight="0.2592179" />
       <window_info id="Designer" order="4" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16577825" />
       <window_info anchor="right" id="Database" order="6" />
@@ -567,27 +578,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/test/Assignment06Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/javax/sql/DataSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="89" column="13" selection-start-line="89" selection-start-column="13" selection-end-line="89" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/scg/domain/InvoiceLineItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/scg/domain/Account.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -613,13 +603,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
           <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/scg/domain/Consultant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-333">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -662,13 +645,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/app/InitLists.java" />
     <entry file="file://$PROJECT_DIR$/ClientList.ser">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/scg/domain/ClientAccount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-261">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/scg/net/cmd/AbstractCommand.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -846,41 +822,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/scg/net/client/InvoiceClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1140">
-          <caret line="62" column="49" lean-forward="true" selection-start-line="62" selection-start-column="49" selection-end-line="62" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/scg/net/cmd/Command.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/Assignment09.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/scg/net/server/CommandProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="119" column="67" lean-forward="true" selection-start-line="119" selection-start-column="67" selection-end-line="119" selection-end-column="67" />
-          <folding>
-            <element signature="e#1420#1421#0" expanded="true" />
-            <element signature="e#1478#1479#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -894,22 +839,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/scg/net/server/InvoiceServer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/scg/net/client/InvoiceClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="77" column="27" selection-start-line="77" selection-start-column="27" selection-end-line="77" selection-end-column="27" />
+        <state relative-caret-position="1240">
+          <caret line="173" column="49" lean-forward="true" selection-start-line="173" selection-start-column="49" selection-end-line="173" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3538#3539#0" expanded="true" />
-            <element signature="e#3595#3596#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/scg/domain/Consultant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="59" column="18" selection-start-line="59" selection-start-column="18" selection-end-line="59" selection-end-column="18" />
+          <folding>
+            <element signature="e#1470#1471#0" expanded="true" />
+            <element signature="e#1508#1509#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/scg/domain/ClientAccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="82" selection-start-line="82" selection-end-line="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/scg/net/server/InvoiceServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="104" column="34" selection-start-line="104" selection-start-column="34" selection-end-line="104" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#4279#4280#0" expanded="true" />
             <element signature="e#4313#4314#0" expanded="true" />
-            <element signature="e#3929#3930#0" expanded="true" />
-            <element signature="e#3958#3959#0" expanded="true" />
-            <element signature="e#4014#4015#0" expanded="true" />
-            <element signature="e#4048#4049#0" expanded="true" />
-            <element signature="e#4092#4093#0" expanded="true" />
-            <element signature="e#4128#4129#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/scg/net/server/CommandProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="89" />
+          <folding>
+            <element signature="e#1420#1421#0" expanded="true" />
+            <element signature="e#1478#1479#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/Assignment09.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="30" column="9" lean-forward="true" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/client-consultant-data/clients.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/client-consultant-data/consultants.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/scg/net/server/InvoiceServerShutdownHook.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="63" column="21" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

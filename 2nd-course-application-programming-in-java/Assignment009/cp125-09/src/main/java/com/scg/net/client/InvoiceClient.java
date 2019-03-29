@@ -38,7 +38,7 @@ public class InvoiceClient implements Runnable {
     /**
      * Runs the client.
      */
-    public void run(){
+    public synchronized void run(){
         try {
             this.socket = new Socket(this.host, this.port);
             System.out.println("Client started");
@@ -51,8 +51,7 @@ public class InvoiceClient implements Runnable {
             this.sendTimeCards(this.output);
             //Send command to create invoices.
             this.createInvoices(this.output);
-            //Send shutdown command.
-            this.sendShutdown(this.output);
+            this.sendDisconnect(this.output);
             try {
                 this.socket.close();
                 this.output.close();
@@ -158,16 +157,24 @@ public class InvoiceClient implements Runnable {
     }
 
     /**
-     * Send shutdown.
-     * @param output
+     * Send shutdown
      */
-    public void sendShutdown(ObjectOutputStream output){
+    public synchronized static void sendShutdown(String host, int port){
         try {
+            Socket socket = new Socket(host, port);
+            System.out.println("Client started");
+            System.out.println("Connecting to Server ...");
+            //Create output stream.
+            ObjectOutputStream output = new ObjectOutputStream(socket.getOutputStream());
             AbstractCommand<Void> shutdownCommand = new ShutdownCommand();
             System.out.println("Sending Shutdown");
             output.writeObject(shutdownCommand);
-        } catch (IOException ioException){
-            ioException.printStackTrace();
+            socket.close();
+            output.close();
+        } catch (UnknownHostException exception){
+            logger.error(exception.getMessage());
+        } catch(IOException i) {
+            logger.error(i.getMessage());
         }
     }
 }

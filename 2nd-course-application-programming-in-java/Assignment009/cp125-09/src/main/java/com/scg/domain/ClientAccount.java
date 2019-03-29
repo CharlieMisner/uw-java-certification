@@ -80,4 +80,5 @@ public class ClientAccount implements Account, Comparable<ClientAccount>, Serial
     public void setAddress(Address address) {
         this.address = address;
     }
+
 }

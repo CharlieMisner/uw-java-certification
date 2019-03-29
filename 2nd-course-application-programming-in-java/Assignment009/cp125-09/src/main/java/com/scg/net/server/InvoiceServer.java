@@ -16,20 +16,19 @@ public class InvoiceServer {
     private static final Logger logger = LoggerFactory.getLogger(InvoiceServer.class);
 
     private ServerSocket server = null;
-    private ObjectInputStream inputStream = null;
-    private int port = 0;
+    private int port;
     private static int threadCount = 1;
     private static int shutdownCount = 1;
     private List<ClientAccount> clientList;
     private List<Consultant> consultantList;
     private String outputDirectoryName;
-    private String currentCommandType = "";
 
     public InvoiceServer(int port, List<ClientAccount> clientList, List<Consultant> consultantList, String outputDirectoryName){
         this.port = port;
         this.clientList = clientList;
         this.consultantList = consultantList;
         this.outputDirectoryName = outputDirectoryName;
+        this.addInvoiceServerShutdownHook();
     }
 
     /**
@@ -54,7 +53,6 @@ public class InvoiceServer {
                 receiverThread.start();
             }
         } catch (IOException exception) {
-            exception.printStackTrace();
         }
 
     }
@@ -78,23 +76,11 @@ public class InvoiceServer {
             client.close();
         } catch (ClassNotFoundException exception) {
             logger.error("Class not found");
-            currentCommandType = "DisconnectCommand";
         } catch (IOException exception){
             exception.printStackTrace();
-            currentCommandType = "DisconnectCommand";
         }
 
     }
-
-    /**
-     * Gets command type.
-     * @param command
-     * @return
-     */
-    private String getCommandType(Command command){
-        return command.getClass().getSimpleName();
-    }
-
 
     /**
      * Shutsdown the server.
@@ -105,22 +91,18 @@ public class InvoiceServer {
         }catch (IOException exception) {
             exception.printStackTrace();
         }
-        System.out.println("Server Shutdown Complete.");
+        System.out.println("Server Shutdown Complete");
     }
 
     public synchronized void incrementThreadCount() {
         threadCount++;
     }
 
-    public synchronized void incrementShutdownCount() {
-        shutdownCount++;
-    }
-
-    public static int getThreadCount() {
-        return threadCount;
-    }
-
-    public static int getShutdownCount() {
-        return shutdownCount;
+    private void addInvoiceServerShutdownHook(){
+        InvoiceServerShutdownHook hook = new InvoiceServerShutdownHook(
+                this.clientList,
+                this.consultantList,
+                "client-consultant-data");
+        Runtime.getRuntime().addShutdownHook(hook);
     }
 }
