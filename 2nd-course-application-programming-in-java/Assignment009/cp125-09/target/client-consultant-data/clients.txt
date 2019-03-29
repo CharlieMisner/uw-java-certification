@@ -1,12 +1,12 @@
-Acme Industries, 
-FooBar Enterprises, 
-Delta Tau Chi, 
-WSU, 
-SpaceX, 
-Delta Tau Chi, 
-WSU, 
-SpaceX, 
-Delta Tau Chi, 
-WSU, 
-SpaceX, 
+Acme Industries 
+FooBar Enterprises 
+Delta Tau Chi 
+WSU 
+SpaceX 
+Delta Tau Chi 
+WSU 
+SpaceX 
+Delta Tau Chi 
+WSU 
+SpaceX 
 
