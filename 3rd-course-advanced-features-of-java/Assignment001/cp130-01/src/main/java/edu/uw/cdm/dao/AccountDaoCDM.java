@@ -1,6 +1,9 @@
 package edu.uw.cdm.dao;
 
+import edu.uw.cdm.account.AddressCDM;
 import edu.uw.ext.framework.account.Account;
+import edu.uw.ext.framework.account.Address;
+import edu.uw.ext.framework.account.CreditCard;
 import edu.uw.ext.framework.dao.AccountDao;
 import org.springframework.util.FileSystemUtils;
 
@@ -46,12 +49,34 @@ public class AccountDaoCDM implements AccountDao, AutoCloseable{
         this.accountFilePath = String.format("./target/accounts/%s", accountName);
         AccountsSer accountHandler = new AccountsSer(this.account, this.accountFilePath, this.ACCOUNT_FILE_NAME);
         Account account = (Account)accountHandler.read();
+        AccountSerialize accountSerialize = new AccountSerialize(this.account, this.accountFilePath);
+        Account binAccount = accountSerialize.read();
+
+//        System.out.println(binAccount.getName());
+//        System.out.println(binAccount.getBalance());
+//        System.out.println(binAccount.getEmail());
+//        System.out.println(binAccount.getPasswordHash());
+
+        Path pathToAddress = Paths.get(this.accountFilePath + "/addressBinary");
+        if(Files.exists(pathToAddress)){
+            AddressSerialize addressSerialize = new AddressSerialize(account.getAddress(), this.accountFilePath);
+            Address binAddress = addressSerialize.read();
+            binAccount.setAddress(binAddress);
+        }
+
+        Path pathToCreditCard = Paths.get(this.accountFilePath + "/creditCardBinary");
+        if(Files.exists(pathToCreditCard)){
+            CreditCardSerialize creditCardSerialize = new CreditCardSerialize(account.getCreditCard(), this.accountFilePath);
+            CreditCard binCreditCard = creditCardSerialize.read();
+            binAccount.setCreditCard(binCreditCard);
+        }
 
         return account;
     }
 
     @Override
     public void setAccount(Account account) {
+        this.deleteAccount(account.getName());
         this.createAccountsDirectory();
         this.account = account;
         this.createAccountDirectory(this.account.getName());
@@ -61,6 +86,19 @@ public class AccountDaoCDM implements AccountDao, AutoCloseable{
         addressHandler.write();
         AccountsSer creditCardHandler = new AccountsSer(this.account, this.accountFilePath, this.CC_FILE_NAME);
         creditCardHandler.write();
+        AccountSerialize accountSerialize = new AccountSerialize(this.account, this.accountFilePath);
+        accountSerialize.write();
+
+        if(this.account.getAddress() != null){
+            AddressSerialize addressSerialize = new AddressSerialize(this.account.getAddress(), this.accountFilePath);
+            addressSerialize.write();
+        }
+        if(this.account.getCreditCard() != null){
+            CreditCardSerialize creditCardSerialize = new CreditCardSerialize(this.account.getCreditCard(), this.accountFilePath);
+            creditCardSerialize.write();
+        }
+
+
     }
 
     private void createAccountsDirectory(){

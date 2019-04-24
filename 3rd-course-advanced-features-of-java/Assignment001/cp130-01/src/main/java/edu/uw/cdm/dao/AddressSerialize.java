@@ -1,17 +1,20 @@
 package edu.uw.cdm.dao;
 
 import edu.uw.cdm.account.AccountCDM;
+import edu.uw.cdm.account.AddressCDM;
 import edu.uw.ext.framework.account.Account;
 import edu.uw.ext.framework.account.AccountException;
+import edu.uw.ext.framework.account.Address;
 
 import java.io.*;
 
-public class AccountSerialize {
+public class AddressSerialize {
 
-    Account account = null;
+    Address address = null;
     private String accountFilePath;
-    public AccountSerialize(Account account, String accountFilePath) {
-        this.account = account;
+
+    public AddressSerialize(Address address, String accountFilePath) {
+        this.address = address;
         this.accountFilePath = accountFilePath;
     }
 
@@ -21,16 +24,13 @@ public class AccountSerialize {
 
         try {
 
-            fos = new FileOutputStream(this.accountFilePath + "/accountBinary");
+            fos = new FileOutputStream(this.accountFilePath + "/addressBinary");
             dos = new DataOutputStream(fos);
 
-            dos.writeUTF(writeString(account.getName()));
-            dos.writeInt(account.getPasswordHash().length);
-            dos.write(account.getPasswordHash());
-            dos.writeInt(account.getBalance());
-            dos.writeUTF(writeString(account.getFullName()));
-            dos.writeUTF(writeString(account.getPhone()));
-            dos.writeUTF(writeString(account.getEmail()));
+            dos.writeUTF(writeString(address.getCity()));
+            dos.writeUTF(writeString(address.getState()));
+            dos.writeUTF(writeString(address.getStreetAddress()));
+            dos.writeUTF(writeString(address.getZipCode()));
             dos.flush();
 
         }
@@ -55,27 +55,21 @@ public class AccountSerialize {
         }
     }
 
-    public Account read(){
+    public Address read(){
 
         FileInputStream fis = null;
         DataInputStream dis = null;
-        Account account = new AccountCDM();
+        Address address = new AddressCDM();
 
         try {
 
-            fis = new FileInputStream(this.accountFilePath + "/accountBinary");
+            fis = new FileInputStream(this.accountFilePath + "/addressBinary");
             dis = new DataInputStream(fis);
 
-
-            account.setName(readString(dis.readUTF()));
-            int passLength = dis.readInt();
-            byte[] passBytes = new byte[passLength];
-            dis.readFully(passBytes);
-            account.setPasswordHash(passBytes);
-            account.setBalance(dis.readInt());
-            account.setFullName(readString(dis.readUTF()));
-            account.setPhone(readString(dis.readUTF()));
-            account.setEmail(readString(dis.readUTF()));
+            address.setCity(readString(dis.readUTF()));
+            address.setState(readString(dis.readUTF()));
+            address.setStreetAddress(readString(dis.readUTF()));
+            address.setZipCode(readString(dis.readUTF()));
 
         }
         catch (FileNotFoundException fnfe) {
@@ -83,9 +77,6 @@ public class AccountSerialize {
         }
         catch (IOException ioe) {
             System.out.println("Error while Reading file" + ioe);
-        }
-        catch (AccountException e) {
-            System.out.println("Account Exception");
         }
         finally {
             try {
@@ -101,7 +92,7 @@ public class AccountSerialize {
             }
         }
 
-        return account;
+        return address;
     }
 
     private String writeString(String value){
@@ -111,5 +102,4 @@ public class AccountSerialize {
     private String readString(String value){
         return value == "null" ? null : value;
     }
-
 }

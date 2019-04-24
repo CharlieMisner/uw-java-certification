@@ -1,17 +1,19 @@
 package edu.uw.cdm.dao;
 
-import edu.uw.cdm.account.AccountCDM;
-import edu.uw.ext.framework.account.Account;
-import edu.uw.ext.framework.account.AccountException;
+import edu.uw.cdm.account.AddressCDM;
+import edu.uw.cdm.account.CreditCardCDM;
+import edu.uw.ext.framework.account.Address;
+import edu.uw.ext.framework.account.CreditCard;
 
 import java.io.*;
 
-public class AccountSerialize {
+public class CreditCardSerialize {
 
-    Account account = null;
+    CreditCard creditCard = null;
     private String accountFilePath;
-    public AccountSerialize(Account account, String accountFilePath) {
-        this.account = account;
+
+    public CreditCardSerialize(CreditCard creditCard, String accountFilePath) {
+        this.creditCard = creditCard;
         this.accountFilePath = accountFilePath;
     }
 
@@ -21,16 +23,14 @@ public class AccountSerialize {
 
         try {
 
-            fos = new FileOutputStream(this.accountFilePath + "/accountBinary");
+            fos = new FileOutputStream(this.accountFilePath + "/creditCardBinary");
             dos = new DataOutputStream(fos);
 
-            dos.writeUTF(writeString(account.getName()));
-            dos.writeInt(account.getPasswordHash().length);
-            dos.write(account.getPasswordHash());
-            dos.writeInt(account.getBalance());
-            dos.writeUTF(writeString(account.getFullName()));
-            dos.writeUTF(writeString(account.getPhone()));
-            dos.writeUTF(writeString(account.getEmail()));
+            dos.writeUTF(writeString(creditCard.getAccountNumber()));
+            dos.writeUTF(writeString(creditCard.getExpirationDate()));
+            dos.writeUTF(writeString(creditCard.getHolder()));
+            dos.writeUTF(writeString(creditCard.getIssuer()));
+            dos.writeUTF(writeString(creditCard.getType()));
             dos.flush();
 
         }
@@ -55,27 +55,22 @@ public class AccountSerialize {
         }
     }
 
-    public Account read(){
+    public CreditCard read(){
 
         FileInputStream fis = null;
         DataInputStream dis = null;
-        Account account = new AccountCDM();
+        CreditCard creditCard = new CreditCardCDM();
 
         try {
 
-            fis = new FileInputStream(this.accountFilePath + "/accountBinary");
+            fis = new FileInputStream(this.accountFilePath + "/creditCardBinary");
             dis = new DataInputStream(fis);
 
-
-            account.setName(readString(dis.readUTF()));
-            int passLength = dis.readInt();
-            byte[] passBytes = new byte[passLength];
-            dis.readFully(passBytes);
-            account.setPasswordHash(passBytes);
-            account.setBalance(dis.readInt());
-            account.setFullName(readString(dis.readUTF()));
-            account.setPhone(readString(dis.readUTF()));
-            account.setEmail(readString(dis.readUTF()));
+            creditCard.setAccountNumber(readString(dis.readUTF()));
+            creditCard.setExpirationDate(readString(dis.readUTF()));
+            creditCard.setHolder(readString(dis.readUTF()));
+            creditCard.setIssuer(readString(dis.readUTF()));
+            creditCard.setType(readString(dis.readUTF()));
 
         }
         catch (FileNotFoundException fnfe) {
@@ -83,9 +78,6 @@ public class AccountSerialize {
         }
         catch (IOException ioe) {
             System.out.println("Error while Reading file" + ioe);
-        }
-        catch (AccountException e) {
-            System.out.println("Account Exception");
         }
         finally {
             try {
@@ -101,7 +93,7 @@ public class AccountSerialize {
             }
         }
 
-        return account;
+        return creditCard;
     }
 
     private String writeString(String value){
@@ -111,5 +103,4 @@ public class AccountSerialize {
     private String readString(String value){
         return value == "null" ? null : value;
     }
-
 }
