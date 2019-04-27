@@ -1,5 +1,9 @@
 package edu.uw.cdm.dao;
 
+import com.fasterxml.jackson.databind.Module;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.module.SimpleModule;
+import edu.uw.cdm.account.AccountCDM;
 import edu.uw.cdm.account.AddressCDM;
 import edu.uw.cdm.account.CreditCardCDM;
 import edu.uw.ext.framework.account.Account;
@@ -9,6 +13,8 @@ import edu.uw.ext.framework.dao.AccountDao;
 import org.springframework.util.FileSystemUtils;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -66,6 +72,25 @@ public class JsonAccountDaoCDM implements AccountDao {
             }
         }
 
+        String jsonAccountFilePath = String.format("./target/accounts/%s.json", accountName);
+        File jsonFile = new File(jsonAccountFilePath);
+
+        SimpleModule module = new SimpleModule();
+        module.addAbstractTypeMapping(Address.class, AddressCDM.class);
+        module.addAbstractTypeMapping(CreditCard.class, CreditCardCDM.class);
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.registerModule(module);
+
+        try {
+            Account jsonAccount = objectMapper.readValue(jsonFile, AccountCDM.class);
+        } catch (FileNotFoundException e){
+
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+
         return binAccount;
     }
 
@@ -87,6 +112,16 @@ public class JsonAccountDaoCDM implements AccountDao {
             creditCardSerialize.write();
         }
 
+        String jsonFilePath = String.format("./target/accounts/%s.json", account.getName());
+        File jsonFile = new File(jsonFilePath);
+
+        ObjectMapper mapper = new ObjectMapper();
+
+
+        try{
+            mapper.writeValue(jsonFile, this.account);
+        } catch (IOException e) {
+        }
 
     }
 

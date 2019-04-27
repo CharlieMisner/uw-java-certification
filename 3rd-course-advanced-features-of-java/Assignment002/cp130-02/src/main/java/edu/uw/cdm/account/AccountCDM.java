@@ -7,9 +7,9 @@ import java.io.Serializable;
 
 public class AccountCDM implements Account, Serializable {
 
-    private Address address;
+    private AddressCDM address;
     private int balance;
-    private CreditCard creditCard;
+    private CreditCardCDM creditCard;
     private String email;
     private String fullName;
     private String name;
@@ -38,7 +38,7 @@ public class AccountCDM implements Account, Serializable {
     }
 
     public void setAddress(Address address) {
-        this.address = address;
+        this.address = (AddressCDM)address;
     }
 
     public int getBalance() {
@@ -56,7 +56,7 @@ public class AccountCDM implements Account, Serializable {
     }
 
     public void setCreditCard(CreditCard card){
-        this.creditCard = card;
+        this.creditCard = (CreditCardCDM)card;
     }
 
     public String getEmail() {
