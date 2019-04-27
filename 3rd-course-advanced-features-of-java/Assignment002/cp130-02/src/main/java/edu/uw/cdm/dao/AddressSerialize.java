@@ -1,36 +1,37 @@
 package edu.uw.cdm.dao;
 
+import edu.uw.cdm.account.AccountCDM;
+import edu.uw.cdm.account.AddressCDM;
+import edu.uw.ext.framework.account.Account;
+import edu.uw.ext.framework.account.AccountException;
+import edu.uw.ext.framework.account.Address;
+
 import java.io.*;
 
-public class AccountsSer {
+public class AddressSerialize {
 
-    private Object object;
+    Address address = null;
     private String accountFilePath;
-    private String fileName;
 
-    public AccountsSer(Object object, String accountFilePath, String fileName) {
-        this.object = object;
+    public AddressSerialize(Address address, String accountFilePath) {
+        this.address = address;
         this.accountFilePath = accountFilePath;
-        this.fileName = fileName;
     }
 
     public void write(){
-        ByteArrayOutputStream bos;
-        ObjectOutputStream oos;
         FileOutputStream fos = null;
         DataOutputStream dos = null;
 
         try {
 
-            bos = new ByteArrayOutputStream();
-            oos = new ObjectOutputStream(bos);
-            fos = new FileOutputStream(this.accountFilePath + this.fileName);
+            fos = new FileOutputStream(this.accountFilePath + "/addressBinary");
             dos = new DataOutputStream(fos);
 
-            oos.writeObject(this.object);
-            oos.flush();
-            byte[] accountBytes = bos.toByteArray();
-            dos.write(accountBytes);
+            dos.writeUTF(writeString(address.getCity()));
+            dos.writeUTF(writeString(address.getState()));
+            dos.writeUTF(writeString(address.getStreetAddress()));
+            dos.writeUTF(writeString(address.getZipCode()));
+            dos.flush();
 
         }
         catch (FileNotFoundException fnfe) {
@@ -54,31 +55,21 @@ public class AccountsSer {
         }
     }
 
-    public Object read(){
+    public Address read(){
 
-        ByteArrayInputStream bis;
-        ObjectInputStream ois;
         FileInputStream fis = null;
         DataInputStream dis = null;
-        Object object = null;
+        Address address = new AddressCDM();
 
         try {
-            File file = new File(this.accountFilePath + this.fileName);
 
-            fis = new FileInputStream(this.accountFilePath + this.fileName);
+            fis = new FileInputStream(this.accountFilePath + "/addressBinary");
             dis = new DataInputStream(fis);
 
-            byte[] byteArray = new byte[(int) file.length()];
-            fis.read(byteArray);
-
-            bis = new ByteArrayInputStream(byteArray);
-            ois = new ObjectInputStream(bis);
-
-            try {
-                object = ois.readObject();
-            } catch (ClassNotFoundException exception){
-
-            }
+            address.setCity(readString(dis.readUTF()));
+            address.setState(readString(dis.readUTF()));
+            address.setStreetAddress(readString(dis.readUTF()));
+            address.setZipCode(readString(dis.readUTF()));
 
         }
         catch (FileNotFoundException fnfe) {
@@ -101,9 +92,14 @@ public class AccountsSer {
             }
         }
 
-        return object;
+        return address;
     }
 
+    private String writeString(String value){
+        return value == null ? "null" : value;
+    }
 
+    private String readString(String value){
+        return value == "null" ? null : value;
+    }
 }
-
