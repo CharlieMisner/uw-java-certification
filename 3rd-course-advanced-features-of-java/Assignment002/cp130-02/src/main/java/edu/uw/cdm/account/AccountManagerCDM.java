@@ -85,7 +85,7 @@ public class AccountManagerCDM implements AccountManager {
     };
 
     private void checkDuplicateUserName(String accountName) throws AccountException {
-        String accountFilePath = String.format("./target/accounts/%s", accountName);
+        String accountFilePath = String.format("./target/accounts/%s.json", accountName);
         Path path = Paths.get(accountFilePath);
         if(Files.exists(path)){
             throw new AccountException("That username already exists.");

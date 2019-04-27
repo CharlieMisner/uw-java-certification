@@ -21,7 +21,6 @@ import java.nio.file.Paths;
 
 public class JsonAccountDaoCDM implements AccountDao {
     private Account account;
-    private String accountFilePath;
 
     public JsonAccountDaoCDM() {
     }
@@ -30,10 +29,10 @@ public class JsonAccountDaoCDM implements AccountDao {
     };
 
     public void deleteAccount(String accountName) {
-        this.accountFilePath = String.format("./target/accounts/%s", accountName);
-        Path path = Paths.get(this.accountFilePath);
-        if(Files.exists(path)){
-            File accountsDirectory = new File(this.accountFilePath);
+        String jsonAccountFilePath = String.format("./target/accounts/%s.json", accountName);
+        Path jsonPath = Paths.get(jsonAccountFilePath);
+        if(Files.exists(jsonPath)){
+            File accountsDirectory = new File(jsonAccountFilePath);
             FileSystemUtils.deleteRecursively(accountsDirectory);
         }
         this.account = null;
@@ -50,29 +49,9 @@ public class JsonAccountDaoCDM implements AccountDao {
     };
 
     public Account getAccount(String accountName) {
-        this.accountFilePath = String.format("./target/accounts/%s", accountName);
-        Account binAccount = null;
-        Path pathToAccount = Paths.get(accountFilePath);
-        if(Files.exists(pathToAccount)){
-            AccountSerialize accountSerialize = new AccountSerialize(this.account, this.accountFilePath);
-            binAccount = accountSerialize.read();
-
-            Path pathToAddress = Paths.get(this.accountFilePath + "/addressBinary");
-            if(Files.exists(pathToAddress)){
-                AddressSerialize addressSerialize = new AddressSerialize(new AddressCDM(), this.accountFilePath);
-                Address binAddress = addressSerialize.read();
-                binAccount.setAddress(binAddress);
-            }
-
-            Path pathToCreditCard = Paths.get(this.accountFilePath + "/creditCardBinary");
-            if(Files.exists(pathToCreditCard)){
-                CreditCardSerialize creditCardSerialize = new CreditCardSerialize(new CreditCardCDM(), this.accountFilePath);
-                CreditCard binCreditCard = creditCardSerialize.read();
-                binAccount.setCreditCard(binCreditCard);
-            }
-        }
 
         String jsonAccountFilePath = String.format("./target/accounts/%s.json", accountName);
+        Path jsonPath = Paths.get(jsonAccountFilePath);
         File jsonFile = new File(jsonAccountFilePath);
 
         SimpleModule module = new SimpleModule();
@@ -82,45 +61,43 @@ public class JsonAccountDaoCDM implements AccountDao {
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.registerModule(module);
 
-        try {
-            Account jsonAccount = objectMapper.readValue(jsonFile, AccountCDM.class);
-        } catch (FileNotFoundException e){
+        Account jsonAccount = new AccountCDM();
 
-        }
-        catch (IOException e) {
-            e.printStackTrace();
+        if (Files.exists(jsonPath)) {
+            try {
+                jsonAccount = objectMapper.readValue(jsonFile, AccountCDM.class);
+            } catch (FileNotFoundException e){
+
+            }
+            catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else {
+            jsonAccount = null;
         }
 
-        return binAccount;
+        return jsonAccount;
     }
 
     @Override
     public void setAccount(Account account) {
         this.deleteAccount(account.getName());
+
         this.createAccountsDirectory();
         this.account = account;
-        this.createAccountDirectory(this.account.getName());
-        AccountSerialize accountSerialize = new AccountSerialize(this.account, this.accountFilePath);
-        accountSerialize.write();
-
-        if(this.account.getAddress() != null){
-            AddressSerialize addressSerialize = new AddressSerialize(this.account.getAddress(), this.accountFilePath);
-            addressSerialize.write();
-        }
-        if(this.account.getCreditCard() != null){
-            CreditCardSerialize creditCardSerialize = new CreditCardSerialize(this.account.getCreditCard(), this.accountFilePath);
-            creditCardSerialize.write();
-        }
 
         String jsonFilePath = String.format("./target/accounts/%s.json", account.getName());
+        Path path = Paths.get(jsonFilePath);
         File jsonFile = new File(jsonFilePath);
 
         ObjectMapper mapper = new ObjectMapper();
 
 
-        try{
-            mapper.writeValue(jsonFile, this.account);
-        } catch (IOException e) {
+        if (!Files.exists(path)) {
+            try{
+                mapper.writeValue(jsonFile, this.account);
+            } catch (IOException e) {
+            }
         }
 
     }
@@ -134,12 +111,4 @@ public class JsonAccountDaoCDM implements AccountDao {
         }
     }
 
-    private void createAccountDirectory(String accountName){
-        this.accountFilePath = String.format("./target/accounts/%s", accountName);
-        Path path = Paths.get(this.accountFilePath);
-        if(!Files.exists(path)){
-            File accountsDirectory = new File(this.accountFilePath);
-            accountsDirectory.mkdir();
-        }
-    }
 }
