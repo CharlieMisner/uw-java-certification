@@ -10,6 +10,6 @@ public class BrokerCDMFactory implements BrokerFactory {
     }
 
     public Broker newBroker(String name, AccountManager accountManager, StockExchange exchange){
-        return new BrokerCDM();
+        return new BrokerCDM(name, accountManager, exchange);
     }
 }
