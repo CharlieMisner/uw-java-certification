@@ -22,6 +22,8 @@
 
   <!-- Bean providing RDBMS implementation of edu.uw.ext.framework.account.DaoFactoryCDM -->
   <bean id="DaoFactory" class="edu.uw.cdm.dao.JsonDaoFactoryCDM"/>
+
+  <bean id="BrokerFactory" class="edu.uw.cdm.broker.BrokerFactoryCDM"/>
   
 </beans>
 
