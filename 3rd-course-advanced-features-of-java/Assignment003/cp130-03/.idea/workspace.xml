@@ -2,36 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2b91c85-4112-4225-9818-01f62a56d6a5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/target/classes/edu/uw/cdm/broker/BrokerCDM.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/edu/uw/cdm/broker/BrokerFactoryCDM.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/edu/uw/cdm/broker/OrderManagerCDM.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/edu/uw/cdm/broker/OrderQueueCDM.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uw/cdm/broker/BrokerCDMFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/uw/cdm/broker/BrokerFactoryCDM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uw/cdm/broker/BrokerCDM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/uw/cdm/broker/BrokerCDM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uw/cdm/broker/OrderManagerCDM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/uw/cdm/broker/OrderManagerCDM.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/uw/cdm/broker/OrderQueueCDM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/uw/cdm/broker/OrderQueueCDM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/context.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/edu/uw/cdm/broker/OrderManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/uw/cdm/broker/OrderManagerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/edu/uw/cdm/broker/OrderQueueTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/uw/cdm/broker/OrderQueueTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/accounts/aabernathy.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/accounts/neotheone.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/accounts/pepper_potts.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/accounts/rachaelnex.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/context.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cp130-03-1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.uw.cdm.account.AccountCDMTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.uw.cdm.account.AccountManagerCDMTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.uw.cdm.dao.DaoCDMTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/edu.uw.cdm.account.AccountCDMTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/edu.uw.cdm.account.AccountManagerCDMTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/edu.uw.cdm.dao.DaoCDMTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/edu/uw/cdm/account/AccountCDMTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/edu/uw/cdm/account/AccountManagerCDMTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/edu/uw/cdm/dao/DaoCDMTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/uw/cdm/broker/BrokerCDM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/uw/cdm/broker/BrokerCDM.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/uw/cdm/broker/OrderManagerCDM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/uw/cdm/broker/OrderManagerCDM.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/uw/cdm/broker/OrderQueueCDM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/uw/cdm/broker/OrderQueueCDM.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/edu/uw/cdm/broker/OrderManagerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/edu/uw/cdm/broker/OrderManagerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/edu/uw/cdm/broker/OrderQueueTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/edu/uw/cdm/broker/OrderQueueTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,35 +25,39 @@
     <session id="265215432">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.26" value="1" />
           <entry key="project.open.time.28" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="1" />
-          <entry key="java" value="7" />
+          <entry key="class" value="14" />
+          <entry key="java" value="32" />
+          <entry key="json" value="2" />
           <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="7" />
+          <entry key="CLASS" value="14" />
+          <entry key="JAVA" value="32" />
+          <entry key="JSON" value="2" />
           <entry key="XML" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="3" />
-          <entry key="java" value="108" />
+          <entry key="java" value="3451" />
           <entry key="xml" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="108" />
+          <entry key="JAVA" value="3451" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="XML" value="13" />
         </counts>
@@ -84,10 +69,40 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/uw/cdm/broker/BrokerCDM.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
+            <state relative-caret-position="54">
+              <caret line="39" column="86" selection-start-line="39" selection-start-column="86" selection-end-line="39" selection-end-column="86" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2676#2677#0" expanded="true" />
+                <element signature="e#2727#2728#0" expanded="true" />
+                <element signature="e#2812#2813#0" expanded="true" />
+                <element signature="e#2862#2863#0" expanded="true" />
+                <element signature="e#3601#3602#0" expanded="true" />
+                <element signature="e#3639#3640#0" expanded="true" />
+                <element signature="e#4309#4310#0" expanded="true" />
+                <element signature="e#4355#4356#0" expanded="true" />
+                <element signature="e#4409#4410#0" expanded="true" />
+                <element signature="e#4455#4456#0" expanded="true" />
+                <element signature="e#4505#4506#0" expanded="true" />
+                <element signature="e#4551#4552#0" expanded="true" />
+                <element signature="e#4602#4603#0" expanded="true" />
+                <element signature="e#4648#4649#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/uw/cdm/broker/OrderQueueCDM.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1797#1798#0" expanded="true" />
+                <element signature="e#1843#1844#0" expanded="true" />
+                <element signature="e#1987#1988#0" expanded="true" />
+                <element signature="e#2024#2025#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -96,46 +111,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/uw/cdm/broker/OrderManagerCDM.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="-460">
+              <caret line="3" column="46" selection-start-line="3" selection-start-column="46" selection-end-line="3" selection-end-column="46" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/uw/cdm/broker/OrderQueueCDM.java">
+        <entry file="jar://$MAVEN_REPOSITORY$/edu/uw/ext/cp130-framework/1.0/cp130-framework-1.0-test-sources.jar!/test/BrokerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#293#294#0" expanded="true" />
-                <element signature="e#320#321#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/edu/uw/cdm/broker/BrokerCDMTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/edu/uw/cdm/broker/OrderManagerTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="287">
+              <caret line="374" selection-start-line="374" selection-end-line="374" />
             </state>
           </provider>
         </entry>
@@ -143,11 +129,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/edu/uw/cdm/broker/OrderQueueTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+            <state relative-caret-position="238">
+              <caret line="14" column="51" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <marker date="1557624553309" expanded="true" signature="826:3540" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/edu/uw/ext/cp130-framework/1.0/cp130-framework-1.0-test-sources.jar!/test/AbstractOrderQueueTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="144" column="5" lean-forward="true" selection-start-line="144" selection-start-column="5" selection-end-line="144" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -162,6 +158,12 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>delete</find>
+      <find>pla</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
@@ -170,13 +172,13 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/edu/uw/cdm/broker/BrokerCDMTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/uw/cdm/broker/OrderManagerCDM.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/uw/cdm/broker/BrokerCDM.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/uw/cdm/broker/BrokerCDMFactory.java" />
         <option value="$PROJECT_DIR$/src/main/resources/context.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/uw/cdm/broker/OrderQueueCDM.java" />
-        <option value="$PROJECT_DIR$/src/test/java/edu/uw/cdm/broker/OrderQueueTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/edu/uw/cdm/broker/OrderManagerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uw/cdm/broker/BrokerCDM.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uw/cdm/broker/OrderManagerCDM.java" />
+        <option value="$PROJECT_DIR$/src/test/java/edu/uw/cdm/broker/OrderQueueTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uw/cdm/broker/OrderQueueCDM.java" />
       </list>
     </option>
   </component>
@@ -206,9 +208,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-82" />
-    <option name="y" value="-23" />
-    <option name="width" value="1934" />
+    <option name="x" value="1092" />
+    <option name="width" value="835" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -217,6 +218,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -249,6 +252,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="cdm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cp130-02" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cp130-03" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cdm" type="462c0819:PsiDirectoryNode" />
+              <item name="account" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cp130-02" type="b2602c69:ProjectViewProjectNode" />
@@ -296,16 +308,25 @@
               <item name="cdm" type="462c0819:PsiDirectoryNode" />
               <item name="broker" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="cp130-02" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cp130-03" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cp130-02" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cp130-03" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="accounts" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557194882016" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557624856875" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
@@ -330,14 +351,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.edu.uw.cdm.broker in cp130-03">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BrokerCDMTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BrokerCDMTest.testBrokerExchangeOpen (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cp130-03" />
       <extension name="coverage">
         <pattern>
@@ -347,12 +368,79 @@
       </extension>
       <option name="PACKAGE_NAME" value="edu.uw.cdm.broker" />
       <option name="MAIN_CLASS_NAME" value="edu.uw.cdm.broker.BrokerCDMTest" />
+      <option name="METHOD_NAME" value="testBrokerExchangeOpen" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BrokerCDMTest.testBrokerExchangeOpen" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cp130-03" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.uw.cdm.broker.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.uw.cdm.broker" />
+      <option name="MAIN_CLASS_NAME" value="edu.uw.cdm.broker.BrokerCDMTest" />
+      <option name="METHOD_NAME" value="testBrokerExchangeOpen" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderQueueTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cp130-03" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.uw.cdm.broker.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.uw.cdm.broker" />
+      <option name="MAIN_CLASS_NAME" value="edu.uw.cdm.broker.OrderQueueTest" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="[engine:junit-jupiter]/[class:edu.uw.cdm.broker.OrderManagerTest]" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cp130-03" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.uw.cdm.broker.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.uw.cdm.broker" />
+      <option name="TEST_OBJECT" value="uniqueId" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <uniqueIds>
+        <uniqueId value="[engine:junit-jupiter]/[class:edu.uw.cdm.broker.OrderManagerTest]" />
+      </uniqueIds>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="edu.uw.cdm.broker in cp130-03" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cp130-03" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.uw.cdm.broker.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.uw.cdm.broker" />
+      <option name="TEST_OBJECT" value="package" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -366,9 +454,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.edu.uw.cdm.broker in cp130-03" />
+      <item itemvalue="JUnit.BrokerCDMTest.testBrokerExchangeOpen" />
+      <item itemvalue="JUnit.BrokerCDMTest.testBrokerExchangeOpen (1)" />
+      <item itemvalue="JUnit.[engine:junit-jupiter]/[class:edu.uw.cdm.broker.OrderManagerTest]" />
+      <item itemvalue="JUnit.OrderQueueTest" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BrokerCDMTest" />
+        <item itemvalue="JUnit.edu.uw.cdm.broker in cp130-03" />
+        <item itemvalue="JUnit.OrderQueueTest" />
+        <item itemvalue="JUnit.[engine:junit-jupiter]/[class:edu.uw.cdm.broker.OrderManagerTest]" />
+        <item itemvalue="JUnit.BrokerCDMTest.testBrokerExchangeOpen (1)" />
+        <item itemvalue="JUnit.BrokerCDMTest.testBrokerExchangeOpen" />
       </list>
     </recent_temporary>
   </component>
@@ -386,34 +485,61 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BrokerCDMTest - 2019.05.06 at 19h 00m 41s.xml">
-      <configuration name="BrokerCDMTest" configurationId="JUnit" />
+    <history-entry file="OrderQueueTest - 2019.05.11 at 18h 27m 28s.xml">
+      <configuration name="OrderQueueTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OrderQueueTest - 2019.05.11 at 18h 27m 52s.xml">
+      <configuration name="OrderQueueTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OrderQueueTest - 2019.05.11 at 18h 28m 20s.xml">
+      <configuration name="OrderQueueTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OrderQueueTest - 2019.05.11 at 18h 29m 00s.xml">
+      <configuration name="OrderQueueTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OrderQueueTest - 2019.05.11 at 18h 29m 29s.xml">
+      <configuration name="OrderQueueTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OrderQueueTest - 2019.05.11 at 18h 31m 50s.xml">
+      <configuration name="OrderQueueTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OrderQueueTest - 2019.05.11 at 18h 32m 02s.xml">
+      <configuration name="OrderQueueTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OrderQueueTest - 2019.05.11 at 18h 32m 11s.xml">
+      <configuration name="OrderQueueTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OrderQueueTest - 2019.05.11 at 18h 32m 22s.xml">
+      <configuration name="OrderQueueTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OrderQueueTest - 2019.05.11 at 18h 32m 27s.xml">
+      <configuration name="OrderQueueTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15298508" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17004265" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.4015573" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.39488322" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3147942" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.16907676" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32925472" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.16853933" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Spring" order="11" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.15684094" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -430,6 +556,35 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/edu/uw/ext/cp130-framework/1.0/cp130-framework-1.0-test-sources.jar!/test/BrokerTest.java</url>
+          <line>374</line>
+          <properties />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/edu/uw/ext/cp130-framework/1.0/cp130-framework-1.0-test-sources.jar!/test/BrokerTest.java</url>
+          <line>314</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/edu/uw/cdm/broker/OrderQueueCDM.java</url>
+          <line>50</line>
+          <properties />
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="history" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/test/java/edu/uw/cdm/account/AccountManagerCDMTest.java">
@@ -455,13 +610,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uw/cdm/dao/JsonAccountDaoCDM.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/uw/cdm/dao/JsonDaoFactoryCDM.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -476,20 +624,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uw/cdm/account/AccountManagerCDM.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/edu/uw/ext/cp130-framework/1.0/cp130-framework-1.0.jar!/edu/uw/ext/framework/broker/OrderQueue.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="5" column="36" lean-forward="true" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/uw/cdm/broker/BrokerFactoryCDM.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -497,35 +631,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uw/cdm/broker/OrderManagerCDM.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uw/cdm/broker/OrderQueueCDM.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#293#294#0" expanded="true" />
-            <element signature="e#320#321#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/edu/uw/cdm/broker/BrokerCDMTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -543,32 +648,197 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uw/cdm/broker/BrokerCDM.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/edu/uw/ext/cp130-framework/1.0/cp130-framework-1.0.jar!/edu/uw/ext/framework/order/AbstractOrder.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="459">
+          <caret line="57" column="21" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/edu/uw/cdm/broker/OrderQueueTest.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/edu/uw/ext/cp130-framework/1.0/cp130-framework-1.0-tests.jar!/test/AbstractOrderQueueTest.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="-1279">
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/edu/uw/ext/cp130-framework/1.0/cp130-framework-1.0.jar!/edu/uw/ext/framework/broker/OrderQueue.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/edu/uw/ext/cp130-framework/1.0/cp130-framework-1.0.jar!/edu/uw/ext/framework/account/Account.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="45" column="18" lean-forward="true" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/edu/uw/ext/cp130-framework/1.0/cp130-framework-1.0.jar!/edu/uw/ext/framework/exchange/StockQuote.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/edu/uw/cdm/dao/DaoCDMTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/accounts/neotheone.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/edu/uw/ext/cp130-framework/1.0/cp130-framework-1.0-tests.jar!/test/BrokerTest.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-309">
+          <caret line="108" column="72" selection-start-line="108" selection-start-column="72" selection-end-line="108" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uw/cdm/account/AccountManagerFactoryCDM.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/edu/uw/ext/cp130-framework/1.0/cp130-framework-1.0.jar!/edu/uw/ext/framework/account/AccountManager.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uw/cdm/account/AccountCDM.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-34">
+          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/edu/uw/cdm/broker/BrokerCDMTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="32" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/edu/uw/ext/cp130-framework/1.0/cp130-framework-1.0.jar!/edu/uw/ext/framework/order/Order.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/edu/uw/ext/cp130-framework/1.0/cp130-framework-1.0.jar!/edu/uw/ext/framework/exchange/StockExchange.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uw/cdm/dao/JsonAccountDaoCDM.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="1256" selection-start-line="1256" selection-end-line="1256" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uw/cdm/account/AccountManagerCDM.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="30" column="36" lean-forward="true" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/edu/uw/cdm/broker/OrderManagerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/edu/uw/ext/cp130-framework/1.0/cp130-framework-1.0-test-sources.jar!/test/BrokerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="374" selection-start-line="374" selection-end-line="374" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uw/cdm/broker/OrderManagerCDM.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-460">
+          <caret line="3" column="46" selection-start-line="3" selection-start-column="46" selection-end-line="3" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uw/cdm/broker/BrokerCDM.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="39" column="86" selection-start-line="39" selection-start-column="86" selection-end-line="39" selection-end-column="86" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2676#2677#0" expanded="true" />
+            <element signature="e#2727#2728#0" expanded="true" />
+            <element signature="e#2812#2813#0" expanded="true" />
+            <element signature="e#2862#2863#0" expanded="true" />
+            <element signature="e#3601#3602#0" expanded="true" />
+            <element signature="e#3639#3640#0" expanded="true" />
+            <element signature="e#4309#4310#0" expanded="true" />
+            <element signature="e#4355#4356#0" expanded="true" />
+            <element signature="e#4409#4410#0" expanded="true" />
+            <element signature="e#4455#4456#0" expanded="true" />
+            <element signature="e#4505#4506#0" expanded="true" />
+            <element signature="e#4551#4552#0" expanded="true" />
+            <element signature="e#4602#4603#0" expanded="true" />
+            <element signature="e#4648#4649#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/edu/uw/ext/cp130-framework/1.0/cp130-framework-1.0-test-sources.jar!/test/AbstractOrderQueueTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="144" column="5" lean-forward="true" selection-start-line="144" selection-start-column="5" selection-end-line="144" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/edu/uw/cdm/broker/OrderQueueTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="51" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1557624553309" expanded="true" signature="826:3540" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uw/cdm/broker/OrderQueueCDM.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1797#1798#0" expanded="true" />
+            <element signature="e#1843#1844#0" expanded="true" />
+            <element signature="e#1987#1988#0" expanded="true" />
+            <element signature="e#2024#2025#0" expanded="true" />
           </folding>
         </state>
       </provider>

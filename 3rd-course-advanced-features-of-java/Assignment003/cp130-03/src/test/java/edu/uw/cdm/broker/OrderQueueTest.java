@@ -16,19 +16,33 @@ public class OrderQueueTest extends AbstractOrderQueueTest {
     /***  Creates an instance of "my" OrderQueue implementation class, using*  an instance of "my" implementation of Comparator that is intended to*  order StopBuyOrders.**  @param filter the OrderDispatch filter to be used**  @return a new OrderQueue instance*/
     @Override
     protected final OrderQueue<Integer, StopBuyOrder> createStopBuyOrderQueue(final BiPredicate<Integer, StopBuyOrder> filter) {/**********************************************************************  This needs to be an instance of your OrderQueue and Comparator.   **********************************************************************/
-        final Comparator<StopBuyOrder> ascending = ...return new OrderQueueCDM<>(0, filter, ascending);
+        final Comparator<StopBuyOrder> ascending = this.getStopBuyOrderComparatorAscending();
+        return new OrderQueueCDM<>(0, filter, ascending);
     }
 
     /***  Creates an instance of "my" OrderQueue implementation class, using*  an instance of "my" implementation of Comparator that is intended to*  order StopSellOrders.**  @param filter the OrderDispatch filter to be used**  @return a new OrderQueue instance*/
     @Override
     protected final OrderQueue<Integer, StopSellOrder> createStopSellOrderQueue(final BiPredicate<Integer, StopSellOrder> filter) {/**********************************************************************  This needs to be an instance of your OrderQueue and Comparator.   **********************************************************************/
-        final Comparator<StopSellOrder> descending = ...
-        return new OrderQueueCDM<>(0, (Integer t, filter, descending);
+        final Comparator<StopSellOrder> descending = this.getStopSellOrderComparatorDescending();
+        return new OrderQueueCDM<>(0, filter, descending);
     }
 
     /***  Creates an instance of "my" OrderQueue implementation class, the queue*  will order the Orders according to their natural ordering.**  @param filter the OrderDispatch filter to be used**  @return a new OrderQueue instance*/
     @Override
     protected final OrderQueue<Boolean, Order> createAnyOrderQueue(final BiPredicate<Boolean, Order> filter) {/**********************************************************************  This needs to be an instance of your OrderQueue.                  **********************************************************************/
-        return new OrderQueueCDM<Boolean, Order>(true, (Boolean t, Order o) -> t);
+        return new OrderQueueCDM<Boolean, Order>(true, filter);
+    }
+
+    /**
+     * Method copied from OrderManagerCDM
+     * @return
+     */
+    private Comparator<StopBuyOrder> getStopBuyOrderComparatorAscending(){
+        return Comparator.comparing(StopBuyOrder::getPrice).thenComparing(StopBuyOrder::compareTo);
+    }
+
+
+    private Comparator<StopSellOrder> getStopSellOrderComparatorDescending(){
+        return Comparator.comparing(StopSellOrder::getPrice).reversed().thenComparing(StopSellOrder::compareTo);
     }
 }
