@@ -15,6 +15,8 @@ public class AccountCDM implements Account, Serializable {
     private String name;
     private byte[] passwordHash;
     private String phone;
+    private final String MARKET_BUY_ORDER = "MarketSellOrder";
+    private final String STOP_SELL_ORDER = "StopSellOrder";
 
     public AccountCDM() {
     }
@@ -26,7 +28,13 @@ public class AccountCDM implements Account, Serializable {
     }
 
     public void reflectOrder(Order order, int executionPrice){
-        this.balance += executionPrice;
+        String orderType = order.getClass().getSimpleName();
+        if(orderType.equals(MARKET_BUY_ORDER) || orderType.equals(STOP_SELL_ORDER)){
+            this.balance += executionPrice;
+        } else {
+            this.balance -= executionPrice;
+        }
+
     }
 
     public void registerAccountManager(AccountManager m){

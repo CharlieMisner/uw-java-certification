@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: edu.uw.cdm.broker.BrokerCDMTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 6.218 s <<< FAILURE! - in edu.uw.cdm.broker.BrokerCDMTest
+testBrokerExchangeOpen  Time elapsed: 1.957 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Market orders should be processed, the market is open, 12 orders executed, expected 3.
+
+testBrokerExchangeClosed  Time elapsed: 4.078 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Market orders should be processed once the market opens, 12 orders executed, expected 3.
+

@@ -3,11 +3,17 @@ package edu.uw.cdm.broker;
 import edu.uw.ext.framework.broker.OrderQueue;
 import edu.uw.ext.framework.order.Order;
 
+import java.lang.reflect.ParameterizedType;
 import java.util.Comparator;
 import java.util.TreeSet;
 import java.util.function.BiPredicate;
 import java.util.function.Consumer;
 
+/**
+ * Order queue.
+ * @param <T>
+ * @param <E>
+ */
 public class OrderQueueCDM<T,E extends Order> implements OrderQueue<T, E> {
 
     private T threshold;
@@ -28,6 +34,10 @@ public class OrderQueueCDM<T,E extends Order> implements OrderQueue<T, E> {
         this.orderQueue = new TreeSet<>(comparator);
     }
 
+    /**
+     * Adds orders to queue.
+     * @param order
+     */
     public void enqueue(E order) {
         orderQueue.add(order);
         dispatchOrders();
@@ -47,6 +57,9 @@ public class OrderQueueCDM<T,E extends Order> implements OrderQueue<T, E> {
         return this.currentDequeueOrder;
     }
 
+    /**
+     * Dispatches orders.
+     */
     public void dispatchOrders() {
         this.dequeue();
         while (this.currentDequeueOrder != null){

@@ -9,6 +9,9 @@ import java.util.Comparator;
 import java.util.function.BiPredicate;
 import java.util.function.Consumer;
 
+/**
+ * Manages Orders
+ */
 public class OrderManagerCDM implements OrderManager {
 
     private String stockTickerSymbol;
@@ -58,18 +61,34 @@ public class OrderManagerCDM implements OrderManager {
         this.stopSellOrderQueue.setOrderProcessor(processor);
     }
 
+    /**
+     * Supplys a predicate filter to the constructor
+     * @return
+     */
     private BiPredicate<Integer, StopSellOrder> getStopSellOrderFilter(){
         return (threshold, order) -> order.getPrice() >= threshold;
     }
 
+    /**
+     * Supplys a predicate filter to the constructor
+     * @return
+     */
     private BiPredicate<Integer, StopBuyOrder> getStopBuyOrderFilter(){
         return (threshold, order) -> order.getPrice() <= threshold;
     }
 
+    /**
+     * Supplys a comparator to the constructor
+     * @return
+     */
     private Comparator<StopBuyOrder> getStopBuyOrderComparatorAscending(){
         return Comparator.comparing(StopBuyOrder::getPrice).thenComparing(StopBuyOrder::compareTo);
     }
 
+    /**
+     * Supplys a comparator to the constructor
+     * @return
+     */
     private Comparator<StopSellOrder> getStopSellOrderComparatorDescending(){
         return Comparator.comparing(StopSellOrder::getPrice).reversed().thenComparing(StopSellOrder::compareTo);
     }

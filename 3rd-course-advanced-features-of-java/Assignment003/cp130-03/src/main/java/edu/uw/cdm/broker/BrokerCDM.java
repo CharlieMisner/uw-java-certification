@@ -19,6 +19,9 @@ import java.util.HashMap;
 import java.util.Optional;
 import java.util.function.Consumer;
 
+/**
+ * Broker class for stock exchange.
+ */
 public class BrokerCDM implements Broker, ExchangeListener, EventListener {
 
     private String brokerName;
@@ -33,6 +36,12 @@ public class BrokerCDM implements Broker, ExchangeListener, EventListener {
         this.exchange = exchange;
     }
 
+    /**
+     * Constructor for broker
+     * @param brokerName
+     * @param accountManager
+     * @param exchange
+     */
     public BrokerCDM(String brokerName, AccountManager accountManager, StockExchange exchange) {
         this.brokerName = brokerName;
         this.accountManager = accountManager;
@@ -43,6 +52,9 @@ public class BrokerCDM implements Broker, ExchangeListener, EventListener {
         exchange.addExchangeListener(this);
     }
 
+    /**
+     * Closes broker.
+     */
     public void close() {
         this.exchange.removeExchangeListener(this);
         this.orderManagerHashMap = null;
@@ -53,19 +65,36 @@ public class BrokerCDM implements Broker, ExchangeListener, EventListener {
         }
     }
 
+    /**
+     * Creates account when broker opens.
+     * @param username
+     * @param password
+     * @param balance
+     * @return
+     */
     public Account createAccount(String username, String password, int balance) {
         try {
             return this.accountManager.createAccount(username, password, balance);
         } catch (AccountException exception) {
             exception.printStackTrace();
-            return new AccountCDM();
+            return null;
         }
     }
 
+    /**
+     * Creates order manager.
+     * @param ticker
+     * @param initialPrice
+     * @return
+     */
     private OrderManager createOrderManager(String ticker, int initialPrice) {
         return new OrderManagerCDM(ticker, initialPrice);
     }
 
+    /**
+     * Deletes Account
+     * @param username
+     */
     public void deleteAccount(String username) {
         try {
             this.accountManager.deleteAccount(username);
@@ -74,19 +103,33 @@ public class BrokerCDM implements Broker, ExchangeListener, EventListener {
         }
     }
 
+    /**
+     * Closes exchange and stops queue operations.
+     * @param event
+     */
     public void exchangeClosed(ExchangeEvent event) {
         this.orderQueue.setThreshold(false);
     }
 
+    /**
+     * Opens exchange and enables queue operations.
+     * @param event
+     */
     public void exchangeOpened(ExchangeEvent event) {
         this.orderQueue.setThreshold(true);
     }
 
+    /**
+     * Executes orders.
+     * @param order
+     */
     private void executeOrder(Order order) {
         int price = exchange.executeTrade(order);
+        int shareQuantity = order.getNumberOfShares();
         try {
             Account account = this.accountManager.getAccount(order.getAccountId());
-            account.reflectOrder(order, price);
+            account.reflectOrder(order, price*shareQuantity);
+            this.accountManager.persist(account);
         } catch (AccountException e) {
             e.printStackTrace();
         }
@@ -111,11 +154,10 @@ public class BrokerCDM implements Broker, ExchangeListener, EventListener {
 
     private void initializeOrderManagers() {
         this.orderManagerHashMap = new HashMap<>();
-        Consumer<StopBuyOrder> stopBuyOrderToOrderProcessor = (StopBuyOrder order) -> this.orderQueue.enqueue(order);
-        Consumer<StopSellOrder> stopSellOrderToOrderProcessor = (StopSellOrder order) -> this.orderQueue.enqueue(order);
+
         for(String stockTicker : this.exchange.getTickers()){
             Optional<StockQuote> quoteOptional = this.exchange.getQuote(stockTicker);
-            quoteOptional.ifPresent(this.addOrderToMap(stopBuyOrderToOrderProcessor,stopSellOrderToOrderProcessor));
+            quoteOptional.ifPresent(this.addOrderToMap());
         }
     }
 
@@ -129,11 +171,11 @@ public class BrokerCDM implements Broker, ExchangeListener, EventListener {
     }
 
     public void placeOrder(StopBuyOrder order) {
-        this.orderQueue.enqueue(order);
+        this.orderManagerHashMap.get(order.getStockTicker()).queueOrder(order);
     }
 
     public void placeOrder(StopSellOrder order) {
-        this.orderQueue.enqueue(order);
+        this.orderManagerHashMap.get(order.getStockTicker()).queueOrder(order);
     }
 
     public void priceChanged(edu.uw.ext.framework.exchange.ExchangeEvent event) {
@@ -147,14 +189,19 @@ public class BrokerCDM implements Broker, ExchangeListener, EventListener {
         return quote;
     }
 
-
-    private Consumer<? super StockQuote> addOrderToMap(Consumer<StopBuyOrder>stopBuy, Consumer<StopSellOrder>stopSell){
+    /**
+     * Adds orders to hash map if optional is available.
+     * @return
+     */
+    private Consumer<? super StockQuote> addOrderToMap(){
         return (quote) -> {
             int price = quote.getPrice();
             String ticker = quote.getTicker();
             OrderManager orderManager = this.createOrderManager(ticker, price);
-            orderManager.setBuyOrderProcessor(stopBuy);
-            orderManager.setSellOrderProcessor(stopSell);
+            Consumer<StopBuyOrder> stopBuyOrderToOrderProcessor = (StopBuyOrder order) -> this.orderQueue.enqueue(order);
+            Consumer<StopSellOrder> stopSellOrderToOrderProcessor = (StopSellOrder order) -> this.orderQueue.enqueue(order);
+            orderManager.setBuyOrderProcessor(stopBuyOrderToOrderProcessor);
+            orderManager.setSellOrderProcessor(stopSellOrderToOrderProcessor);
             this.orderManagerHashMap.put(ticker, orderManager);
         };
     }
