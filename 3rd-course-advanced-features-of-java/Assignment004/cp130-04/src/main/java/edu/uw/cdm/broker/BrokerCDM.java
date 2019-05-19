@@ -161,20 +161,20 @@ public class BrokerCDM implements Broker, ExchangeListener, EventListener {
         }
     }
 
-    public void placeOrder(MarketBuyOrder order) {
+    public void placeOrder(MarketBuyOrder order) { //synchronized
         this.orderQueue.enqueue(order);
     }
 
 
     public void placeOrder(MarketSellOrder order) {
         this.orderQueue.enqueue(order);
-    }
+    }//synchronized
 
-    public void placeOrder(StopBuyOrder order) {
+    public void placeOrder(StopBuyOrder order) {//synchronized
         this.orderManagerHashMap.get(order.getStockTicker()).queueOrder(order);
     }
 
-    public void placeOrder(StopSellOrder order) {
+    public void placeOrder(StopSellOrder order) {//synchronized
         this.orderManagerHashMap.get(order.getStockTicker()).queueOrder(order);
     }
 
