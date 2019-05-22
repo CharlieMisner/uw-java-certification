@@ -21,17 +21,19 @@ public class OrderQueueCDM<T,E extends Order> implements OrderQueue<T, E>, Runna
     private T threshold;
     private BiPredicate<T,E> filter;
     private TreeSet<E> orderQueue;
-    //private E order;
     private Consumer<E> orderProcessor;
     private Thread queueThread;
-    private ReentrantLock queueLock = new ReentrantLock();
-    private ReentrantLock processorLock = new ReentrantLock();
-    private Condition condition = this.queueLock.newCondition();
+    private final ReentrantLock queueLock = new ReentrantLock();
+    private final ReentrantLock processorLock = new ReentrantLock();
+    private final Condition condition = this.queueLock.newCondition();
 
     public OrderQueueCDM(T threshold, BiPredicate<T, E> filter) {
         this.threshold = threshold;
         this.filter = filter;
         this.orderQueue = new TreeSet<>();
+        this.queueThread = new Thread(this);
+        this.queueThread.setDaemon(true);
+        this.queueThread.start();
     }
 
     public OrderQueueCDM(T threshold, BiPredicate<T, E> filter, Comparator<E> comparator) {
@@ -80,6 +82,7 @@ public class OrderQueueCDM<T,E extends Order> implements OrderQueue<T, E>, Runna
         this.queueLock.lock();
         try {
             if(orderQueue.add(order)){
+                this.queueThread.setName(order.getStockTicker());
                 dispatchOrders();
             }
         } finally {
@@ -90,15 +93,15 @@ public class OrderQueueCDM<T,E extends Order> implements OrderQueue<T, E>, Runna
     public E dequeue() {
         E order = null;
         this.queueLock.lock();
-
         try {
             if(!this.orderQueue.isEmpty()) {
                 order = orderQueue.first();
                 Boolean queueIsWithinThreshold = this.filter.test(threshold, order);
-                if (queueIsWithinThreshold) {
-                    this.orderQueue.remove(order);
-                } else {
+
+                if (!queueIsWithinThreshold) {
                     order = null;
+                } else {
+                    this.orderQueue.remove(order);
                 }
             }
         } finally {
@@ -120,11 +123,6 @@ public class OrderQueueCDM<T,E extends Order> implements OrderQueue<T, E>, Runna
             this.queueLock.unlock();
         }
 
-//        this.dequeue();
-//        while (this.currentDequeueOrder != null){
-//            orderProcessor.accept(this.currentDequeueOrder);
-//            this.dequeue();
-//        }
     }
 
     public void setOrderProcessor(Consumer<E> consumer) {
