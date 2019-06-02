@@ -1,0 +1,6 @@
+edu\uw\cdm\broker\OrderManagerTest.class
+edu\uw\cdm\broker\OrderQueueTest.class
+edu\uw\cdm\account\AccountCDMTest.class
+edu\uw\cdm\account\AccountManagerCDMTest.class
+edu\uw\cdm\dao\DaoCDMTest.class
+edu\uw\cdm\broker\BrokerCDMTest.class
