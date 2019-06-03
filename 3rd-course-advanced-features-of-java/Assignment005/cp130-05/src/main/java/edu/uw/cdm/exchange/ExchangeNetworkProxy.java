@@ -8,6 +8,19 @@ import edu.uw.ext.framework.order.Order;
 import java.util.Optional;
 
 public class ExchangeNetworkProxy implements StockExchange {
+
+    private String eventIpAddress;
+    private int eventPort;
+    private String cmdIpAddress;
+    private int cmdPort;
+
+    public ExchangeNetworkProxy(String eventIpAddress, int eventPort, String cmdIpAddress, int cmdPort) {
+        this.eventIpAddress = eventIpAddress;
+        this.eventPort = eventPort;
+        this.cmdIpAddress = cmdIpAddress;
+        this.cmdPort = cmdPort;
+    }
+
     @Override
     public boolean isOpen() {
         return false;

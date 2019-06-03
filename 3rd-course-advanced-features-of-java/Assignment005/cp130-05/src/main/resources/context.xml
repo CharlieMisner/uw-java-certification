@@ -24,6 +24,9 @@
   <bean id="DaoFactory" class="edu.uw.cdm.dao.JsonDaoFactoryCDM"/>
 
   <bean id="BrokerFactory" class="edu.uw.cdm.broker.BrokerFactoryCDM"/>
-  
+
+  <bean id="NetworkExchangeAdapterFactory" class="edu.uw.cdm.exchange.ExchangeNetworkAdapterFactory"/>
+
+  <bean id="NetworkExchangeProxyFactory" class="edu.uw.cdm.exchange.ExchangeNetworkProxyFactory"/>
 </beans>
 

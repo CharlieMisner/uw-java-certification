@@ -1,146 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/edu/uw/cdm/exchange/ExchangeNetworkAdapterFactory.java" line="12" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="e6c79a92-690c-461e-82f6-ea86fdb3bb1c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__edu_uw_ext_cp130_framework_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__edu_uw_ext_cp130_framework_test_jar_tests_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_launcher_1_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_runner_1_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_suite_api_1_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_22.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_jdk14_1_7_22.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_1_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_1_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_1_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_1_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_1_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_1_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.project" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.apt.core.prefs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cp130-05.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/uw/cdm/account/AccountCDM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/uw/cdm/account/AccountFactoryCDM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/uw/cdm/account/AccountManagerCDM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/uw/cdm/account/AccountManagerFactoryCDM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/uw/cdm/account/AddressCDM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/uw/cdm/account/CreditCardCDM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/uw/cdm/broker/BrokerCDM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/uw/cdm/broker/BrokerFactoryCDM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/uw/cdm/broker/OrderManagerCDM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/uw/cdm/broker/OrderQueueCDM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/uw/cdm/dao/AccountDaoCDM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/uw/cdm/dao/AccountSerialize.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/uw/cdm/dao/AddressSerialize.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/uw/cdm/dao/CreditCardSerialize.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/uw/cdm/dao/DaoFactoryCDM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/uw/cdm/dao/JsonAccountDaoCDM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/uw/cdm/dao/JsonDaoFactoryCDM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/uw/cdm/exchange/ExchangeNetworkAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/uw/cdm/exchange/ExchangeNetworkAdapterFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/uw/cdm/exchange/ExchangeNetworkProxy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/uw/cdm/exchange/ExchangeNetworkProxyFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/uw/cdm/exchange/ProtocolConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/context.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logging.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/edu/uw/cdm/account/AccountCDMTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/edu/uw/cdm/account/AccountManagerCDMTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/edu/uw/cdm/broker/BrokerCDMTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/edu/uw/cdm/broker/OrderManagerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/edu/uw/cdm/broker/OrderQueueTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/edu/uw/cdm/dao/DaoCDMTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/accounts/aabernathy.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/accounts/neotheone.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/accounts/pepper_potts.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/accounts/rachaelnex.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/context.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/edu/uw/cdm/account/AccountCDM.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/edu/uw/cdm/account/AccountFactoryCDM.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/edu/uw/cdm/account/AccountManagerCDM.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/edu/uw/cdm/account/AccountManagerFactoryCDM.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/edu/uw/cdm/account/AddressCDM.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/edu/uw/cdm/account/CreditCardCDM.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/edu/uw/cdm/broker/BrokerCDM.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/edu/uw/cdm/broker/BrokerFactoryCDM.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/edu/uw/cdm/broker/OrderManagerCDM.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/edu/uw/cdm/broker/OrderQueueCDM.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/edu/uw/cdm/dao/AccountDaoCDM.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/edu/uw/cdm/dao/AccountSerialize.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/edu/uw/cdm/dao/AddressSerialize.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/edu/uw/cdm/dao/CreditCardSerialize.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/edu/uw/cdm/dao/DaoFactoryCDM.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/edu/uw/cdm/dao/JsonAccountDaoCDM.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/edu/uw/cdm/dao/JsonDaoFactoryCDM.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/logging.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/cp130-03-1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.uw.cdm.account.AccountCDMTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.uw.cdm.account.AccountManagerCDMTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.uw.cdm.broker.BrokerCDMTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.uw.cdm.broker.OrderManagerTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.uw.cdm.broker.OrderQueueTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.uw.cdm.dao.DaoCDMTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/edu.uw.cdm.account.AccountCDMTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/edu.uw.cdm.account.AccountManagerCDMTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/edu.uw.cdm.broker.BrokerCDMTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/edu.uw.cdm.broker.OrderManagerTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/edu.uw.cdm.broker.OrderQueueTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/edu.uw.cdm.dao.DaoCDMTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/edu/uw/cdm/account/AccountCDMTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/edu/uw/cdm/account/AccountManagerCDMTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/edu/uw/cdm/broker/BrokerCDMTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/edu/uw/cdm/broker/OrderManagerTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/edu/uw/cdm/broker/OrderQueueTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/edu/uw/cdm/dao/DaoCDMTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Solution-cp130-3-project.tar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Solution-cp130-3-project.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Solution-cp130-3-project/Solution-cp130-3/.classpath" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Solution-cp130-3-project/Solution-cp130-3/.pom.xml.swo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Solution-cp130-3-project/Solution-cp130-3/.project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Solution-cp130-3-project/Solution-cp130-3/.settings/org.eclipse.core.resources.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Solution-cp130-3-project/Solution-cp130-3/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Solution-cp130-3-project/Solution-cp130-3/.settings/org.eclipse.m2e.core.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Solution-cp130-3-project/Solution-cp130-3/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Solution-cp130-3-project/Solution-cp130-3/src/main/java/edu/uw/rgm/account" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Solution-cp130-3-project/Solution-cp130-3/src/main/java/edu/uw/rgm/broker/MoveStopBuyToMarketOrderProcessor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Solution-cp130-3-project/Solution-cp130-3/src/main/java/edu/uw/rgm/broker/SimpleBroker.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Solution-cp130-3-project/Solution-cp130-3/src/main/java/edu/uw/rgm/broker/SimpleBroker.java.bak" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Solution-cp130-3-project/Solution-cp130-3/src/main/java/edu/uw/rgm/broker/SimpleBrokerFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Solution-cp130-3-project/Solution-cp130-3/src/main/java/edu/uw/rgm/broker/SimpleOrderManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Solution-cp130-3-project/Solution-cp130-3/src/main/java/edu/uw/rgm/broker/SimpleOrderQueue.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Solution-cp130-3-project/Solution-cp130-3/src/main/java/edu/uw/rgm/broker/StopBuyOrderDispatchFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Solution-cp130-3-project/Solution-cp130-3/src/main/java/edu/uw/rgm/dao" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Solution-cp130-3-project/Solution-cp130-3/src/test/java/edu/uw/rgm/MyBrokerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Solution-cp130-3-project/Solution-cp130-3/src/test/java/edu/uw/rgm/MyBrokerTest.java.bak" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Solution-cp130-3-project/Solution-cp130-3/src/test/java/edu/uw/rgm/OrderManagerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Solution-cp130-3-project/Solution-cp130-3/src/test/java/edu/uw/rgm/OrderQueueTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Solution-cp130-3-project/Solution-cp130-3/src/test/resources/context.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Solution-cp130-3-project/Solution-cp130-3/src/test/resources/logging.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cp130-05.iml" beforeDir="false" afterPath="$PROJECT_DIR$/cp130-05.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uw/cdm/exchange/ExchangeNetworkAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/uw/cdm/exchange/ExchangeNetworkAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uw/cdm/exchange/ExchangeNetworkAdapterFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/uw/cdm/exchange/ExchangeNetworkAdapterFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uw/cdm/exchange/ExchangeNetworkProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/uw/cdm/exchange/ExchangeNetworkProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uw/cdm/exchange/ExchangeNetworkProxyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/uw/cdm/exchange/ExchangeNetworkProxyFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uw/cdm/exchange/ProtocolConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/uw/cdm/exchange/ProtocolConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/accounts/aabernathy.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/accounts/neotheone.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/accounts/pepper_potts.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/accounts/rachaelnex.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cp130-03-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.uw.cdm.account.AccountCDMTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.uw.cdm.account.AccountManagerCDMTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.uw.cdm.broker.BrokerCDMTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.uw.cdm.broker.OrderManagerTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.uw.cdm.broker.OrderQueueTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.uw.cdm.dao.DaoCDMTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/edu.uw.cdm.account.AccountCDMTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/edu.uw.cdm.account.AccountManagerCDMTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/edu.uw.cdm.broker.BrokerCDMTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/edu.uw.cdm.broker.OrderManagerTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/edu.uw.cdm.broker.OrderQueueTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/edu.uw.cdm.dao.DaoCDMTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/edu/uw/cdm/account/AccountCDMTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/edu/uw/cdm/account/AccountManagerCDMTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/edu/uw/cdm/broker/BrokerCDMTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/edu/uw/cdm/broker/OrderManagerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/edu/uw/cdm/broker/OrderQueueTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/edu/uw/cdm/dao/DaoCDMTest.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -162,24 +64,28 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="1" />
-          <entry key="java" value="6" />
+          <entry key="class" value="2" />
+          <entry key="java" value="7" />
+          <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="6" />
+          <entry key="CLASS" value="2" />
+          <entry key="JAVA" value="7" />
+          <entry key="XML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="37" />
+          <entry key="java" value="289" />
+          <entry key="xml" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="37" />
+          <entry key="JAVA" value="289" />
+          <entry key="XML" value="20" />
         </counts>
       </usages-collector>
     </session>
@@ -189,8 +95,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/uw/cdm/exchange/ExchangeNetworkAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="221">
+              <caret line="13" column="110" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="110" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -199,19 +105,43 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/uw/cdm/exchange/ExchangeNetworkAdapterFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
+            <state relative-caret-position="255">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/uw/cdm/exchange/ExchangeNetworkProxyFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/uw/cdm/exchange/ExchangeNetworkProxy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+            <state relative-caret-position="246">
+              <caret line="16" column="105" selection-start-line="16" selection-start-column="105" selection-end-line="16" selection-end-column="105" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#359#360#0" expanded="true" />
@@ -228,10 +158,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/uw/cdm/exchange/ExchangeNetworkProxyFactory.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/context.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+            <state relative-caret-position="493">
+              <caret line="29" column="95" selection-start-line="29" selection-start-column="95" selection-end-line="29" selection-end-column="95" />
             </state>
           </provider>
         </entry>
@@ -239,8 +169,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/uw/cdm/exchange/ProtocolConstants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="799">
+              <caret line="47" column="51" selection-start-line="47" selection-start-column="51" selection-end-line="47" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -260,8 +190,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/main/java/edu/uw/cdm/exchange/ProtocolConstants.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/edu/uw/cdm/exchange/ExchangeNetworkAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uw/cdm/exchange/ExchangeNetworkAdapterFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/uw/cdm/exchange/ExchangeNetworkProxy.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/context.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uw/cdm/exchange/ExchangeNetworkProxyFactory.java" />
       </list>
     </option>
   </component>
@@ -342,48 +277,14 @@
             </path>
             <path>
               <item name="cp130-03" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="cp130-05" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cp130-03" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: edu.uw.ext:cp130-framework:1.0" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="cp130-03" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: edu.uw.ext:cp130-framework:1.0" type="70bed36:NamedLibraryElementNode" />
-              <item name="cp130-framework-1.0.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cp130-03" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: edu.uw.ext:cp130-framework:1.0" type="70bed36:NamedLibraryElementNode" />
-              <item name="cp130-framework-1.0.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cp130-03" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: edu.uw.ext:cp130-framework:1.0" type="70bed36:NamedLibraryElementNode" />
-              <item name="cp130-framework-1.0.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="ext" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cp130-03" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: edu.uw.ext:cp130-framework:1.0" type="70bed36:NamedLibraryElementNode" />
-              <item name="cp130-framework-1.0.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="ext" type="462c0819:PsiDirectoryNode" />
-              <item name="exchange" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cp130-03" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: edu.uw.ext:cp130-framework:1.0" type="70bed36:NamedLibraryElementNode" />
-              <item name="cp130-framework-1.0.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="ext" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -394,7 +295,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558990211450" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559522801453" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
@@ -424,9 +325,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21268657" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21268657" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -440,7 +340,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.21913236" />
+      <window_info active="true" anchor="bottom" x="22" y="397" width="1876" height="246" id="Terminal" order="7" visible="true" weight="0.33926585" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -457,6 +357,20 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="jar://$MAVEN_REPOSITORY$/edu/uw/ext/cp130-framework/1.0/cp130-framework-1.0.jar!/app/NetExchangeDriver.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1753">
+          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uw/cdm/exchange/ProtocolConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="47" column="51" selection-start-line="47" selection-start-column="51" selection-end-line="47" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/uw/cdm/dao/JsonDaoFactoryCDM.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -466,46 +380,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/uw/cdm/exchange/ExchangeNetworkAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="221">
+          <caret line="13" column="110" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="110" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="95" selection-start-line="29" selection-start-column="95" selection-end-line="29" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/uw/cdm/exchange/ExchangeNetworkAdapterFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
+        <state relative-caret-position="255">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uw/cdm/exchange/ExchangeNetworkProxyFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uw/cdm/exchange/ProtocolConstants.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/edu/uw/ext/cp130-framework/1.0/cp130-framework-1.0.jar!/edu/uw/ext/framework/exchange/NetworkExchangeProxyFactory.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/edu/uw/ext/cp130-framework/1.0/cp130-framework-1.0.jar!/app/NetExchangeDriver.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1753">
-          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/uw/cdm/exchange/ExchangeNetworkProxy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+        <state relative-caret-position="246">
+          <caret line="16" column="105" selection-start-line="16" selection-start-column="105" selection-end-line="16" selection-end-column="105" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#359#360#0" expanded="true" />
@@ -516,6 +433,16 @@
             <element signature="e#580#581#0" expanded="true" />
             <element signature="e#831#832#0" expanded="true" />
             <element signature="e#855#856#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uw/cdm/exchange/ExchangeNetworkProxyFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
