@@ -91,7 +91,7 @@ public class ExchangeNetworkAdapter implements ExchangeAdapter {
     }
 
     @Override
-    public void close() throws Exception {
+    public void close() {
         this.exchange.removeExchangeListener(this);
         this.commandListener.terminate();
         this.multicastSocket.close();
