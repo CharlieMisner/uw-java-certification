@@ -52,7 +52,9 @@ public class ExchangeNetworkAdapter implements ExchangeAdapter {
         this.exchange.addExchangeListener(this);
     }
 
-    private synchronized void sendEvent(String message) {
+    @Override
+    public synchronized void exchangeOpened(ExchangeEvent exchangeEvent) {
+        String message = OPEN_EVNT;
         try {
             byte[] buffer = message.getBytes(ENCODING);
             this.datagramPacket.setData(buffer);
@@ -63,21 +65,29 @@ public class ExchangeNetworkAdapter implements ExchangeAdapter {
     }
 
     @Override
-    public void exchangeOpened(ExchangeEvent exchangeEvent) {
-        this.sendEvent(OPEN_EVNT);
+    public synchronized void exchangeClosed(ExchangeEvent exchangeEvent) {
+        String message = CLOSED_EVNT;
+        try {
+            byte[] buffer = message.getBytes(ENCODING);
+            this.datagramPacket.setData(buffer);
+            this.datagramPacket.setLength(buffer.length);
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
-    public void exchangeClosed(ExchangeEvent exchangeEvent) {
-        this.sendEvent(CLOSED_EVNT);
-    }
-
-    @Override
-    public void priceChanged(ExchangeEvent exchangeEvent) {
+    public synchronized void priceChanged(ExchangeEvent exchangeEvent) {
         String symbol = exchangeEvent.getTicker();
         int price = exchangeEvent.getPrice();
         String message = String.join(ELEMENT_DELIMITER, PRICE_CHANGE_EVNT, symbol, Integer.toString(price));
-        this.sendEvent(message);
+        try {
+            byte[] buffer = message.getBytes(ENCODING);
+            this.datagramPacket.setData(buffer);
+            this.datagramPacket.setLength(buffer.length);
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
