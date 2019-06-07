@@ -31,13 +31,18 @@ public class ExchangeNetworkAdapter implements ExchangeAdapter {
     private MulticastSocket multicastSocket;
     private DatagramPacket datagramPacket;
 
-    public ExchangeNetworkAdapter(StockExchange exchange, String multicastIP, int multicastPort, int commandPort) throws UnknownHostException {
+    public ExchangeNetworkAdapter(StockExchange exchange, String multicastIP, int multicastPort, int commandPort){
         this.exchange = exchange;
         this.multicastIP = multicastIP;
         this.multicastPort = multicastPort;
         this.commandPort = commandPort;
 
-        InetAddress multicastGroup = InetAddress.getByName(this.multicastIP);
+        InetAddress multicastGroup = null;
+        try {
+            multicastGroup = InetAddress.getByName(this.multicastIP);
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+        }
         byte[] buffer = {};
         this.datagramPacket = new DatagramPacket(buffer, 0, multicastGroup, this.multicastPort);
         try {
