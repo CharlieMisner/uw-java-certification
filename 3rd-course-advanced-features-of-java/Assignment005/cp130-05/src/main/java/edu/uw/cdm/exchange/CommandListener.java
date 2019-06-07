@@ -25,8 +25,8 @@ public class CommandListener implements Runnable {
 
     @Override
     public void run() {
-        try {
-            this.serverSocket = new ServerSocket(this.port);
+        try(ServerSocket localSocket = new ServerSocket(this.port)) {
+            this.serverSocket = localSocket;
             while (listening) {
                 Socket socket = null;
                 try {
@@ -59,7 +59,7 @@ public class CommandListener implements Runnable {
             this.serverSocket = null;
             if(!this.executorService.isShutdown()){
                 this.executorService.shutdown();
-                this.executorService.awaitTermination(10, TimeUnit.SECONDS);
+                this.executorService.awaitTermination(3, TimeUnit.SECONDS);
             }
         } catch (IOException exception) {
             exception.printStackTrace();
