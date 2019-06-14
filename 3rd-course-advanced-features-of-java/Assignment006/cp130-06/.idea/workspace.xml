@@ -24,8 +24,8 @@
       <file leaf-file-name="PrivateMessageCodecImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/uw/cdm/crypto/PrivateMessageCodecImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="102" column="52" selection-start-line="102" selection-start-column="52" selection-end-line="102" selection-end-column="52" />
+            <state relative-caret-position="234">
+              <caret line="94" column="71" selection-start-line="94" selection-start-column="71" selection-end-line="94" selection-end-column="71" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -33,32 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="XMLDSigRI.class" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/jre/lib/rt.jar!/org/jcp/xml/dsig/internal/dom/XMLDSigRI.class">
+      <file leaf-file-name="PrivateMessageCodecTest.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/edu/uw/ext/cp130-framework/1.0/cp130-framework-1.0-tests.jar!/test/PrivateMessageCodecTest.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="clientCert.crt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/clientCert.crt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PrivateMessageCodecImplTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/edu/uw/cdm/crypto/PrivateMessageCodecImplTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="25" selection-start-column="25" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="18">
+              <caret line="57" selection-start-line="57" selection-end-line="57" />
             </state>
           </provider>
         </entry>
@@ -72,6 +51,11 @@
         <option value="JUnit5 Test Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>encip</find>
+    </findStrings>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -351,34 +335,34 @@
     <configuration />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_cp130-06 - 2019.06.14 at 15h 18m 23s.xml">
+    <history-entry file="All_in_cp130-06 - 2019.06.14 at 16h 14m 42s.xml">
       <configuration name="All in cp130-06" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_cp130-06 - 2019.06.14 at 15h 25m 20s.xml">
+    <history-entry file="All_in_cp130-06 - 2019.06.14 at 16h 16m 42s.xml">
       <configuration name="All in cp130-06" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_cp130-06 - 2019.06.14 at 15h 25m 33s.xml">
+    <history-entry file="All_in_cp130-06 - 2019.06.14 at 16h 27m 00s.xml">
       <configuration name="All in cp130-06" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_cp130-06 - 2019.06.14 at 15h 26m 21s.xml">
+    <history-entry file="All_in_cp130-06 - 2019.06.14 at 16h 27m 03s.xml">
       <configuration name="All in cp130-06" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_cp130-06 - 2019.06.14 at 15h 27m 23s.xml">
+    <history-entry file="All_in_cp130-06 - 2019.06.14 at 16h 28m 02s.xml">
       <configuration name="All in cp130-06" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_cp130-06 - 2019.06.14 at 15h 27m 27s.xml">
+    <history-entry file="All_in_cp130-06 - 2019.06.14 at 16h 28m 09s.xml">
       <configuration name="All in cp130-06" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_cp130-06 - 2019.06.14 at 15h 29m 11s.xml">
+    <history-entry file="All_in_cp130-06 - 2019.06.14 at 16h 29m 13s.xml">
       <configuration name="All in cp130-06" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_cp130-06 - 2019.06.14 at 15h 31m 30s.xml">
+    <history-entry file="All_in_cp130-06 - 2019.06.14 at 16h 30m 10s.xml">
       <configuration name="All in cp130-06" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_cp130-06 - 2019.06.14 at 15h 31m 42s.xml">
+    <history-entry file="All_in_cp130-06 - 2019.06.14 at 16h 30m 16s.xml">
       <configuration name="All in cp130-06" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_cp130-06 - 2019.06.14 at 15h 36m 01s.xml">
+    <history-entry file="All_in_cp130-06 - 2019.06.14 at 16h 48m 31s.xml">
       <configuration name="All in cp130-06" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -424,12 +408,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/edu/uw/cdm/crypto/PrivateMessageCodecImpl.java</url>
-          <line>47</line>
+          <line>197</line>
           <properties />
-          <option name="timeStamp" value="9" />
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="10" />
+      <option name="time" value="20" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -444,23 +428,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/edu/uw/ext/cp130-framework/1.0/cp130-framework-1.0-tests.jar!/test/PrivateMessageCodecTest.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/edu/uw/cdm/crypto/PrivateMessageCodecImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="25" selection-start-column="25" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -495,10 +462,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/edu/uw/cdm/crypto/PrivateMessageCodecImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="25" selection-start-column="25" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/edu/uw/ext/cp130-framework/1.0/cp130-framework-1.0-tests.jar!/test/PrivateMessageCodecTest.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/uw/cdm/crypto/PrivateMessageCodecImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="102" column="52" selection-start-line="102" selection-start-column="52" selection-end-line="102" selection-end-column="52" />
+        <state relative-caret-position="234">
+          <caret line="94" column="71" selection-start-line="94" selection-start-column="71" selection-end-line="94" selection-end-column="71" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

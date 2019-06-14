@@ -3,6 +3,7 @@ package edu.uw.cdm.crypto;
 import edu.uw.ext.framework.crypto.PrivateMessageCodec;
 import edu.uw.ext.framework.crypto.PrivateMessageTriple;
 import javax.crypto.*;
+import javax.crypto.spec.SecretKeySpec;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.security.*;
@@ -13,6 +14,7 @@ import java.util.ArrayList;
 public class PrivateMessageCodecImpl implements PrivateMessageCodec {
 
     private static final String ENCRYPTION_ALGORITHM = "RSA";
+    private static final String SIGNATURE_ALGORITHM = "SHA256withRSA";
 
     public PrivateMessageCodecImpl() {
     }
@@ -48,13 +50,57 @@ public class PrivateMessageCodecImpl implements PrivateMessageCodec {
         PrivateKey clientPrivateKey = (PrivateKey)this.getKey(senderKeyStorePasswd, senderKeyStoreName, senderKeyPasswd);
 
         // Step 7) Sign the plaintext order data using the private key from the the provided keystore.
-        Signature signer = Signature.getInstance("SHA256withRSA");
+        Signature signer = Signature.getInstance(SIGNATURE_ALGORITHM);
         signer.initSign(clientPrivateKey);
         signer.update(encryptedData);
 
         // Step 8) Construct and return a PrivateMessageTriple containing the ciphertext, key bytes and signature.
         PrivateMessageTriple privateMessageTriple = new PrivateMessageTriple(encryptedSecretKey,encryptedData, signer.sign());
         return privateMessageTriple;
+    }
+
+    @Override
+    public byte[] decipher(
+            PrivateMessageTriple triple,
+            String recipientKeyStoreName,
+            char[] recipientKeyStorePasswd,
+            String recipientKeyName,
+            char[] recipientKeyPasswd,
+            String trustStoreName,
+            char[] trustStorePasswd,
+            String signerCertName)
+            throws GeneralSecurityException, IOException {
+
+        // Step 1) Obtain the shared secret key, order data ciphertext and signature from the provided PrivateMessageTriple
+        byte[] encryptedSecretKey = triple.getEncipheredSharedKey();
+        byte[] encipheredData = triple.getCiphertext();
+        byte[] signature = triple.getSignature();
+
+        // Step 2) Retrieve the (brokers's) private key from the the provided keystore
+        PrivateKey brokersPrivateKey = (PrivateKey)this.getKey(recipientKeyStorePasswd, recipientKeyStoreName, recipientKeyPasswd);
+
+        // Step 3) Use the private key from the keystore to decipher the shared secret key's bytes
+        byte[] decryptedBrokerPrivateKeyBytes = this.decipherData(brokersPrivateKey, encryptedSecretKey, ENCRYPTION_ALGORITHM);
+
+        // Step 4) Reconstruct the shared secret key from shared secret key's bytes
+        SecretKey secretKey = new SecretKeySpec(decryptedBrokerPrivateKeyBytes, 0, decryptedBrokerPrivateKeyBytes.length,"AES");
+
+        // Step 5) Use the shared secret key to decipher the order data ciphertext
+        byte[] plainText = this.decipherData(secretKey, encipheredData, secretKey.getAlgorithm());
+
+        // Step 6) Retrieve the (client's) public key from the provided truststore
+        PublicKey clientsPublicKey = (PublicKey)this.getKey(trustStorePasswd, trustStoreName, new char[0]);
+
+        // Step 7)
+        boolean isValidSignature = this.isValidSignature(encipheredData, clientsPublicKey, signature);
+        if(isValidSignature){
+            System.out.println("The signature is valid.");
+        } else {
+            System.out.println("The signature is invalid.");
+        }
+
+        // Step 8) Return the order data plaintext
+        return plainText;
     }
 
     private SecretKey generateSecretKey(){
@@ -74,6 +120,27 @@ public class PrivateMessageCodecImpl implements PrivateMessageCodec {
             Cipher cipher = Cipher.getInstance(algorithm);
             cipher.init(Cipher.ENCRYPT_MODE, key);
             encryptedData = cipher.doFinal(data);
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        } catch (NoSuchPaddingException e) {
+            e.printStackTrace();
+        } catch (InvalidKeyException e){
+            e.printStackTrace();
+        } catch (IllegalBlockSizeException e){
+            e.printStackTrace();
+        } catch (BadPaddingException e){
+            e.printStackTrace();
+        }
+
+        return encryptedData;
+    }
+
+    private byte[] decipherData(Key key, byte[] data, String algorithm){
+        byte[] encryptedData = null;
+        try {
+            Cipher decipher = Cipher.getInstance(algorithm);
+            decipher.init(Cipher.DECRYPT_MODE, key);
+            encryptedData = decipher.doFinal(data);
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         } catch (NoSuchPaddingException e) {
@@ -122,21 +189,22 @@ public class PrivateMessageCodecImpl implements PrivateMessageCodec {
         return key;
     }
 
-    @Override
-    public byte[] decipher(
-        PrivateMessageTriple privateMessageTriple,
-        String s,
-        char[] chars,
-        String s1,
-        char[] chars1,
-        String s2,
-        char[] chars2,
-        String s3)
-        throws GeneralSecurityException, IOException {
-
-        return new byte[0];
+    private boolean isValidSignature(byte[] data, PublicKey key, byte[] signature) {
+        boolean verify = false;
+        try {
+            Signature verifier = Signature.getInstance(SIGNATURE_ALGORITHM);
+            verifier.initVerify(key);
+            verifier.update(data);
+            verify =  verifier.verify(signature);
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        } catch (InvalidKeyException e) {
+            e.printStackTrace();
+        } catch (SignatureException e) {
+            e.printStackTrace();
+        }
+        return verify;
     }
-
 
     private String getAliasFromName(String name){
         String alias = "";
