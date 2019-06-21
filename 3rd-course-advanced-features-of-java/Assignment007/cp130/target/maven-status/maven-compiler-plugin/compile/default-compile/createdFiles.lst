@@ -1,0 +1,6 @@
+edu\uw\cdm\web\QuoteTransformFilter.class
+edu\uw\cdm\web\StockQuoteServlet.class
+edu\uw\cdm\web\JsonRequestFilter.class
+edu\uw\cdm\web\TextResponseWrapper.class
+edu\uw\cdm\web\PropertyRequestWrapper.class
+app\QuoteApp.class

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 7</title>
+</head>
+<body>
+    <h1>Stocks R Us</h1>
+    <form action="http://localhost:8080/StockQuote/StockQuoteServlet" method="post">
+        <select name="symbol">
+            <option value="MSFT">MSFT</option>
+            <option value="GOOG">GOOG</option>
+        </select>
+        <br>
+        <select name="type">
+            <option value="text">text</option>
+            <option value="html">html</option>
+            <option value="json">json</option>
+            <option value="xml">xml</option>
+        </select>
+        <br>
+        <input type="submit" name="submit_btn" value="Get Quote">
+    </form>
+</body>
+</html>
