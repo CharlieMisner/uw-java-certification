@@ -4,6 +4,18 @@
 
 <web-app>
   <display-name>Assignment 7</display-name>
+
+  <filter>
+    <filter-name>QuoteTransformFilter</filter-name>
+    <display-name>QuoteTransformFilter</display-name>
+    <description> </description>
+    <filter-class>edu.uw.cdm.web.QuoteTransformFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>QuoteTransformFilter</filter-name>
+    <url-pattern>/StockQuoteServlet</url-pattern>
+  </filter-mapping>
+
   <servlet>
     <servlet-name>StockQuoteServlet</servlet-name>
     <servlet-class>edu.uw.cdm.web.StockQuoteServlet</servlet-class>

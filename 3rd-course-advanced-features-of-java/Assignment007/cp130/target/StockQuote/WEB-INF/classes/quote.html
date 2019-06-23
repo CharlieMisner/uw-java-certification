@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Quote</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-light_blue.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+        .form-container{
+            margin: 30px;
+            padding: 0px 30px 30px 30px;
+        }
+        h3 {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="form-container mdl-card mdl-shadow--4dp">
+        <h3>%s Quote</h3>
+        <div>
+            <span>Price: </span><span>%s</span>
+        </div>
+    </div>
+</div>
+</body>
+</html>

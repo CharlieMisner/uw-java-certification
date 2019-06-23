@@ -3,23 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <title>Assignment 7</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-light_blue.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+        .form-container{
+            margin: 30px;
+            padding: 0px 30px 30px 30px;
+        }
+        h3 {
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    <h1>Stocks R Us</h1>
-    <form action="http://localhost:8080/StockQuote/StockQuoteServlet" method="post">
-        <select name="symbol">
-            <option value="MSFT">MSFT</option>
-            <option value="GOOG">GOOG</option>
-        </select>
-        <br>
-        <select name="type">
-            <option value="text">text</option>
-            <option value="html">html</option>
-            <option value="json">json</option>
-            <option value="xml">xml</option>
-        </select>
-        <br>
-        <input type="submit" name="submit_btn" value="Get Quote">
-    </form>
+    <div class="container">
+        <div class="form-container mdl-card mdl-shadow--4dp">
+            <h3>Stock Quote</h3>
+            <form action="http://localhost:8080/StockQuote/StockQuoteServlet" method="post">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <select class="mdl-textfield__input" id="symbol" name="symbol">
+                        <option value="MSFT">MSFT</option>
+                        <option value="GOOG">GOOG</option>
+                        <option value="EXPD">EXPD</option>
+                        <option value="BA">BA</option>
+                    </select>
+                    <label class="mdl-textfield__label" for="symbol">Stock Symbol</label>
+                </div>
+                <div>
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+                        <input type="radio" id="option-1" class="mdl-radio__button" name="type" value="json" checked>
+                        <span class="mdl-radio__label">JSON</span>
+                    </label>
+                    <br>
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+                        <input type="radio" id="option-2" class="mdl-radio__button" name="type" value="html">
+                        <span class="mdl-radio__label">HTML</span>
+                    </label>
+                    <br>
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-3">
+                        <input type="radio" id="option-3" class="mdl-radio__button" name="type" value="xml">
+                        <span class="mdl-radio__label">XML</span>
+                    </label>
+                    <br>
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-4">
+                        <input type="radio" id="option-4" class="mdl-radio__button" name="type" value="text">
+                        <span class="mdl-radio__label">Text</span>
+                    </label>
+                </div>
+                <br>
+                <button type="submit" name="submit_btn" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                    GET QUOTE
+                </button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
